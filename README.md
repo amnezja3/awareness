@@ -191,9 +191,9 @@ Description: The kind_sex_word function recognizes the gender of a word, i.e. ma
 Example:
 
 ##### python
-  import awareness
-  print(awareness.kind_sex_word('car')) # 'M'
-  print(awareness.kind_sex_word('woman')) # 'Z'
+    import awareness
+    print(awareness.kind_sex_word('car')) # 'M'
+    print(awareness.kind_sex_word('woman')) # 'Z'
 
 (PL)
 ### Moduł LPM (Rozpoznawanie Liczby Słowa)
@@ -205,9 +205,9 @@ Opis: Funkcja lpm rozpoznaje, czy liczba słowa jest liczba mnogą (LM), pojedyn
 Przykład:
 
 ##### python
-  import awareness
-  print(awareness.lpm('samochód'))  # 'LP'
-  print(awareness.lpm('kobiety'))  # 'LM'
+    import awareness
+    print(awareness.lpm('samochód'))  # 'LP'
+    print(awareness.lpm('kobiety'))  # 'LM'
 
 (EN)
 ### LPM Module (Word Number Recognition)
@@ -219,9 +219,9 @@ Description: The lpm function recognizes whether the number of a word is plural 
 Example:
 
 ##### python
-  import awareness
-  print(awareness.lpm('car')) # 'LP'
-  print(awareness.lpm('women')) # 'LM'
+    import awareness
+    print(awareness.lpm('car')) # 'LP'
+    print(awareness.lpm('women')) # 'LM'
 
 (PL)
 ### Moduł Part_Check (Rozpoznawanie Części Mowy)
@@ -233,8 +233,8 @@ Opis: Funkcja part_check oddaje część mowy na podstawie podanego słowa.
 Przykład:
 
 ##### python
-  import awareness
-  print(awareness.part_check('samochód'))  # 'rzeczownik'
+    import awareness
+    print(awareness.part_check('samochód'))  # 'rzeczownik'
 
 (EN)
 ### Part_Check Module (Part of Speech Recognition)
@@ -246,8 +246,8 @@ Description: The part_check function returns a part of speech based on the given
 Example:
 
 ##### python
-  import awareness
-  print(awareness.part_check('car')) # 'noun'
+    import awareness
+    print(awareness.part_check('car')) # 'noun'
 
 (PL)
 ### Moduł Case_Updater (Aktualizacja Pliku Słów z Częściami Mowy)
@@ -259,9 +259,9 @@ Opis: Funkcja case_updater aktualizuje plik słów z częściami mowy, ale nic n
 Przykład:
 
 ##### python
-  import awareness
-  awareness.case_updater('samochód')
-  # Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
+    import awareness
+    awareness.case_updater('samochód')
+    # Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
 
 (EN)
 Case_Updater Module (Updating the Word File with Parts of Speech)
