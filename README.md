@@ -1,38 +1,90 @@
 # awareness
 The Awareness Library is a versatile Polish text processing tool offering advanced modules for text analysis, content generation, and linguistic research. Key modules include the Action Module for sentence analysis, the Advanced Action Module for complex constructions, and functions for adjective, noun, and verb inflections.
 
-(PL) Biblioteka Awareness: Narzędzie NLP dla Języka Polskiego
-(EN) Awareness Library: NLP Tool for the Polish Language
+## (PL) Biblioteka Awareness: Narzędzie NLP dla Języka Polskiego
+
+## (EN) Awareness Library: NLP Tool for the Polish Language
 
 (PL)
-Biblioteka Awareness to zaawansowane narzędzie do przetwarzania tekstu w języku polskim, stworzone w celu ułatwienia analizy i manipulacji tekstu. Ta wszechstronna biblioteka oferuje szereg potężnych modułów, które umożliwiają użytkownikom przeprowadzanie głębokiej analizy tekstów, wykonywanie zaawansowanych operacji związanych z językiem polskim. Poniżej przedstawiamy kilka najciekawszych i kluczowych modułów, które wyróżniają bibliotekę Awareness:
-Moduł Action: Moduł Action to funkcja klasyfikująca i interpretująca podane zdania. Dzięki temu modułowi można analizować zdania pod względem podziału na części zdania, takie jak podmiot, orzeczenie, dopełnienie, i inne części zdania. Możesz również dodawać analizowane zdania do bazy systemowej.
-Moduł Advanced Action: Moduł Advanced Action umożliwia tworzenie bardziej złożonych zdań, łączenie ich z bazą systemową oraz przypisywanie ich do określonych kategorii. To narzędzie idealne do tworzenia i zarządzania bardziej skomplikowanymi konstrukcjami językowymi.
-Odmiany Przymiotników i Rzeczowników: Biblioteka Awareness posiada funkcje do odmiany przymiotników i rzeczowników przez przypadki. Możesz łatwo zmieniać formy tych słów i uzyskiwać propozycje odmiany, z możliwością korekty.
-Praca z Czasownikami: Moduł verb_flex pozwala na odmienianie czasowników w różnych formach i generowanie całych rodzin odmienionych czasowników wraz z flagami.
+
+Biblioteka Awareness to zaawansowane narzędzie do przetwarzania tekstu w języku polskim, stworzone w celu ułatwienia analizy i manipulacji tekstu. Ta wszechstronna biblioteka oferuje szereg potężnych modułów, które umożliwiają użytkownikom przeprowadzanie głębokiej analizy tekstów, wykonywanie zaawansowanych operacji związanych z językiem polskim. 
+
+Poniżej przedstawiamy kilka najciekawszych i kluczowych modułów, które wyróżniają bibliotekę Awareness:
+Moduł Action:
+
+Moduł Action to funkcja klasyfikująca i interpretująca podane zdania. Dzięki temu modułowi można analizować zdania pod względem podziału na części zdania, takie jak podmiot, orzeczenie, dopełnienie, i inne części zdania. Możesz również dodawać analizowane zdania do bazy systemowej.
+    
+Moduł Advanced Action: 
+
+Moduł Advanced Action umożliwia tworzenie bardziej złożonych zdań, łączenie ich z bazą systemową oraz przypisywanie ich do określonych kategorii. To narzędzie idealne do tworzenia i zarządzania bardziej skomplikowanymi konstrukcjami językowymi.
+
+Odmiany Przymiotników i Rzeczowników: 
+
+Biblioteka Awareness posiada funkcje do odmiany przymiotników i rzeczowników przez przypadki. Możesz łatwo zmieniać formy tych słów i uzyskiwać propozycje odmiany, z możliwością korekty.
+
+Praca z Czasownikami: 
+
+Moduł verb_flex pozwala na odmienianie czasowników w różnych formach i generowanie całych rodzin odmienionych czasowników wraz z flagami.
+
 Potencjalne Wykorzystanie:
-Analiza Tekstu: Biblioteka Awareness może być wykorzystywana do analizy tekstów w celu wydobycia kluczowych informacji, identyfikacji struktury zdania i części mowy.
-Generowanie Treści: Moduł Advanced Action może być używany do generowania skomplikowanych konstrukcji językowych, co jest przydatne w tworzeniu treści tekstowej.
-Lingwistyczne Badania: Dzięki funkcjom odmiany przymiotników, rzeczowników i czasowników, biblioteka jest cennym narzędziem w lingwistycznych badaniach nad językiem polskim.
+
+Analiza Tekstu: 
+
+Biblioteka Awareness może być wykorzystywana do analizy tekstów w celu wydobycia kluczowych informacji, identyfikacji struktury zdania i części mowy.
+
+Generowanie Treści:
+
+Moduł Advanced Action może być używany do generowania skomplikowanych konstrukcji językowych, co jest przydatne w tworzeniu treści tekstowej.
+
+Lingwistyczne Badania: 
+
+Dzięki funkcjom odmiany przymiotników, rzeczowników i czasowników, biblioteka jest cennym narzędziem w lingwistycznych badaniach nad językiem polskim.
+
 Biblioteka Awareness to narzędzie wszechstronne i potężne, które znalazło swoje zastosowanie w analizie języka polskiego, zarówno w kontekście analizy gramatycznej, jak i generowania treści. Dzięki tym modułom użytkownicy mogą wykonywać zaawansowane operacje na tekście, analizować jego strukturę, a także tworzyć bardziej skomplikowane konstrukcje językowe.
+
 Jeśli potrzebujesz bardziej szczegółowych informacji na temat konkretnych funkcji i ich zastosowań, zapraszamy do konsultacji dokumentacji biblioteki Awareness.
 
 (EN)
-The Awareness Library is an advanced tool for processing text in the Polish language, created to facilitate the analysis and manipulation of text. This versatile library offers a range of powerful modules that enable users to perform in-depth analysis of texts and carry out advanced operations related to the Polish language. Below, we present some of the most interesting and key modules that distinguish the Awareness library:
+
+The Awareness Library is an advanced tool for processing text in the Polish language, created to facilitate the analysis and manipulation of text. This versatile library offers a range of powerful modules that enable users to perform in-depth analysis of texts and carry out advanced operations related to the Polish language. 
+
+Below, we present some of the most interesting and key modules that distinguish the Awareness library:
+
 Action Module: The Action module is a function that classifies and interprets given sentences. With this module, you can analyze sentences in terms of their components, such as subjects, predicates, complements, and other parts of a sentence. You can also add analyzed sentences to the system's database.
-Advanced Action Module: The Advanced Action module allows you to create more complex sentences, link them to the system's database, and assign them to specific categories. This tool is ideal for creating and managing more intricate language constructions.
-Adjective and Noun Inflections: The Awareness Library includes functions for inflecting adjectives and nouns according to cases. You can easily change the forms of these words and receive suggestions for inflection, with the option for corrections.
-Verb Processing: The verb_flex module enables the inflection of verbs in various forms and the generation of complete families of inflected verbs along with flags.
+
+Advanced Action Module: 
+
+The Advanced Action module allows you to create more complex sentences, link them to the system's database, and assign them to specific categories. This tool is ideal for creating and managing more intricate language constructions.
+
+Adjective and Noun Inflections: 
+
+The Awareness Library includes functions for inflecting adjectives and nouns according to cases. You can easily change the forms of these words and receive suggestions for inflection, with the option for corrections.
+
+Verb Processing: 
+
+The verb_flex module enables the inflection of verbs in various forms and the generation of complete families of inflected verbs along with flags.
+
 Potential Uses:
+
 Text Analysis: The Awareness Library can be used for analyzing texts to extract key information, identify sentence structure, and parts of speech.
-Content Generation: The Advanced Action module can be used to generate complex language constructions, making it useful for creating textual content.
-Linguistic Research: Thanks to the functions for adjective, noun, and verb inflections, the library is a valuable tool for linguistic research on the Polish language.
+
+Content Generation: 
+
+The Advanced Action module can be used to generate complex language constructions, making it useful for creating textual content.
+
+Linguistic Research: 
+
+Thanks to the functions for adjective, noun, and verb inflections, the library is a valuable tool for linguistic research on the Polish language.
+
 The Awareness Library is a versatile and powerful tool that has found its applications in the analysis of the Polish language, both in terms of grammatical analysis and content generation. These modules allow users to perform advanced text operations, analyze sentence structures, and construct more complex language constructions.
+
 If you need more detailed information about specific functions and their applications, please refer to the Awareness Library documentation.
 
 (PL)
-# Moduł Sam_g (Rozpoznawanie Samogłoski)
-## Opis: Funkcja sam_g rozpoznaje samogłoski w podanym tekście.
+
+Moduł Sam_g (Rozpoznawanie Samogłoski)
+
+Opis: Funkcja sam_g rozpoznaje samogłoski w podanym tekście.
     Funkcja: sam_g(x: Any) -> bool
 
 Przykład:
@@ -42,14 +94,17 @@ Przykład:
     print(awareness.sam_g('a'))  # True
 
 (EN)
+
 Sam_g Module (Vowel Recognition)
+
 Description: The sam_g function recognizes vowels in text.
 Function: sam_g(x: Any) -> bool
+
 Example:
-python
-import awareness
-print(awareness.sam_g('x')) # False
-print(awareness.sam_g('a')) # True
+## python
+    import awareness
+    print(awareness.sam_g('x')) # False
+    print(awareness.sam_g('a')) # True
 
 (PL)
 Moduł Sufix (Rozpoznawanie Sufiksów)
