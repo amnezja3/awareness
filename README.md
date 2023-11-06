@@ -1081,365 +1081,540 @@ How to use:
 This function allows you to add and assign categories of complex sentences to the system database, which may be useful for further analyzes and text processing.
 
 (PL)
-Funkcja: action(base: Any, sentens: Any, se_id: Any | None = None, option: str = 'all') -> (Any | dict[str, Any] | None)
+
+    Funkcja: action(base: Any, sentens: Any, se_id: Any | None = None, option: str = 'all') -> (Any | dict[str, Any] | None)
+    
 Opis: Funkcja action jest używana do analizy zdania. Przyjmuje zdanie jako tekst i zwraca wynik analizy w postaci listy symboli reprezentujących składniki zdania. Może również dodawać zdanie do bazy systemowej, jeśli zostanie podane jako se_id.
+
 Parametry:
-base: Baza systemowa.
-sentens: Tekst zdania do analizy.
-se_id: Opcjonalny parametr określający, do którego zbioru SE należy dodać analizowane zdanie (domyślnie None).
-option: Opcjonalny parametr określający, co zwróci funkcja (domyślnie 'all'). Możliwe opcje: 'all', 'only_se_done', 'only_se_new', 'only_se_now', 'only_se_old'.
+
+    base: Baza systemowa.
+    sentens: Tekst zdania do analizy.
+    se_id: Opcjonalny parametr określający, do którego zbioru SE należy dodać analizowane zdanie (domyślnie None).
+    option: Opcjonalny parametr określający, co zwróci funkcja (domyślnie 'all'). Możliwe opcje: 'all', 'only_se_done', 'only_se_new', 'only_se_now', 'only_se_old'.
+    
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.action(base, 'Doświadczony górnik spokojnie odkrywa kolejne złoża miedzi')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.action(base, 'Doświadczony górnik spokojnie odkrywa kolejne złoża miedzi')
+    print(result)
+    
 Przykład wyniku:
-['PR_729', 'PO_8059', 'OZ_5969', 'OR_14456', 'OK_1147', 'DO_1982', 'DO_4557']
+
+    ['PR_729', 'PO_8059', 'OZ_5969', 'OR_14456', 'OK_1147', 'DO_1982', 'DO_4557']
+    
 Funkcja action analizuje zdanie i zwraca listę symboli składających się na to zdanie. Może być używana do analizy tekstu i dodawania go do bazy systemowej w celu dalszej analizy.
 
 (EN)
-Function: action(base: Any, sentens: Any, se_id: Any | None = None, option: str = 'all') -> (Any | dict[str, Any] | None)
+
+    Function: action(base: Any, sentens: Any, se_id: Any | None = None, option: str = 'all') -> (Any | dict[str, Any] | None)
+    
 Description: The action function is used to parse a sentence. It accepts a sentence as text and returns the parse result as a list of symbols representing the components of the sentence. It can also add a sentence to the system database if given as se_id.
+
 Parameters:
-base: System base.
-sentens: The text of the sentence to be analyzed.
-se_id: Optional parameter specifying to which SE set the analyzed sentence should be added (default: None).
-option: Optional parameter specifying what the function will return (default 'all'). Possible options: 'all', 'only_se_done', 'only_se_new', 'only_se_now', 'only_se_old'.
+
+    base: System base.
+    sentens: The text of the sentence to be analyzed.
+    se_id: Optional parameter specifying to which SE set the analyzed sentence should be added (default: None).
+    option: Optional parameter specifying what the function will return (default 'all'). Possible options: 'all', 'only_se_done', 'only_se_new', 'only_se_now', 'only_se_old'.
+    
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.action(base, 'An experienced miner calmly discovers further copper deposits')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.action(base, 'An experienced miner calmly discovers further copper deposits')
+    print(result)
+    
 Result example:
-['PR_729', 'PO_8059', 'OZ_5969', 'OR_14456', 'OK_1147', 'DO_1982', 'DO_4557']
+
+    ['PR_729', 'PO_8059', 'OZ_5969', 'OR_14456', 'OK_1147', 'DO_1982', 'DO_4557']
+    
 The action function parses a sentence and returns a list of symbols that make up that sentence. It can be used to analyze text and add it to the system database for further analysis.
 
 (PL)
-Funkcja: splitSententionNum(sentention: Any) -> tuple[list, set, dict[str, Any]
+
+    Funkcja: splitSententionNum(sentention: Any) -> tuple[list, set, dict[str, Any]
+    
 Opis: Funkcja splitSententionNum jest używana do analizy i podziału zdania na zdania podrzędne, nadrzędne i równoległe. Przyjmuje zdanie jako tekst i zwraca wynik podziału w formie krotki, która zawiera listę zdan podrzędnych, zbiór zdan nadrzędnych i słownik z informacjami na temat zdan równoległych.
+
 Parametry:
-sentention: Tekst zdania do analizy i podziału.
+
+    sentention: 
+        Tekst zdania do analizy i podziału.
+        
 Sposób użycia:
-python
-import awareness
-sentention = "Doświadczony górnik spokojnie odkrywa kolejne złoża miedzi, a jego kolega bada ich zawartość."
-result = awareness.splitSententionNum(sentention)
-print(result)
+
+##### python
+    import awareness
+    sentention = "Doświadczony górnik spokojnie odkrywa kolejne złoża miedzi, a jego kolega bada ich zawartość."
+    result = awareness.splitSententionNum(sentention)
+    print(result)
+    
 Przykład wyniku:
-(['Doświadczony górnik spokojnie odkrywa kolejne złoża miedzi', 'a jego kolega bada ich zawartość'], {'a jego kolega bada ich zawartość'}, {1: ['a jego kolega bada ich zawartość']})
+
+    (['Doświadczony górnik spokojnie odkrywa kolejne złoża miedzi', 'a jego kolega bada ich zawartość'], {'a jego kolega bada ich zawartość'}, {1: ['a jego kolega bada ich zawartość']})
+
 Funkcja splitSententionNum analizuje zdanie i dokonuje jego podziału na zdania podrzędne, nadrzędne i równoległe, a następnie zwraca wynik w formie krotki. Zdania podrzędne są przechowywane w liście, zdania nadrzędne w zbiorze, a zdania równoległe w słowniku. 
 
 (EN)
-Function: splitSentenceNum(sentention: Any) -> tuple[list, set, dict[str, Any]
+
+    Function: splitSentenceNum(sentention: Any) -> tuple[list, set, dict[str, Any]
+
 Description: The splitSentenceNum function is used to parse and divide a sentence into subordinate, superordinate and parallel sentences. It accepts a sentence as text and returns the result of the division as a tuple that contains a list of subordinate sentences, a set of parent sentences, and a dictionary with information about parallel sentences.
+
 Parameters:
-senttention: Sentence text to analyze and divide.
+
+    senttention: 
+        Sentence text to analyze and divide.
+        
 How to use:
-python
-import awareness
-senttention = "An experienced miner calmly discovers further copper deposits, and his colleague examines their contents."
-result = awareness.splitSentenceNum(sentention)
-print(result)
+
+##### python
+    import awareness
+    senttention = "An experienced miner calmly discovers further copper deposits, and his colleague examines their contents."
+    result = awareness.splitSentenceNum(sentention)
+    print(result)
+    
 Result example:
-(['An experienced miner calmly discovers further copper deposits', 'and his colleague examines their contents'], {'and his colleague examines their contents'}, {1: ['his colleague examines their contents']})
+
+    (['An experienced miner calmly discovers further copper deposits', 'and his colleague examines their contents'], {'and his colleague examines their contents'}, {1: ['his colleague examines their contents']})
+    
 The splitSentenceNum function parses a sentence and splits it into child, parent, and parallel sentences, and then returns the result as a tuple. Subordinate sentences are stored in a list, parent sentences in a set, and parallel sentences in a dictionary.
 
 (PL)
-Funkcja: make_OS(base: Any, se_id: Any, oso: str = 'Ios-LP-NDKTER-DKPRZY', frend: str = 'PR', main: str = 'PO', neubor: str = 'ZAI') -> str | None
+
+    Funkcja: make_OS(base: Any, se_id: Any, oso: str = 'Ios-LP-NDKTER-DKPRZY', frend: str = 'PR', main: str = 'PO', neubor: str = 'ZAI') -> str | None
+    
 Opis: Funkcja make_OS służy do zmiany wybranych zdań w bazie zdaniowej SE na wybraną formę czasownika w zdaniach nadrzędnych. Przyjmuje identyfikator zbioru SE, formę czasownika oso, symbol relacji dla zdania nadrzędnego frend, symbol relacji dla zdania głównego main oraz symbol relacji dla zdania nadrzędnego zdania nadrzędnego neubor.
+
 Parametry:
-base: Baza systemowa, która zawiera zbiory SE.
-se_id: Identyfikator zbioru SE, w którym chcesz dokonać zmiany.
-oso: Forma czasownika, na jaką chcesz zamienić zdania w zbiorze SE. Domyślnie ustawiona na 'Ios-LP-NDKTER-DKPRZY'.
-frend: Symbol relacji dla zdania nadrzędnego. Domyślnie ustawiony na 'PR'.
-main: Symbol relacji dla zdania głównego. Domyślnie ustawiony na 'PO'.
-neubor: Symbol relacji dla zdania nadrzędnego zdania nadrzędnego. Domyślnie ustawiony na 'ZAI'.
+
+    base: Baza systemowa, która zawiera zbiory SE.
+    se_id: Identyfikator zbioru SE, w którym chcesz dokonać zmiany.
+    oso: Forma czasownika, na jaką chcesz zamienić zdania w zbiorze SE. Domyślnie ustawiona na 'Ios-LP-NDKTER-DKPRZY'.
+    frend: Symbol relacji dla zdania nadrzędnego. Domyślnie ustawiony na 'PR'.
+    main: Symbol relacji dla zdania głównego. Domyślnie ustawiony na 'PO'.
+    neubor: Symbol relacji dla zdania nadrzędnego zdania nadrzędnego. Domyślnie ustawiony na 'ZAI'.
+    
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-se_id = 'SE_150'
-result = awareness.make_OS(base, se_id, oso='IIos-LM-DKTOI-DKPRZY', frend='SPO', main='PR', neubor='KON')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    se_id = 'SE_150'
+    result = awareness.make_OS(base, se_id, oso='IIos-LM-DKTOI-DKPRZY', frend='SPO', main='PR', neubor='KON')
+    print(result)
+
 Funkcja make_OS pozwala na modyfikację zdaniowego zbioru SE w bazie systemowej, zamieniając zdania na wybraną formę czasownika i ustalając odpowiednie relacje między zdaniem nadrzędnym, zdaniem głównym i zdaniem nadrzędnym zdania nadrzędnego. 
 
 (EN)
-Function: make_OS(base: Any, se_id: Any, oso: str = 'Ios-LP-NDKTER-DKPRZY', frend: str = 'PR', main: str = 'PO', neubor: str = 'ZAI') -> p | None
+
+    Function: make_OS(base: Any, se_id: Any, oso: str = 'Ios-LP-NDKTER-DKPRZY', frend: str = 'PR', main: str = 'PO', neubor: str = 'ZAI') -> p | None
+    
 Description: The make_OS function is used to change selected sentences in the SE sentence database to the selected verb form in the parent sentences. It takes the set identifier SE, the verb form oso, the relation symbol for the parent clause frend, the relation symbol for the main clause main, and the relation symbol for the parent clause of the parent clause neubor.
+
 Parameters:
-base: The system database that contains the SE files.
-se_id: The ID of the SE file you want to change.
-oso: The verb form you want to convert the sentences into in SE. Default is set to 'Ios-LP-NDKTER-DKPRZY'.
-frend: Relationship symbol for the parent clause. Default set to 'PR'.
-main: Relationship symbol for the main sentence. Default set to 'PO'.
-neubor: Relationship symbol for the parent clause of a parent clause. Default set to 'ZAI'.
+
+    base: The system database that contains the SE files.
+    se_id: The ID of the SE file you want to change.
+    oso: The verb form you want to convert the sentences into in SE. Default is set to 'Ios-LP-NDKTER-DKPRZY'.
+    frend: Relationship symbol for the parent clause. Default set to 'PR'.
+    main: Relationship symbol for the main sentence. Default set to 'PO'.
+    neubor: Relationship symbol for the parent clause of a parent clause. Default set to 'ZAI'.
+    
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-se_id = 'SE_150'
-result = awareness.make_OS(base, se_id, oso='IIos-LM-DKTOI-DKPRZY', frend='SPO', main='PR', neubor='KON')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    se_id = 'SE_150'
+    result = awareness.make_OS(base, se_id, oso='IIos-LM-DKTOI-DKPRZY', frend='SPO', main='PR', neubor='KON')
+    print(result)
+    
 The make_OS function allows you to modify the SE sentence set in the system database, replacing the sentences with the selected verb form and establishing appropriate relationships between the parent clause, the main clause and the parent clause of the parent clause.
 
 (PL)
-Funkcja: synonimus_sentenses(base: Any, sentens_list: Any) -> Any
+
+    Funkcja: synonimus_sentenses(base: Any, sentens_list: Any) -> Any
+    
 Opis: Funkcja synonimus_sentenses zwraca synonimy dla słów w podanym zdaniu. Przyjmuje bazę systemową base oraz listę słów w zdaniu sentens_list.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base()
-sentens_list = ['historia', 'pisze', 'się', 'sama']
-result = awareness.synonimus_sentenses(base, sentens_list)
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base()
+    sentens_list = ['historia', 'pisze', 'się', 'sama']
+    result = awareness.synonimus_sentenses(base, sentens_list)
+    print(result)
+
 Przykład wyniku:
-{'DICT': {0: ['historia', 'pisze', 'się', 'sam'], 1: ['historia', 'pisze', 'się', 'jednakowy'], ...}, 'LIST': [['historia', 'pisze', 'się', 'sam'], ['historia', 'pisze', 'się', 'jednakowy'], ...], 'STRINGES': ['historia pisze się sam', 'historia pisze się jednakowy', …]}
+
+    {'DICT': {0: ['historia', 'pisze', 'się', 'sam'], 1: ['historia', 'pisze', 'się', 'jednakowy'], ...}, 'LIST': [['historia', 'pisze', 'się', 'sam'], ['historia', 'pisze', 'się', 'jednakowy'], ...], 'STRINGES': ['historia pisze się sam', 'historia pisze się jednakowy', …]}
 
 (EN)
-Function: synonymus_sentenses(base: Any, sentens_list: Any) -> Any
+
+    Function: synonymus_sentenses(base: Any, sentens_list: Any) -> Any
+    
 Description: The synonymus_sentenses function returns synonyms for the words in the given sentence. It accepts a system database base and a list of words in the sentens_list sentence.
+
 How to use:
-python
-import awareness
-base = awareness.take_base()
-sentens_list = ['history', 'is writing', 'itself', 'itself']
-result = awareness.synonimus_sentenses(base, sentens_list)
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base()
+    sentens_list = ['history', 'is writing', 'itself', 'itself']
+    result = awareness.synonimus_sentenses(base, sentens_list)
+    print(result)
+    
 Result example:
-{'DICT': {0: ['history', 'writes', 'itself', 'itself'], 1: ['history', 'it writes', 'itself', 'the same'], ...} , 'LETTER': [['history', 'writes', 'itself', 'itself'], ['history', 'it writes', 'itself', 'the same'], ...], 'STRINGES' : ['history writes itself', 'history writes itself', ...]}
+
+    {'DICT': {0: ['history', 'writes', 'itself', 'itself'], 1: ['history', 'it writes', 'itself', 'the same'], ...} , 'LETTER': [['history', 'writes', 'itself', 'itself'], ['history', 'it writes', 'itself', 'the same'], ...], 'STRINGES' : ['history writes itself', 'history writes itself', ...]}
 
 (PL)
-Funkcja: neuralSentensPrepare(base: Any) -> dict[str, dict]
+
+    Funkcja: neuralSentensPrepare(base: Any) -> dict[str, dict]
+    
 Opis: Funkcja neuralSentensPrepare przygotowuje zdania do wprowadzenia do sieci neuronowej, zamieniając słowa na tokeny. Zwraca słowniki z informacjami o słownikach słów, kategoriach, identyfikatorach wszystkich zdań i samych zdaniach.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.neuralSentensPrepare(base)
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.neuralSentensPrepare(base)
+    print(result)
+    
 Przykład wyniku:
-{'SLOWNIK_SLOW': {...}, 'SLOWNIK_CAT': {...}, 'ALL_SENTENSES_LID': {...}, 'ALL_SENTENSES': {…}}
+
+    {'SLOWNIK_SLOW': {...}, 'SLOWNIK_CAT': {...}, 'ALL_SENTENSES_LID': {...}, 'ALL_SENTENSES': {…}}
 
 (EN)
-Function: neuralSentensPrepare(base: Any) -> dict[str, dict]
+
+    Function: neuralSentensPrepare(base: Any) -> dict[str, dict]
+    
 Description: The neuralSentensPrepare function prepares sentences for input into the neural network by converting words into tokens. Returns dictionaries with information about word dictionaries, categories, all sentence IDs, and the sentences themselves.
-How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.neuralSentensPrepare(base)
-print(result)
-Result example:
-{'SLOWNIK_SLOW': {...}, 'CAT_DICATORIAL': {...}, 'ALL_SENTENSES_LID': {...}, 'ALL_SENTENSES': {...}}
 
+How to use:
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.neuralSentensPrepare(base)
+    print(result)
+    
+Result example:
+
+    {'SLOWNIK_SLOW': {...}, 'CAT_DICATORIAL': {...}, 'ALL_SENTENSES_LID': {...}, 'ALL_SENTENSES': {...}}
+    
 (PL)
-Funkcja: stats_se(base: Any, se_id: Any) -> dict[str, int] | dict
+
+    Funkcja: stats_se(base: Any, se_id: Any) -> dict[str, int] | dict
+
 Opis: Funkcja stats_se oddaje statystykę dla danego zbioru SE na podstawie identyfikatora se_id. Zwraca słownik z informacjami o liczbie poszczególnych relacji w danym zbiorze.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.stats_se(base, 'SE_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.stats_se(base, 'SE_100')
+    print(result)
+    
 Przykład wyniku:
-{'PO': 1, 'PR': 3, 'OR': 3, 'DO': 3, 'OK': 0, 'VO': 1, 'OZ': 0, 'ZA': 3, 'HW': 3}
+
+    {'PO': 1, 'PR': 3, 'OR': 3, 'DO': 3, 'OK': 0, 'VO': 1, 'OZ': 0, 'ZA': 3, 'HW': 3}
 
 (EN)
-Function: stats_se(base: Any, se_id: Any) -> dict[str, int] | dict
+
+    Function: stats_se(base: Any, se_id: Any) -> dict[str, int] | dict
+    
 Description: The stats_se function returns statistics for a given SE set based on the se_id. Returns a dictionary with information about the number of individual relations in a given set.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.stats_se(base, 'SE_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.stats_se(base, 'SE_100')
+    print(result)
+    
 Result example:
-{'PO': 1, 'PR': 3, 'OR': 3, 'DO': 3, 'OK': 0, 'VO': 1, 'OZ': 0, 'ZA': 3, ' HW': 3}
+
+    {'PO': 1, 'PR': 3, 'OR': 3, 'DO': 3, 'OK': 0, 'VO': 1, 'OZ': 0, 'ZA': 3, ' HW': 3}
 
 (PL)
-Funkcja: golden_se(base: Any, cat_id: Any) -> list
+
+    Funkcja: golden_se(base: Any, cat_id: Any) -> list
+
 Opis: Funkcja golden_se znajduje tzw. "złote" zdania w zbiorze SE na podstawie identyfikatora kategorii cat_id. Zwraca listę identyfikatorów zdaniowych, które są uważane za szczególnie wartościowe w danej kategorii.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.golden_se(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.golden_se(base, 'PO_100')
+    print(result)
+    
 Przykład wyniku:
-['SE_32509', 'SE_83880', 'SE_58694', 'SE_67428', 'SE_56169', …]
+
+    ['SE_32509', 'SE_83880', 'SE_58694', 'SE_67428', 'SE_56169', …]
 
 (EN)
-Function: golden_se(base: Any, cat_id: Any) -> list
+    Function: golden_se(base: Any, cat_id: Any) -> list
+    
 Description: The golden_se function finds the so-called "golden" sentences in the SE set based on the category identifier cat_id. Returns a list of sentence identifiers that are considered particularly valuable in a given category.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.golden_se(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.golden_se(base, 'PO_100')
+    print(result)
+    
 Result example:
-['SE_32509', 'SE_83880', 'SE_58694', 'SE_67428', 'SE_56169', ...]
+
+    ['SE_32509', 'SE_83880', 'SE_58694', 'SE_67428', 'SE_56169', ...]
 
 (PL)
-Funkcja: part_split_IN_OUT(base: Any, cat_id: Any) -> dict[str, set]
+
+    Funkcja: part_split_IN_OUT(base: Any, cat_id: Any) -> dict[str, set]
+    
 Opis: Funkcja part_split_IN_OUT zwraca symbole słów poprzedzających i następujących po wybranym słowie na podstawie jego identyfikatora cat_id. Zwraca słownik, gdzie kluczami są 'IN' (słowa poprzedzające) i 'OUT' (słowa następujące), a wartościami są zbiory symboli słów.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.part_split_IN_OUT(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.part_split_IN_OUT(base, 'PO_100')
+    print(result)
+    
 Przykład wyniku:
-{'IN': {'VO_13', 'VO_40', 'HW_3', 'PR_625', 'HW_1', ...}, 'OUT': {'ZA_234', 'OZ_43', 'HW_7', 'DO_5654', …}}
+
+    {'IN': {'VO_13', 'VO_40', 'HW_3', 'PR_625', 'HW_1', ...}, 'OUT': {'ZA_234', 'OZ_43', 'HW_7', 'DO_5654', …}}
 
 (EN)
-Function: part_split_IN_OUT(base: Any, cat_id: Any) -> dict[str, set]
+
+    Function: part_split_IN_OUT(base: Any, cat_id: Any) -> dict[str, set]
+    
 Description: The part_split_IN_OUT function returns the symbols of the words preceding and following the selected word based on its cat_id. Returns a dictionary where the keys are 'IN' (words preceding) and 'OUT' (words following), and the values are sets of word symbols.
-How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.part_split_IN_OUT(base, 'PO_100')
-print(result)
-Result example:
-{'IN': {'VO_13', 'VO_40', 'HW_3', 'PR_625', 'HW_1', ...}, 'OUT': {'ZA_234', 'OZ_43', 'HW_7', 'DO_5654 ', ...}}
 
+How to use:
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.part_split_IN_OUT(base, 'PO_100')
+    print(result)
+    
+Result example:
+    {'IN': {'VO_13', 'VO_40', 'HW_3', 'PR_625', 'HW_1', ...}, 'OUT': {'ZA_234', 'OZ_43', 'HW_7', 'DO_5654 ', ...}}
 
 (PL)
-Funkcja: find_part_in_SE(base: Any, cat_id: Any) -> list
+
+    Funkcja: find_part_in_SE(base: Any, cat_id: Any) -> list
+    
 Opis: Funkcja find_part_in_SE zwraca symbole zdań ze zbioru SE (zestawu zdań) w których występuje dane słowo na podstawie identyfikatora cat_id.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.find_part_in_SE(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.find_part_in_SE(base, 'PO_100')
+    print(result)
+    
 Przykład wyniku:
-['SE_131', 'SE_1307', 'SE_1378', 'SE_1508', 'SE_2699', …]
+
+    ['SE_131', 'SE_1307', 'SE_1378', 'SE_1508', 'SE_2699', …]
 
 (EN)
-Function: find_part_in_SE(base: Any, cat_id: Any) -> list
+
+    Function: find_part_in_SE(base: Any, cat_id: Any) -> list
+    
 Description: The find_part_in_SE function returns symbols of sentences from the SE set (set of sentences) in which a given word occurs based on the cat_id identifier.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.find_part_in_SE(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.find_part_in_SE(base, 'PO_100')
+    print(result)
+    
 Result example:
-['SE_131', 'SE_1307', 'SE_1378', 'SE_1508', 'SE_2699', ...]
+
+    ['SE_131', 'SE_1307', 'SE_1378', 'SE_1508', 'SE_2699', ...]
 
 (PL)
-Funkcja: part_most_popular(base: Any, item_list: Any, exceping_part: Any | None = None) -> Any | None
+
+    Funkcja: part_most_popular(base: Any, item_list: Any, exceping_part: Any | None = None) -> Any | None
+    
 Opis: Funkcja part_most_popular zwraca najpopularniejsze słowo z listy, na przykład, zbioru SE, pomijając wyjątkowe (jeśli podane) na podstawie identyfikatorów w item_list.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-items = ['PO_100', 'DO_700']
-result = awareness.part_most_popular(base, items, exceping_part='HW')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    items = ['PO_100', 'DO_700']
+    result = awareness.part_most_popular(base, items, exceping_part='HW')
+    print(result)
+    
 Przykład wyniku:
-PO_100
+
+    PO_100
 
 (EN)
-Function: part_most_popular(base: Any, item_list: Any, exceping_part: Any | None = None) -> Any | None
+
+    Function: part_most_popular(base: Any, item_list: Any, exceping_part: Any | None = None) -> Any | None
+
 Description: The part_most_popular function returns the most popular word in a list of, for example, the SE set, omitting unique ones (if provided) based on the identifiers in the item_list.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-items = ['PO_100', 'DO_700']
-result = awareness.part_most_popular(base, items, exceping_part='HW')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    items = ['PO_100', 'DO_700']
+    result = awareness.part_most_popular(base, items, exceping_part='HW')
+    print(result)
+    
 Result example:
-PO_100
+
+    PO_100
 
 (PL)
-Funkcja: find_se_by_LB(base: Any, LB_id: Any) -> set
+
+    Funkcja: find_se_by_LB(base: Any, LB_id: Any) -> set
+    
 Opis: Funkcja find_se_by_LB zwraca zbiór symboli zdań SE, w których występuje słowo o podanym symbolu na podstawie identyfikatora LB_id.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.find_se_by_LB(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.find_se_by_LB(base, 'PO_100')
+    print(result)
+    
 Przykład wyniku:
-{'SE_131', 'SE_2699', 'SE_11883', 'SE_13512', 'SE_45499', ...}
+
+    {'SE_131', 'SE_2699', 'SE_11883', 'SE_13512', 'SE_45499', ...}
 
 (EN)
-Function: find_se_by_LB(base: Any, LB_id: Any) -> set
+
+    Function: find_se_by_LB(base: Any, LB_id: Any) -> set
+    
 Description: The find_se_by_LB function returns a set of SE sentence symbols that contain a word with the given symbol based on the LB_id.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.find_se_by_LB(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.find_se_by_LB(base, 'PO_100')
+    print(result)
+    
 Result example:
-{'SE_131', 'SE_2699', 'SE_11883', 'SE_13512', 'SE_45499', …}
+
+    {'SE_131', 'SE_2699', 'SE_11883', 'SE_13512', 'SE_45499', …}
 
 (PL)
-Funkcja: find_se_by_PO(base: Any, PO_id: Any, cat_id: Any) -> set
+
+    Funkcja: find_se_by_PO(base: Any, PO_id: Any, cat_id: Any) -> set
+    
 Opis: Funkcja find_se_by_PO zwraca zbiór symboli zdań SE, w których występują dwa słowa jednocześnie - jedno o symbolu PO_id i drugie o symbolu cat_id.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.find_se_by_PO(base, 'PO_100', 'DO_5654')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.find_se_by_PO(base, 'PO_100', 'DO_5654')
+    print(result)
+    
 Przykład wyniku:
-{'SE_6138'}
+
+    {'SE_6138'}
 
 (EN)
-Function: find_se_by_PO(base: Any, PO_id: Any, cat_id: Any) -> set
+
+    Function: find_se_by_PO(base: Any, PO_id: Any, cat_id: Any) -> set
+    
 Description: The find_se_by_PO function returns a set of SE sentence symbols in which two words appear at the same time - one with the PO_id symbol and the other with the cat_id symbol.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.find_se_by_PO(base, 'PO_100', 'DO_5654')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.find_se_by_PO(base, 'PO_100', 'DO_5654')
+    print(result)
+    
 Result example:
-{'SE_6138'}
+
+    {'SE_6138'}
 
 (PL)
-Funkcja: find_pharse_in_part(base: Any, word: Any) -> list
+
+    Funkcja: find_pharse_in_part(base: Any, word: Any) -> list
+    
 Opis: Funkcja find_pharse_in_part zwraca listę symboli zdań zawierających dane słowo (jego symbol) na podstawie symbolu słowa word.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.find_pharse_in_part(base, 'kierować')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.find_pharse_in_part(base, 'kierować')
+    print(result)
+    
 Przykład wyniku:
-['OR_584']
+
+    ['OR_584']
 
 (EN)
-Function: find_pharse_in_part(base: Any, word: Any) -> list
+
+    Function: find_pharse_in_part(base: Any, word: Any) -> list
+    
 Description: The find_pharse_in_part function returns a list of symbols for sentences containing a given word (its symbol) based on the symbol of the word word.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.find_pharse_in_part(base, 'direct')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.find_pharse_in_part(base, 'direct')
+    print(result)
+    
 Result example:
-['OR_584']
+
+    ['OR_584']
 
 (PL)
-Funkcja: searcher_phrase(base: Any, sentens: Any) -> set
+
+    Funkcja: searcher_phrase(base: Any, sentens: Any) -> set
+    
 Opis: Funkcja searcher_phrase znajduje zdania, w których występuje podana fraza (słowa oddzielone spacjami).
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.searcher_phrase(base, 'użyć siły')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.searcher_phrase(base, 'użyć siły')
+    print(result)
+    
 Przykład wyniku:
-{'SE_36750', 'SE_54847', 'SE_51866', 'SE_81097', 'SE_11900', …}
+
+    {'SE_36750', 'SE_54847', 'SE_51866', 'SE_81097', 'SE_11900', …}
 
 (EN)
 Function: searcher_phrase(base: Any, sentens: Any) -> set
@@ -1454,349 +1629,493 @@ Result example:
 {'SE_36750', 'SE_54847', 'SE_51866', 'SE_81097', 'SE_11900', …}
 
 (PL)
-Funkcja: stats_part(base: Any, cat_id: Any) -> dict
+
+    Funkcja: stats_part(base: Any, cat_id: Any) -> dict
+    
 Opis: Funkcja stats_part zwraca statystykę dla danego symbolu słowa na podstawie identyfikatora cat_id. Statystyka zawiera informacje na temat liczby zdań, linków, symboli wchodzących i wychodzących, oraz łącznej liczby symboli.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.stats_part(base, 'PO_100')
-print(result)
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.stats_part(base, 'PO_100')
+    print(result)
+    
 Przykład wyniku:
-{'SENTENS': 21, 'LINKS': 21, 'PART-IN': 7, 'PART-OUT': 13, 'TOTAL': 62}
+
+    {'SENTENS': 21, 'LINKS': 21, 'PART-IN': 7, 'PART-OUT': 13, 'TOTAL': 62}
 
 (EN)
-Function: stats_part(base: Any, cat_id: Any) -> dict
+
+    Function: stats_part(base: Any, cat_id: Any) -> dict
+    
 Description: The stats_part function returns statistics for a given word symbol based on the cat_id. Statistics include information on the number of sentences, links, incoming and outgoing symbols, and the total number of symbols.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.stats_part(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.stats_part(base, 'PO_100')
+    print(result)
+    
 Result example:
-{'SENTENS': 21, 'LINKS': 21, 'PART-IN': 7, 'PART-OUT': 13, 'TOTAL': 62}
+
+    {'SENTENS': 21, 'LINKS': 21, 'PART-IN': 7, 'PART-OUT': 13, 'TOTAL': 62}
 
 (PL)
-Funkcja: generator_AI_most_popular(base: Any, cat_start_id: Any, no_words: int = 5, exceping_part: Any | None = None) -> dict
+
+    Funkcja: generator_AI_most_popular(base: Any, cat_start_id: Any, no_words: int = 5, exceping_part: Any | None = None) -> dict
+
 Opis: Funkcja generator_AI_most_popular zwraca string wygenerowanego zdania i listę symboli dla wygenerowanych słów. Generuje zdanie na podstawie symbolu słowa cat_start_id, używając najpopularniejszych słów (z wyjątkiem tych podanych w exceping_part) jako kontekstu. Możesz określić ilość słów w generowanym zdaniu za pomocą no_words.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.generator_AI_most_popular(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.generator_AI_most_popular(base, 'PO_100')
+    print(result)
+    
 Przykład wyniku:
-{'STRING': 'różnica w to', 'ID': ['PO_100', 'ZA_3', 'HW_1']}
+
+    {'STRING': 'różnica w to', 'ID': ['PO_100', 'ZA_3', 'HW_1']}
 
 (EN)
-Function: generator_AI_most_popular(base: Any, cat_start_id: Any, no_words: int = 5, exceping_part: Any | None = None) -> dict
+    
+    Function: generator_AI_most_popular(base: Any, cat_start_id: Any, no_words: int = 5, exceping_part: Any | None = None) -> dict
+
 Description: The generator_AI_most_popular function returns a string of the generated sentence and a list of symbols for the generated words. Generates a sentence based on the word symbol cat_start_id, using the most common words (except those provided in exceping_part) as context. You can specify the number of words in the generated sentence using no_words.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.generator_AI_most_popular(base, 'PO_100')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.generator_AI_most_popular(base, 'PO_100')
+    print(result)
+    
 Result example:
-{'STRING': 'difference in', 'ID': ['PO_100', 'ZA_3', 'HW_1']}
+
+    {'STRING': 'difference in', 'ID': ['PO_100', 'ZA_3', 'HW_1']}
 
 (PL)
-Funkcja: generator_AI_se(base: Any, seed: str) -> str
+
+    Funkcja: generator_AI_se(base: Any, seed: str) -> str
+
 Opis: Funkcja generator_AI_se generuje zdanie według określonego schematu odpowiadającego symbolom części zdania. Możesz określić schemat zdania jako ciąg symboli części zdania, np. 'PO, OR, ZA, OK, DO', a funkcja wygeneruje zdanie według tego schematu.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.generator_AI_se(base, 'samochód', 'PO, OR, ZA, OK, DO')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.generator_AI_se(base, 'samochód', 'PO, OR, ZA, OK, DO')
+    print(result)
+    
 Przykład wyniku:
-samochód lub całkowicie samochód
+
+    samochód lub całkowicie samochód
 
 (EN)
-Function: generator_AI_se(base: Any, seed: str) -> str
+
+    Function: generator_AI_se(base: Any, seed: str) -> str
+    
 Description: The generator_AI_se function generates a sentence according to a specific pattern corresponding to the symbols of the sentence parts. You can define a sentence schema as a sequence of sentence part symbols, e.g. 'PO, OR, FOR, OK, DO', and the function will generate a sentence according to this schema.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.generator_AI_se(base, 'car', 'PO, OR, ZA, OK, DO')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.generator_AI_se(base, 'car', 'PO, OR, ZA, OK, DO')
+    print(result)
+    
 Result example:
-car or completely car
+
+    car or completely car
 
 (PL)
-Funkcja: check_list_to_list(list_a: list, list_b: list) -> bool
+
+    Funkcja: check_list_to_list(list_a: list, list_b: list) -> bool
+    
 Opis: Funkcja check_list_to_list porównuje dwie listy ze sobą i zwraca True, jeśli przynajmniej jeden element jest wspólny, lub False, jeśli nie ma wspólnych elementów.
+
 Sposób użycia:
-python
-import awareness
-list_a, list_b = ([1, 2, 3], [3, 4, 5])
-result = awareness.check_list_to_list(list_a, list_b)
-print(result)
+
+##### python
+    import awareness
+    list_a, list_b = ([1, 2, 3], [3, 4, 5])
+    result = awareness.check_list_to_list(list_a, list_b)
+    print(result)
+    
 Przykład wyniku:
-True
+
+    True
 
 (EN)
-Function: check_list_to_list(list_a: list, list_b: list) -> bool
+
+    Function: check_list_to_list(list_a: list, list_b: list) -> bool
+
 Description: The check_list_to_list function compares two lists with each other and returns True if at least one element is common, or False if there are no common elements.
+
 How to use:
-python
-import awareness
-list_a, list_b = ([1, 2, 3], [3, 4, 5])
-result = awareness.check_list_to_list(list_a, list_b)
-print(result)
+
+##### python
+    import awareness
+    list_a, list_b = ([1, 2, 3], [3, 4, 5])
+    result = awareness.check_list_to_list(list_a, list_b)
+    print(result)
+    
 Result example:
-True
+
+    True
 
 (PL)
-Funkcja: sentens_generator_AI(base: Any, seed: str) -> dict
+
+    Funkcja: sentens_generator_AI(base: Any, seed: str) -> dict
+
 Opis: Funkcja sentens_generator_AI generuje zdania na podstawie podanej frazy jako ziarna. Fraza może zawierać słowa oddzielone spacjami. Funkcja zwraca listę wygenerowanych zdań oraz słownik DICT-ID, który pozwala powiązać wygenerowane zdania z symbolami słów użytych w tych zdaniach.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.sentens_generator_AI(base, 'łączy dwa zdania ze sobą')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.sentens_generator_AI(base, 'łączy dwa zdania ze sobą')
+    print(result)
+    
 Przykład wyniku:
-{'LIST': ['Orzeczenie to część zdania w którym się znajduje , lub o procesie , któremu podlega.', 'Zdania informująca o w nim możliwości lub kilka naraz.', 'Dwa jej w celu uzyskania potomstwa dziedziczącego nowe cechy.', 'Łączy się w związku chemicznym.'], 'DICT-ID': {'łączy się w': ['OR_430', 'ZA_5', 'ZA_3'], 'dwa jej': ['OZ_70', 'ZA_80', 'ZA_3'], 'dwa przedmioty': ['PR_723', 'DO_184', 'ZA_3'], 'dwa miejsca': ['OK_10', 'DO_12', 'ZA_3'], 'zdania w': ['DO_71', 'ZA_3'], 'zdania informująca w': ['OR_12276', 'OK_2680', 'ZA_11', 'ZA_3']}, 'SENTENS': 'łączy dwa zdania ze sobą', 'WORDS': {'łączy': ['DO_14670', 'OR_430'], 'dwa': ['OZ_70', 'PR_723', 'OK_10'], 'zdania': ['DO_71', 'OR_12276'], 'ze': ['ZA_243'], 'sobą': ['ZA_115']}}
+
+    {'LIST': ['Orzeczenie to część zdania w którym się znajduje , lub o procesie , któremu podlega.', 'Zdania informująca o w nim możliwości lub kilka naraz.', 'Dwa jej w celu uzyskania potomstwa dziedziczącego nowe cechy.', 'Łączy się w związku chemicznym.'], 'DICT-ID': {'łączy się w': ['OR_430', 'ZA_5', 'ZA_3'], 'dwa jej': ['OZ_70', 'ZA_80', 'ZA_3'], 'dwa przedmioty': ['PR_723', 'DO_184', 'ZA_3'], 'dwa miejsca': ['OK_10', 'DO_12', 'ZA_3'], 'zdania w': ['DO_71', 'ZA_3'], 'zdania informująca w': ['OR_12276', 'OK_2680', 'ZA_11', 'ZA_3']}, 'SENTENS': 'łączy dwa zdania ze sobą', 'WORDS': {'łączy': ['DO_14670', 'OR_430'], 'dwa': ['OZ_70', 'PR_723', 'OK_10'], 'zdania': ['DO_71', 'OR_12276'], 'ze': ['ZA_243'], 'sobą': ['ZA_115']}}
 
 (EN)
-Function: sentens_generator_AI(base: Any, seed: str) -> dict
+
+    Function: sentens_generator_AI(base: Any, seed: str) -> dict
+    
 Description: The sentens_generator_AI function generates sentences based on the given phrase as a seed. A phrase can contain words separated by spaces. The function returns a list of generated sentences and a DICT-ID dictionary that allows you to associate the generated sentences with the symbols of the words used in these sentences.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.sentens_generator_AI(base, 'connects two sentences together')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.sentens_generator_AI(base, 'connects two sentences together')
+    print(result)
+    
 Result example:
-{'LIST': ['A predicate is part of a sentence in which it is found, or about a process to which it is subject.', 'A sentence informing about a possibility in it or several at once.', 'Two of them in order to obtain offspring inheriting new features.', 'Combines in a chemical compound.'], 'DICT-ID': {'combines in': ['OR_430', 'ZA_5', 'ZA_3'], 'two hers': ['OZ_70', 'ZA_80' , 'ZA_3'], 'two items': ['PR_723', 'DO_184', 'ZA_3'], 'two places': ['OK_10', 'DO_12', 'ZA_3'], 'sentences in': [ 'DO_71', 'ZA_3'], 'sentence informing in': ['OR_12276', 'OK_2680', 'ZA_11', 'ZA_3']}, 'SENTENS': 'connects two sentences together', 'WORDS': {'connects': ['DO_14670', 'OR_430'], 'two': ['OZ_70', 'PR_723', 'OK_10'], 'sentences': ['DO_71', 'OR_12276'], 'with' : ['ZA_243'], 'myself': ['ZA_115']}}
+
+    {'LIST': ['A predicate is part of a sentence in which it is found, or about a process to which it is subject.', 'A sentence informing about a possibility in it or several at once.', 'Two of them in order to obtain offspring inheriting new features.', 'Combines in a chemical compound.'], 'DICT-ID': {'combines in': ['OR_430', 'ZA_5', 'ZA_3'], 'two hers': ['OZ_70', 'ZA_80' , 'ZA_3'], 'two items': ['PR_723', 'DO_184', 'ZA_3'], 'two places': ['OK_10', 'DO_12', 'ZA_3'], 'sentences in': [ 'DO_71', 'ZA_3'], 'sentence informing in': ['OR_12276', 'OK_2680', 'ZA_11', 'ZA_3']}, 'SENTENS': 'connects two sentences together', 'WORDS': {'connects': ['DO_14670', 'OR_430'], 'two': ['OZ_70', 'PR_723', 'OK_10'], 'sentences': ['DO_71', 'OR_12276'], 'with' : ['ZA_243'], 'myself': ['ZA_115']}}
 
 (PL)
-Funkcja: save_ver(project_name: str, var_name: str, data: Any) -> bool
+
+    Funkcja: save_ver(project_name: str, var_name: str, data: Any) -> bool
+
 Opis: Funkcja save_ver służy do zapisywania danych w określonym projekcie. Dane są skojarzone z określoną nazwą zmiennej var_name w projekcie o nazwie project_name. Zapisuje dowolne struktury danych takie jak string, lista, set, słownik itp.
+
 Sposób użycia:
-python
-import awareness
-var = 'String'
-result = awareness.save_ver('project_Name', 'ver', var)
-print(result)
+
+##### python
+    import awareness
+    var = 'String'
+    result = awareness.save_ver('project_Name', 'ver', var)
+    print(result)
+    
 Przykład wyniku:
-True
+
+    True
 
 (EN)
-Function: save_ver(project_name: str, var_name: str, data: Any) -> bool
+
+    Function: save_ver(project_name: str, var_name: str, data: Any) -> bool
+
 Description: The save_ver function is used to save data to a specific project. Data is associated with a specific variable name var_name in the project called project_name. Saves any data structures such as string, list, set, dictionary, etc.
+
 How to use:
-python
-import awareness
-var = 'String'
-result = awareness.save_ver('project_Name', 'ver', var)
-print(result)
+
+##### python
+    import awareness
+    var = 'String'
+    result = awareness.save_ver('project_Name', 'ver', var)
+    print(result)
+
 Result example:
-True
+
+    True
 
 (PL)
-Funkcja: open_all(project_name: str) -> dict
+
+    Funkcja: open_all(project_name: str) -> dict
+
 Opis: Funkcja open_all otwiera wszystkie dane zapisane w określonym projekcie o nazwie project_name i zwraca je jako słownik, gdzie klucze to nazwy zmiennych, a wartości to dane skojarzone z tymi zmiennymi.
+
 Sposób użycia:
-python
-import awareness
-result = awareness.open_all('project_Name')
-print(result)
+
+##### python
+    import awareness
+    result = awareness.open_all('project_Name')
+    print(result)
+    
 Przykład wyniku:
-{'ver': 'String'}
+
+    {'ver': 'String'}
 
 (EN)
-Function: open_all(project_name: str) -> dict
+
+    Function: open_all(project_name: str) -> dict
+
 Description: The open_all function opens all data stored in a specific project named project_name and returns it as a dictionary, where keys are variable names and values are data associated with those variables.
+
 How to use:
-python
-import awareness
-result = awareness.open_all('project_Name')
-print(result)
+
+##### python
+    import awareness
+    result = awareness.open_all('project_Name')
+    print(result)
+    
 Result example:
-{'ver': 'String'}
+
+    {'ver': 'String'}
 
 (PL)
-Funkcja: open_ver(project_name: str, var_name: str) -> Any
+
+    Funkcja: open_ver(project_name: str, var_name: str) -> Any
+
 Opis: Funkcja open_ver służy do otwierania wybranych danych z projektu. Możesz podać nazwę projektu project_name i nazwę zmiennej var_name, a funkcja zwróci dane skojarzone z tą nazwą zmiennej w projekcie.
+
 Sposób użycia:
-python
-import awareness
-result = awareness.open_ver('project_Name', 'ver')
-print(result)
+
+##### python
+    import awareness
+    result = awareness.open_ver('project_Name', 'ver')
+    print(result)
+    
 Przykład wyniku:
-'String'
+
+    'String'
 
 (EN)
-Function: open_ver(project_name: str, var_name: str) -> Any
+
+    Function: open_ver(project_name: str, var_name: str) -> Any
+
 Description: The open_ver function is used to open selected data from the project. You can provide a project name project_name and a variable name var_name, and the function will return the data associated with that variable name in the project.
+
 How to use:
+
 python
-import awareness
-result = awareness.open_ver('project_Name', 'ver')
-print(result)
+    import awareness
+    result = awareness.open_ver('project_Name', 'ver')
+    print(result)
+    
 Result example:
-'String'
+
+    'String'
 
 (PL)
-Funkcja: delete_project(project_name: str) -> bool
+
+    Funkcja: delete_project(project_name: str) -> bool
+
 Opis: Funkcja delete_project służy do usuwania całego projektu wraz z zapisanymi danymi. Jeśli projekt o nazwie project_name istnieje, zostanie usunięty, a funkcja zwróci True. W przeciwnym przypadku zwróci False.
+
 Sposób użycia:
-python
-import awareness
-result = awareness.delete_project('project_Name')
-print(result)
+
+##### python
+    import awareness
+    result = awareness.delete_project('project_Name')
+    print(result)
+    
 Przykład wyniku:
-True
+
+    True
 
 (EN)
-Function: delete_project(project_name: str) -> bool
+
+    Function: delete_project(project_name: str) -> bool
+    
 Description: The delete_project function is used to delete the entire project along with saved data. If a project named project_name exists, it will be deleted and the function will return True. Otherwise it will return False.
+
 How to use:
-python
-import awareness
-result = awareness.delete_project('project_Name')
-print(result)
+
+##### python
+    import awareness
+    result = awareness.delete_project('project_Name')
+    print(result)
+    
 Result example:
-True
+
+    True
 
 (PL)
-Funkcja: delete_ver(project_name: str, var_name: str) -> bool
+
+    Funkcja: delete_ver(project_name: str, var_name: str) -> bool
+    
 Opis: Funkcja delete_ver służy do usuwania danych skojarzonych z określoną nazwą zmiennej var_name w projekcie o nazwie project_name. Jeśli nazwa zmiennej i projektu istnieje, to dane zostaną usunięte, a funkcja zwróci True. W przeciwnym przypadku zwróci False.
+
 Sposób użycia:
-python
-import awareness
-result = awareness.delete_ver('project_Name', 'ver')
-print(result)
+
+##### python
+    import awareness
+    result = awareness.delete_ver('project_Name', 'ver')
+    print(result)
+    
 Przykład wyniku:
-True
+
+    True
 
 Te funkcje pozwalają na zapisywanie, odczytywanie i zarządzanie danymi w projektach.
 
 (EN)
-Function: delete_ver(project_name: str, var_name: str) -> bool
+
+    Function: delete_ver(project_name: str, var_name: str) -> bool
+
 Description: The delete_ver function is used to delete data associated with the specified var_name variable name in a project named project_name. If the variable and project names exist, the data will be deleted and the function will return True. Otherwise it will return False.
+
 How to use:
-python
-import awareness
-result = awareness.delete_ver('project_Name', 'ver')
-print(result)
+
+##### python
+    import awareness
+    result = awareness.delete_ver('project_Name', 'ver')
+    print(result)
+    
 Result example:
-True
+
+    True
 
 These functions allow you to save, read and manage data in your projects.
 
 (PL)
-Funkcja part_speach jest używana do rozpoznawania rodzaju części mowy słowa. Oto przykład jej użycia:
-python
-import awareness
-result = awareness.part_speach('samochód')
-print(result)
+### Funkcja part_speach jest używana do rozpoznawania rodzaju części mowy słowa. 
+
+Oto przykład jej użycia:
+
+##### python
+    import awareness
+    result = awareness.part_speach('samochód')
+    print(result)
+    
 Przykład wyniku:
-[['rzeczownik', 'samochód']]
+
+    [['rzeczownik', 'samochód']]
+
 Funkcja zwraca listę, gdzie pierwszym elementem jest rozpoznany rodzaj części mowy (np. 'rzeczownik'), a drugim elementem jest analizowane słowo (np. 'samochód'). Możesz używać tej funkcji, aby analizować części mowy różnych słów w tekście
 
 (EN)
-The part_speach function is used to recognize the type of part of speech of a word. Here is an example of its use:
-python
-import awareness
-result = awareness.part_speach('car')
-print(result)
+### The part_speach function is used to recognize the type of part of speech of a word. 
+
+Here is an example of its use:
+
+##### python
+    import awareness
+    result = awareness.part_speach('car')
+    print(result)
+    
 Result example:
-[['noun', 'car']]
+
+    [['noun', 'car']]
+    
 The function returns a list, where the first element is the recognized type of part of speech (e.g. 'noun'), and the second element is the word being analyzed (e.g. 'car'). You can use this feature to analyze the parts of speech of different words in text
 
 
 (PL)
-Funkcja dicson_brain służy do uzyskiwania zestawu danych dotyczących podanego zdania. Oto przykład jej użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.dicson_brain(base, 'co robi samochód')
-print(result)
+### Funkcja dicson_brain służy do uzyskiwania zestawu danych dotyczących podanego zdania. 
+
+Oto przykład jej użycia:
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.dicson_brain(base, 'co robi samochód')
+    print(result)
+    
 Przykład wyniku:
-{
-  'ASK-LIST': ['ZA_19', 'OR_2120', 'DO_11952'],
-  'OPERATION': {
-    'SE_20270': [      ['PO_5344', 'OZ_1796', 'DO_4634'],
-      ['OR_2120'],
-      ['PO_4230', 'DO_4634', 'OZ_394', 'ZA_3', 'DO_11410', 'ZA_108', 'DO_11411', 'DO_4634', 'OZ_4220']
-    ],
-    'SE_8387': [      ['PO_2', 'DO_7007'],
-      ['OR_2120'],
-      ['PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9']
-    ],
-    'SE_3': [      ['PO_2', 'OZ_2'],
-      ['OR_2120'],
-      ['PO_1', 'OR_4', 'ZA_2', 'DO_10', 'DO_11', 'HW_3', 'VO_1']
-    ],
-    'SE_2': [      ['PO_2'],
-      ['OR_2120'],
-      ['PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9']
-    ],
-    'SE_1': [      ['PO_2'],
-      ['OR_2120'],
-      ['PO_3', 'ZA_1', 'DO_1', 'OZ_1', 'DO_2', 'HW_2', 'PO_4', 'ZA_2', 'DO_3', 'DO_4', 'HW_3', 'DO_5']
-    ]
-  },
-  'TECHNICAL': {
-    'SE_20270': [      'PO_5344', 'OZ_1796', 'DO_4634', 'OR_2120', 'PO_4230', 'DO_4634', 'OZ_394', 'ZA_3', 'DO_11410', 'ZA_108', 'DO_11411', 'DO_4634', 'OZ_4220'    ],
-    'SE_8387': [      'PO_2', 'DO_7007', 'OR_2120', 'PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9'    ],
-    'SE_3': [      'PO_2', 'OZ_2', 'OR_2120', 'PO_1', 'OR_4', 'ZA_2', 'DO_10', 'DO_11', 'HW_3', 'VO_1'    ],
-    'SE_2': [      'PO_2', 'OR_2120', 'PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9'    ],
-    'SE_1': [      'PO_2', 'OR_2120', 'PO_3', 'ZA_1', 'DO_1', 'OZ_1', 'DO_2', 'HW_2', 'PO_4', 'ZA_2', 'DO_3', 'DO_4', 'HW_3', 'DO_5'    ]
-  },
-  'ANSWERS-LIST': [    'Samochód pułapka robi samochód , w którym podłożono materiał wybuchowy w celu dokonania zamachu ',    'Samochód robi samochód , w którym podłożono materiał wybuchowy w celu dokonania zamachu ',    'Samochód sanitarny robi samochód przystosowany do przewożenia chorych lub rannych ',    'Samochód robi pojazd na kołach napędzany silnikiem , służący do przewozu osób lub ładunków ',    'Przegląd zerowy samochodu robi przegląd samochodu dokonywany w salonie przed wydaniem samochodu kupującemu '  ],
-  'RANDOM-ANSWER': 'Samochód robi samochód , w którym podłożono materiał wybuchowy w celu dokonania zamachu ',
-  'FOUND': True
-}
+
+    {
+      'ASK-LIST': ['ZA_19', 'OR_2120', 'DO_11952'],
+      'OPERATION': {
+        'SE_20270': [      ['PO_5344', 'OZ_1796', 'DO_4634'],
+          ['OR_2120'],
+          ['PO_4230', 'DO_4634', 'OZ_394', 'ZA_3', 'DO_11410', 'ZA_108', 'DO_11411', 'DO_4634', 'OZ_4220']
+        ],
+        'SE_8387': [      ['PO_2', 'DO_7007'],
+          ['OR_2120'],
+          ['PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9']
+        ],
+        'SE_3': [      ['PO_2', 'OZ_2'],
+          ['OR_2120'],
+          ['PO_1', 'OR_4', 'ZA_2', 'DO_10', 'DO_11', 'HW_3', 'VO_1']
+        ],
+        'SE_2': [      ['PO_2'],
+          ['OR_2120'],
+          ['PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9']
+        ],
+        'SE_1': [      ['PO_2'],
+          ['OR_2120'],
+          ['PO_3', 'ZA_1', 'DO_1', 'OZ_1', 'DO_2', 'HW_2', 'PO_4', 'ZA_2', 'DO_3', 'DO_4', 'HW_3', 'DO_5']
+        ]
+      },
+      'TECHNICAL': {
+        'SE_20270': [      'PO_5344', 'OZ_1796', 'DO_4634', 'OR_2120', 'PO_4230', 'DO_4634', 'OZ_394', 'ZA_3', 'DO_11410', 'ZA_108', 'DO_11411', 'DO_4634', 'OZ_4220'    ],
+        'SE_8387': [      'PO_2', 'DO_7007', 'OR_2120', 'PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9'    ],
+        'SE_3': [      'PO_2', 'OZ_2', 'OR_2120', 'PO_1', 'OR_4', 'ZA_2', 'DO_10', 'DO_11', 'HW_3', 'VO_1'    ],
+        'SE_2': [      'PO_2', 'OR_2120', 'PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9'    ],
+        'SE_1': [      'PO_2', 'OR_2120', 'PO_3', 'ZA_1', 'DO_1', 'OZ_1', 'DO_2', 'HW_2', 'PO_4', 'ZA_2', 'DO_3', 'DO_4', 'HW_3', 'DO_5'    ]
+      },
+      'ANSWERS-LIST': [    'Samochód pułapka robi samochód , w którym podłożono materiał wybuchowy w celu dokonania zamachu ',    'Samochód robi samochód , w którym podłożono materiał wybuchowy w celu dokonania zamachu ',    'Samochód sanitarny robi samochód przystosowany do przewożenia chorych lub rannych ',    'Samochód robi pojazd na kołach napędzany silnikiem , służący do przewozu osób lub ładunków ',    'Przegląd zerowy samochodu robi przegląd samochodu dokonywany w salonie przed wydaniem samochodu kupującemu '  ],
+      'RANDOM-ANSWER': 'Samochód robi samochód , w którym podłożono materiał wybuchowy w celu dokonania zamachu ',
+      'FOUND': True
+    }
+    
 Funkcja zwraca zestaw danych zawierający listę symboli, operacje związków między symbolami, dane techniczne, listę odpowiedzi oraz wybraną odpowiedź losową.
 
 
 (EN)
-The dicson_brain function is used to obtain a set of data about the given sentence. Here is an example of its use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.dicson_brain(base, 'what the car does')
-print(result)
+
+### The dicson_brain function is used to obtain a set of data about the given sentence. 
+
+Here is an example of its use:
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.dicson_brain(base, 'what the car does')
+    print(result)
+    
 Result example:
-{
-   'ASK-LIST': ['ZA_19', 'OR_2120', 'DO_11952'],
-   'OPERATION': {
-     'SE_20270': [ ['PO_5344', 'OZ_1796', 'DO_4634'],
-       ['OR_2120'],
-       ['PO_4230', 'DO_4634', 'OZ_394', 'ZA_3', 'DO_11410', 'ZA_108', 'DO_11411', 'DO_4634', 'OZ_4220']
-     ],
-     'SE_8387': [ ['PO_2', 'DO_7007'],
-       ['OR_2120'],
-       ['PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9']
-     ],
-     'SE_3': [ ['PO_2', 'OZ_2'],
-       ['OR_2120'],
-       ['PO_1', 'OR_4', 'ZA_2', 'DO_10', 'DO_11', 'HW_3', 'VO_1']
-     ],
-     'SE_2': [ ['PO_2'],
-       ['OR_2120'],
-       ['PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9']
-     ],
-     'SE_1': [ ['PO_2'],
-       ['OR_2120'],
-       ['PO_3', 'ZA_1', 'DO_1', 'OZ_1', 'DO_2', 'HW_2', 'PO_4', 'ZA_2', 'DO_3', 'DO_4', 'HW_3', 'DO_5']
-     ]
-   },
-   'TECHNICAL': {
-     'SE_20270': [ 'PO_5344', 'OZ_1796', 'DO_4634', 'OR_2120', 'PO_4230', 'DO_4634', 'OZ_394', 'ZA_3', 'DO_11410', 'ZA_108', 'DO_11411', ' DO_4634', 'OZ_4220' ],
-     'SE_8387': [ 'PO_2', 'DO_7007', 'OR_2120', 'PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', ' DO_7', 'DO_8', 'DO_9' ],
-     'SE_3': [ 'PO_2', 'OZ_2', 'OR_2120', 'PO_1', 'OR_4', 'ZA_2', 'DO_10', 'DO_11', 'HW_3', 'VO_1' ],
-     'SE_2': [ 'PO_2', 'OR_2120', 'PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', ' DO_8', 'DO_9' ],
-     'SE_1': [ 'PO_2', 'OR_2120', 'PO_3', 'ZA_1', 'DO_1', 'OZ_1', 'DO_2', 'HW_2', 'PO_4', 'ZA_2', 'DO_3', ' DO_4', 'HW_3', 'DO_5' ]
-   },
-   'ANSWERS-LIST': ['A car trap makes a car in which an explosive was planted in order to commit an attack', 'A car trap makes a car in which an explosive was planted in order to commit an attack', 'The sanitary car makes a car adapted to transport sick people or injured ', 'A car is a vehicle on wheels powered by an engine, used to transport people or loads', 'Zero car inspection is an inspection of the car carried out in the showroom before handing over the car to the buyer' ],
-   'RANDOM-ANSWER': 'Car makes a car in which an explosive was planted to commit an attack',
-   'FOUND': True
-}
+
+    {
+       'ASK-LIST': ['ZA_19', 'OR_2120', 'DO_11952'],
+       'OPERATION': {
+         'SE_20270': [ ['PO_5344', 'OZ_1796', 'DO_4634'],
+           ['OR_2120'],
+           ['PO_4230', 'DO_4634', 'OZ_394', 'ZA_3', 'DO_11410', 'ZA_108', 'DO_11411', 'DO_4634', 'OZ_4220']
+         ],
+         'SE_8387': [ ['PO_2', 'DO_7007'],
+           ['OR_2120'],
+           ['PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9']
+         ],
+         'SE_3': [ ['PO_2', 'OZ_2'],
+           ['OR_2120'],
+           ['PO_1', 'OR_4', 'ZA_2', 'DO_10', 'DO_11', 'HW_3', 'VO_1']
+         ],
+         'SE_2': [ ['PO_2'],
+           ['OR_2120'],
+           ['PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', 'DO_8', 'DO_9']
+         ],
+         'SE_1': [ ['PO_2'],
+           ['OR_2120'],
+           ['PO_3', 'ZA_1', 'DO_1', 'OZ_1', 'DO_2', 'HW_2', 'PO_4', 'ZA_2', 'DO_3', 'DO_4', 'HW_3', 'DO_5']
+         ]
+       },
+       'TECHNICAL': {
+         'SE_20270': [ 'PO_5344', 'OZ_1796', 'DO_4634', 'OR_2120', 'PO_4230', 'DO_4634', 'OZ_394', 'ZA_3', 'DO_11410', 'ZA_108', 'DO_11411', ' DO_4634', 'OZ_4220' ],
+         'SE_8387': [ 'PO_2', 'DO_7007', 'OR_2120', 'PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', ' DO_7', 'DO_8', 'DO_9' ],
+         'SE_3': [ 'PO_2', 'OZ_2', 'OR_2120', 'PO_1', 'OR_4', 'ZA_2', 'DO_10', 'DO_11', 'HW_3', 'VO_1' ],
+         'SE_2': [ 'PO_2', 'OR_2120', 'PO_1', 'HW_2', 'ZA_3', 'ZA_4', 'OR_2', 'DO_6', 'OK_1', 'ZA_3', 'DO_7', ' DO_8', 'DO_9' ],
+         'SE_1': [ 'PO_2', 'OR_2120', 'PO_3', 'ZA_1', 'DO_1', 'OZ_1', 'DO_2', 'HW_2', 'PO_4', 'ZA_2', 'DO_3', ' DO_4', 'HW_3', 'DO_5' ]
+       },
+       'ANSWERS-LIST': ['A car trap makes a car in which an explosive was planted in order to commit an attack', 'A car trap makes a car in which an explosive was planted in order to commit an attack', 'The sanitary car makes a car adapted to transport sick people or injured ', 'A car is a vehicle on wheels powered by an engine, used to transport people or loads', 'Zero car inspection is an inspection of the car carried out in the showroom before handing over the car to the buyer' ],
+       'RANDOM-ANSWER': 'Car makes a car in which an explosive was planted to commit an attack',
+       'FOUND': True
+    }
+
 The function returns a data set containing a list of symbols, symbol relationship operations, technical data, a list of responses, and a selected random response.
