@@ -31,14 +31,15 @@ The Awareness Library is a versatile and powerful tool that has found its applic
 If you need more detailed information about specific functions and their applications, please refer to the Awareness Library documentation.
 
 (PL)
-Moduł Sam_g (Rozpoznawanie Samogłoski)
-Opis: Funkcja sam_g rozpoznaje samogłoski w podanym tekście.
-Funkcja: sam_g(x: Any) -> bool
+# Moduł Sam_g (Rozpoznawanie Samogłoski)
+## Opis: Funkcja sam_g rozpoznaje samogłoski w podanym tekście.
+    Funkcja: sam_g(x: Any) -> bool
+
 Przykład:
-python
-import awareness
-print(awareness.sam_g('x'))  # False
-print(awareness.sam_g('a'))  # True
+## python
+    import awareness
+    print(awareness.sam_g('x'))  # False
+    print(awareness.sam_g('a'))  # True
 
 (EN)
 Sam_g Module (Vowel Recognition)
