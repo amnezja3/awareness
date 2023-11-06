@@ -88,6 +88,7 @@ If you need more detailed information about specific functions and their applica
 ### Moduł Sam_g (Rozpoznawanie Samogłoski)
 
 Opis: Funkcja sam_g rozpoznaje samogłoski w podanym tekście.
+
     Funkcja: sam_g(x: Any) -> bool
 
 Przykład:
@@ -100,7 +101,8 @@ Przykład:
 ### Sam_g Module (Vowel Recognition)
 
 Description: The sam_g function recognizes vowels in text.
-Function: sam_g(x: Any) -> bool
+
+    Function: sam_g(x: Any) -> bool
 
 Example:
 ##### python
@@ -112,6 +114,7 @@ Example:
 ### Moduł Sufix (Rozpoznawanie Sufiksów)
 
 Opis: Funkcja sufix zwraca sufiksy dla podanego słowa.
+
     Funkcja: sufix(word: Any) -> Any
 
 Przykład:
@@ -124,6 +127,7 @@ Przykład:
 ### Sufix Module (Suffix Recognizer)
 
 Description: The suffix function returns suffixes for the given word.
+
     Function: suffix(word: Any) -> Any
     
 Example:
@@ -137,6 +141,7 @@ Example:
 ### Moduł Check_v_list (Sprawdza czy jakiś element znajduje się na liście)
 
 Opis: Funkcja check_v_list sprawdza, czy dany element znajduje się na liście.
+
     Funkcja: check_v_list(x_list: Any, v: Any, option: str = 'True') -> (bool | int | None)
     
 Przykład:
@@ -148,85 +153,115 @@ Przykład:
     print(awareness.check_v_list(lista, 1))  # True
 
 (EN)
-Check_v_list module (Checks if an item is in the list)
+### Check_v_list module (Checks if an item is in the list)
+
 Description: The check_v_list function checks whether an item is in the list.
-Function: check_v_list(x_list: Any, v: Any, option: str = 'True') -> (bool | int | None)
+
+    Function: check_v_list(x_list: Any, v: Any, option: str = 'True') -> (bool | int | None)
+    
 Example:
-python
-import awareness
-list = [1, 2, 4, 5, 5, 6]
-print(awareness.check_v_list(list, 3)) # False
-print(awareness.check_v_list(list, 1)) # True
+
+##### python
+    import awareness
+    list = [1, 2, 4, 5, 5, 6]
+    print(awareness.check_v_list(list, 3)) # False
+    print(awareness.check_v_list(list, 1)) # True
 
 (PL)
-Moduł Kind_sex_word (Rozpoznawanie Rodzaje Słowa)
+### Moduł Kind_sex_word (Rozpoznawanie Rodzaje Słowa)
+
 Opis: Funkcja kind_sex_word rozpoznaje rodzaj słowa, tj. męski (M), żeński (Z) lub nijaki (N).
-Funkcja: kind_sex_word(word: Any) -> (Literal['Z', 'N', 'M'] | None)
+
+    Funkcja: kind_sex_word(word: Any) -> (Literal['Z', 'N', 'M'] | None)
+    
 Przykład:
-python
+
+##### python
   import awareness
   print(awareness.kind_sex_word('samochód'))  # 'M'
   print(awareness.kind_sex_word('kobieta'))  # 'Z'
 
 (EN)
-Kind_sex_word module (Recognizing Kinds of Words)
+### Kind_sex_word module (Recognizing Kinds of Words)
+
 Description: The kind_sex_word function recognizes the gender of a word, i.e. masculine (M), feminine (Z), or neuter (N).
 
-Function: kind_sex_word(word: Any) -> (Literal['Z', 'N', 'M'] | None)
+    Function: kind_sex_word(word: Any) -> (Literal['Z', 'N', 'M'] | None)
+
 Example:
-python
+
+##### python
   import awareness
   print(awareness.kind_sex_word('car')) # 'M'
   print(awareness.kind_sex_word('woman')) # 'Z'
 
 (PL)
-Moduł LPM (Rozpoznawanie Liczby Słowa)
+### Moduł LPM (Rozpoznawanie Liczby Słowa)
+
 Opis: Funkcja lpm rozpoznaje, czy liczba słowa jest liczba mnogą (LM), pojedynczą (LP) lub nijaką (LN).
-Funkcja: lpm(word: Any) -> Literal['LM', 'LP', 'LN']
+
+    Funkcja: lpm(word: Any) -> Literal['LM', 'LP', 'LN']
+    
 Przykład:
-python
+
+##### python
   import awareness
   print(awareness.lpm('samochód'))  # 'LP'
   print(awareness.lpm('kobiety'))  # 'LM'
 
 (EN)
-LPM Module (Word Number Recognition)
+### LPM Module (Word Number Recognition)
+
 Description: The lpm function recognizes whether the number of a word is plural (LM), singular (LP), or neuter (LN).
-Function: lpm(word: Any) -> Literal['LM', 'LP', 'LN']
+
+    Function: lpm(word: Any) -> Literal['LM', 'LP', 'LN']
+    
 Example:
-python
+
+##### python
   import awareness
   print(awareness.lpm('car')) # 'LP'
   print(awareness.lpm('women')) # 'LM'
 
 (PL)
-Moduł Part_Check (Rozpoznawanie Części Mowy)
+### Moduł Part_Check (Rozpoznawanie Części Mowy)
+
 Opis: Funkcja part_check oddaje część mowy na podstawie podanego słowa.
-Funkcja: part_check(word: Any, multi: str = 'main') -> str
+
+    Funkcja: part_check(word: Any, multi: str = 'main') -> str
+
 Przykład:
-python
+
+##### python
   import awareness
   print(awareness.part_check('samochód'))  # 'rzeczownik'
 
 (EN)
-Part_Check Module (Part of Speech Recognition)
+### Part_Check Module (Part of Speech Recognition)
+
 Description: The part_check function returns a part of speech based on the given word.
-Function: part_check(word: Any, multi: str = 'main') -> str
+
+    Function: part_check(word: Any, multi: str = 'main') -> str
+    
 Example:
-python
+
+##### python
   import awareness
   print(awareness.part_check('car')) # 'noun'
 
 (PL)
-Moduł Case_Updater (Aktualizacja Pliku Słów z Częściami Mowy)
+### Moduł Case_Updater (Aktualizacja Pliku Słów z Częściami Mowy)
+
 Opis: Funkcja case_updater aktualizuje plik słów z częściami mowy, ale nic nie zwraca.
-Funkcja: case_updater(s: Any) -> None
+
+    Funkcja: case_updater(s: Any) -> None
+
 Przykład:
-python
+
+##### python
   import awareness
   awareness.case_updater('samochód')
-
-Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
+  # Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
 
 (EN)
 Case_Updater Module (Updating the Word File with Parts of Speech)
