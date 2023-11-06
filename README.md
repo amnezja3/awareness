@@ -17,7 +17,6 @@ Lingwistyczne Badania: Dzięki funkcjom odmiany przymiotników, rzeczowników i 
 Biblioteka Awareness to narzędzie wszechstronne i potężne, które znalazło swoje zastosowanie w analizie języka polskiego, zarówno w kontekście analizy gramatycznej, jak i generowania treści. Dzięki tym modułom użytkownicy mogą wykonywać zaawansowane operacje na tekście, analizować jego strukturę, a także tworzyć bardziej skomplikowane konstrukcje językowe.
 Jeśli potrzebujesz bardziej szczegółowych informacji na temat konkretnych funkcji i ich zastosowań, zapraszamy do konsultacji dokumentacji biblioteki Awareness.
 
-
 (EN)
 The Awareness Library is an advanced tool for processing text in the Polish language, created to facilitate the analysis and manipulation of text. This versatile library offers a range of powerful modules that enable users to perform in-depth analysis of texts and carry out advanced operations related to the Polish language. Below, we present some of the most interesting and key modules that distinguish the Awareness library:
 Action Module: The Action module is a function that classifies and interprets given sentences. With this module, you can analyze sentences in terms of their components, such as subjects, predicates, complements, and other parts of a sentence. You can also add analyzed sentences to the system's database.
@@ -160,7 +159,7 @@ Przykład:
 python
 import awareness
 awareness.case_updater('samochód')
-# Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
+// Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
 
 (EN)
 Case_Updater Module (Updating the Word File with Parts of Speech)
@@ -170,7 +169,7 @@ Example:
 python
 import awareness
 awareness.case_updater('car')
-# Updates the word file with information about the declination of the word 'car'
+// Updates the word file with information about the declination of the word 'car'
 
 (PL)
 Moduł If_Case (Sprawdzanie, Czy Słowo Jest Deklinacyjne)
