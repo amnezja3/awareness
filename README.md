@@ -264,468 +264,721 @@ Przykład:
     # Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
 
 (EN)
-Case_Updater Module (Updating the Word File with Parts of Speech)
+### Case_Updater Module (Updating the Word File with Parts of Speech)
+
 Description: The case_updater function updates the part-of-speech word file but returns nothing.
-Function: case_updater(s: Any) -> None
+
+    Function: case_updater(s: Any) -> None
+    
 Example:
-python
-import awareness
-awareness.case_updater('car')
-// Updates the word file with information about the declination of the word 'car'
+
+##### python
+    import awareness
+    awareness.case_updater('car')
+    # Updates the word file with information about the declination of the word 'car'
 
 (PL)
-Moduł If_Case (Sprawdzanie, Czy Słowo Jest Deklinacyjne)
+### Moduł If_Case (Sprawdzanie, Czy Słowo Jest Deklinacyjne)
+
 Opis: Funkcja if_case sprawdza, czy dane słowo jest deklinacyjne, tj. czy odmienia się przez przypadki.
-Funkcja: if_case(word: Any) -> bool
+
+    Funkcja: if_case(word: Any) -> bool
+    
 Przykład:
-python
-import awareness
-print(awareness.if_case('samochód'))  # True
-print(awareness.if_case('być'))  # False
+
+##### python
+    import awareness
+    print(awareness.if_case('samochód'))  # True
+    print(awareness.if_case('być'))  # False
 
 (EN)
-If_Case Module (Checking Whether a Word Is Declinational)
+### If_Case Module (Checking Whether a Word Is Declinational)
+
 Description: The if_case function checks whether a given word is declensional, i.e. whether it is inflected by cases.
-Function: if_case(word: Any) -> bool
+
+    Function: if_case(word: Any) -> bool
+    
 Example:
-python
-import awareness
-print(awareness.if_case('car')) # True
-print(awareness.if_case('be')) # False
+
+##### python
+    import awareness
+    print(awareness.if_case('car')) # True
+    print(awareness.if_case('be')) # False
 
 (PL)
-Moduł Change_Cases (Odmiana Słowa przez Przypadki)
+### Moduł Change_Cases (Odmiana Słowa przez Przypadki)
+
 Opis: Funkcja change_cases zwraca informacje o odmianie podanego rzeczownika lub zwraca pożądaną odmianę.
-Funkcja: change_cases(w: Any, truck: str = 'BACK', update: str = 'YES', opt: str = 'MIA') -> Any
+
+    Funkcja: change_cases(w: Any, truck: str = 'BACK', update: str = 'YES', opt: str = 'MIA') -> Any
+
 Przykład:
-python
-import awareness
-print(awareness.change_cases('samochód', truck='BACK', opt='DOP', update='NO'))
-# ['samochodu']
+
+##### python
+    import awareness
+    print(awareness.change_cases('samochód', truck='BACK', opt='DOP', update='NO'))
+    # ['samochodu']
 
 (EN)
-Change_Cases Module (Word Inflection by Cases)
-Description: The change_cases function returns information about the declination of the given noun or returns the desired declination.
-Function: change_cases(in: Any, truck: str = 'BACK', update: str = 'YES', opt: str = 'MIA') -> Any
+### Change_Cases Module (Word Inflection by Cases)
+
+Description: The change_cases function returns information about the declination of the given noun or returns the desired 
+declination.
+
+    Function: change_cases(in: Any, truck: str = 'BACK', update: str = 'YES', opt: str = 'MIA') -> Any
+
 Example:
-python
-import awareness
-print(awareness.change_cases('car', truck='BACK', opt='DOP', update='NO'))
-# ['car']
+
+##### python
+    import awareness
+    print(awareness.change_cases('car', truck='BACK', opt='DOP', update='NO'))
+    # ['car']
 
 (PL)
-Moduł Noun_Adj_Case_Detector (Wykrywanie Rzeczowników i Przymiotników w Zdaniu)
-Opis: Funkcja noun_adj_case_detector wykrywa rzeczowniki i przymiotniki w podanym zdaniu i określa ich przypadek, liczbę i rodzaj, w przypadku przymiotników również zaprzeczenia.
-Funkcja: noun_adj_case_detector(sentence: Any) -> dict
+### Moduł Noun_Adj_Case_Detector (Wykrywanie Rzeczowników i Przymiotników w Zdaniu)
+
+Opis: Funkcja noun_adj_case_detector wykrywa rzeczowniki i przymiotniki w podanym zdaniu i określa ich przypadek, liczbę i rodzaj, 
+w przypadku przymiotników również zaprzeczenia.
+
+    Funkcja: noun_adj_case_detector(sentence: Any) -> dict
+
 Przykład:
-python
-import awareness
-print(awareness.noun_adj_case_detector('stary samochód toczy się wolno'))
-# {'stary': 'MIA-LP-MRZ-POZ', 'samochód': 'LP-MIA', 'toczy': False, 'się': False, 'wolno': False}
+
+##### python
+    import awareness
+    print(awareness.noun_adj_case_detector('stary samochód toczy się wolno'))
+    # {'stary': 'MIA-LP-MRZ-POZ', 'samochód': 'LP-MIA', 'toczy': False, 'się': False, 'wolno': False}
 
 (EN)
-Noun_Adj_Case_Detector Module (Detecting Nouns and Adjectives in a Sentence)
+### Noun_Adj_Case_Detector Module (Detecting Nouns and Adjectives in a Sentence)
+
 Description: The noun_adj_case_detector function detects nouns and adjectives in the given sentence and determines their case, number and gender, and in the case of adjectives, also their negation.
-Function: noun_adj_case_detector(sentence: Any) -> dict
+
+    Function: noun_adj_case_detector(sentence: Any) -> dict
+
 Example:
-python
-import awareness
-print(awareness.noun_adj_case_detector('old car rolls slowly'))
-# {'old': 'MIA-LP-MRZ-POZ', 'car': 'LP-MIA', 'rolling': False, 'running': False, 'slow': False}
+
+##### python
+    import awareness
+    print(awareness.noun_adj_case_detector('old car rolls slowly'))
+    # {'old': 'MIA-LP-MRZ-POZ', 'car': 'LP-MIA', 'rolling': False, 'running': False, 'slow': False}
 
 (PL)
-Moduł Change_Case_SP (Odmiana Słowa przez Przypadki z Korektą)
+### Moduł Change_Case_SP (Odmiana Słowa przez Przypadki z Korektą)
+
 Opis: Funkcja change_case_SP odmienia słowo przez przypadki i daje propozycje odmiany z możliwością korekty.
-Funkcja: change_case_SP(base: Any, word: Any, target: str = 'rzeczownik', manual: bool = True) -> Any
+
+    Funkcja: change_case_SP(base: Any, word: Any, target: str = 'rzeczownik', manual: bool = True) -> Any
+    
 Przykład:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.change_case_SP(base, 'rower'))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.change_case_SP(base, 'rower'))
 
 (EN)
-Change_Case_SP Module (Word Conjugation by Cases with Correction)
+### Change_Case_SP Module (Word Conjugation by Cases with Correction)
+
 Description: The change_case_SP function inflects a word by case and provides inflection suggestions with the possibility of correction.
-Function: change_case_SP(base: Any, word: Any, target: str = 'noun', manual: bool = True) -> Any
+
+    Function: change_case_SP(base: Any, word: Any, target: str = 'noun', manual: bool = True) -> Any
+    
 Example:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.change_case_SP(base, 'bicycle'))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.change_case_SP(base, 'bicycle'))
 
 (PL)
-Moduł Change_Cases_SP_Adjective (Odmiana Przymiotników z Korektą)
+### Moduł Change_Cases_SP_Adjective (Odmiana Przymiotników z Korektą)
+
 Opis: Funkcja change_cases_SP_adjective zarządza przymiotnikami w systemie, odmienia przymiotniki przez przypadki i zwraca informacje o przymiotniku.
-Funkcja: change_cases_SP_adjective(base: Any, word: Any, truck: str = 'BACK', opt: str = 'MIA', numb: str = 'LM', rodz: str = 'MOS', direct: str = 'POZ', target: str = 'przymiotnik', update: str = 'YES') -> (dict | Any | dict[str, list] | Literal['Nieodmienialny', 'MAKE-UPDATE'] | None)
+
+    Funkcja: change_cases_SP_adjective(base: Any, word: Any, truck: str = 'BACK', opt: str = 'MIA', numb: str = 'LM', rodz: str = 'MOS', direct: str = 'POZ', target: str = 'przymiotnik', update: str = 'YES') -> (dict | Any | dict[str, list] | Literal['Nieodmienialny', 'MAKE-UPDATE'] | None)
+
 Przykład:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.change_cases_SP_adjective(base, 'rowerowy', truck='BACK', numb='LM', rodz='MOS', direct='NEG', target='przymiotnik', update='YES'))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.change_cases_SP_adjective(base, 'rowerowy', truck='BACK', numb='LM', rodz='MOS', direct='NEG', target='przymiotnik', update='YES'))
 
 (EN)
-Module Change_Cases_SP_Adjective (Conjugation of Adjectives with Correction)
+### Module Change_Cases_SP_Adjective (Conjugation of Adjectives with Correction)
+
 Description: The change_cases_SP_adjective function manages adjectives in the system, inflects adjectives by case, and returns information about the adjective.
-Function: change_cases_SP_adjective(base: Any, word: Any, truck: str = 'BACK', opt: str = 'MIA', numb: str = 'LM', genus: str = 'MOS', direct: str = 'POZ' ', target: str = 'adjective', update: str = 'YES') -> (dict | Any | dict[str, list] | Literal['Unchangeable', 'MAKE-UPDATE'] | None)
+
+    Function: change_cases_SP_adjective(base: Any, word: Any, truck: str = 'BACK', opt: str = 'MIA', numb: str = 'LM', genus: str = 'MOS', direct: str = 'POZ' ', target: str = 'adjective', update: str = 'YES') -> (dict | Any | dict[str, list] | Literal['Unchangeable', 'MAKE-UPDATE'] | None)
+
 Example:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.change_cases_SP_adjective(base, 'bicycle', truck='BACK', numb='LM', genus='MOS', direct='NEG', target='adjective', update='YES'))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.change_cases_SP_adjective(base, 'bicycle', truck='BACK', numb='LM', genus='MOS', direct='NEG', target='adjective', update='YES'))
 
 (PL)
-Moduł Part_Speech_2 (Zapisywanie Pliku Systemowego Części Mowy)
+### Moduł Part_Speech_2 (Zapisywanie Pliku Systemowego Części Mowy)
+
 Opis: Funkcja part_Speech_2 zapisuje plik systemowy cases_words_noun.neural.
-Funkcja: part_Speech_2(word: Any) -> bool
+
+    Funkcja: part_Speech_2(word: Any) -> bool
+    
 Przykład:
-python
-import awareness
-print(awareness.part_Speech_2('rower'))  # True
+
+##### python
+    import awareness
+    print(awareness.part_Speech_2('rower'))  # True
 
 (EN)
-Part_Speech_2 Module (Saving Part of Speech System File)
+### Part_Speech_2 Module (Saving Part of Speech System File)
+
 Description: The part_Speech_2 function writes the cases_words_noun.neural system file.
-Function: part_Speech_2(word: Any) -> bool
+
+    Function: part_Speech_2(word: Any) -> bool
+
 Example:
-python
-import awareness
-print(awareness.part_Speech_2('bicycle')) # True
+
+##### python
+    import awareness
+    print(awareness.part_Speech_2('bicycle')) # True
 
 (PL)
-Moduł Two_Way_Words (Słowa Dwubiegunowe)
+### Moduł Two_Way_Words (Słowa Dwubiegunowe)
+
 Opis: Funkcja two_way_words oddaje słowa dwubiegunowe, czyli słowa, które posiadają przeciwieństwa.
-Funkcja: two_way_words(word: Any) -> dict[str, Any]
+
+    Funkcja: two_way_words(word: Any) -> dict[str, Any]
+
 Przykład:
-python
-import awareness
-result = awareness.two_way_words('wadliwy')
-print(result['RESULT'])  # True
-print(result['WORD'])    # Przeciwieństwo słowa 'wadliwy'
-print(result['WORDS'])   # Wszystkie słowa obsługiwane przez funkcję
-Rezultat:
-result['RESULT']: True (znaleziono słowo dwubiegunowe).
-result['WORD']: nieskazitelny (drugie biegunowe słowo do 'wadliwy').
-result['WORDS']: Lista zawierająca wszystkie słowa, które mają przeciwieństwa i są obsługiwane przez funkcję.
+
+##### python
+    import awareness
+    result = awareness.two_way_words('wadliwy')
+    print(result['RESULT'])  # True
+    print(result['WORD'])    # Przeciwieństwo słowa 'wadliwy'
+    print(result['WORDS'])   # Wszystkie słowa obsługiwane przez funkcję
+    Rezultat:
+    result['RESULT']: True (znaleziono słowo dwubiegunowe).
+    result['WORD']: nieskazitelny (drugie biegunowe słowo do 'wadliwy').
+    result['WORDS']: Lista zawierająca wszystkie słowa, które mają przeciwieństwa i są obsługiwane przez funkcję.
+
 Moduł Ten pozwala na znalezienie słów, które posiadają swoje przeciwieństwa, co może być przydatne w różnych analizach językowych lub generowaniu treści.
 
 (EN)
-Two_Way_Words Module
+### Two_Way_Words Module
+
 Description: The two_way_words function returns bipolar words, i.e. words that have opposites.
-Function: two_way_words(word: Any) -> dict[str, Any]
+
+    Function: two_way_words(word: Any) -> dict[str, Any]
+    
 Example:
-python
-import awareness
-result = awareness.two_way_words('faulty')
-print(result['RESULT']) # True
-print(result['WORD']) # Opposite of 'defective'
-print(result['WORDS']) # All words supported by the function
-Result:
-result['RESULT']: True (bipolar word found).
-result['WORD']: flawless (second polar word to 'defective').
-result['WORDS']: A list containing all words that have opposites and are supported by the function.
+
+##### python
+    import awareness
+    result = awareness.two_way_words('faulty')
+    print(result['RESULT']) # True
+    print(result['WORD']) # Opposite of 'defective'
+    print(result['WORDS']) # All words supported by the function
+    Result:
+    result['RESULT']: True (bipolar word found).
+    result['WORD']: flawless (second polar word to 'defective').
+    result['WORDS']: A list containing all words that have opposites and are supported by the function.
+
 This module allows you to find words that have their opposites, which can be useful in various language analyzes or content generation.
 
 (PL)
-Moduł Take_Target (Słowa z Rodziny)
+### Moduł Take_Target (Słowa z Rodziny)
+
 Opis: Funkcja take_target oddaje wszystkie słowa w formie listy, które należą do rodziny słowa docelowego.
-Funkcja: take_target(w: Any, target: str = 'czasownik') -> (Any | list[str])
+
+    Funkcja: take_target(w: Any, target: str = 'czasownik') -> (Any | list[str])
+    
 Przykład:
-python
-import awareness
-print(awareness.take_target('rower', 'rzeczownik'))
-Rezultat: Lista słów, które należą do rodziny słowa 'rower'.
+
+##### python
+    import awareness
+    print(awareness.take_target('rower', 'rzeczownik'))
+    
+Rezultat: 
+
+    Lista słów, które należą do rodziny słowa 'rower'.
 
 (EN)
-Take_Target Module (Family Words)
+### Take_Target Module (Family Words)
+
 Description: The take_target function returns all words in a list that belong to the target word family.
-Function: take_target(in: Any, target: str = 'verb') -> (Any | list[str])
+
+    Function: take_target(in: Any, target: str = 'verb') -> (Any | list[str])
+    
 Example:
-python
-import awareness
-print(awareness.take_target('bicycle', 'noun'))
-Result: A list of words that belong to the word 'bicycle' family.
+
+##### python
+    import awareness
+    print(awareness.take_target('bicycle', 'noun'))
+
+Result: 
+
+    A list of words that belong to the word 'bicycle' family.
 
 (PL)
-Moduł Take_SuperTarget (Słowo Główne Rodziny)
+### Moduł Take_SuperTarget (Słowo Główne Rodziny)
+
 Opis: Funkcja take_superTarget robi to samo co take_target, ale znacznie szybciej i potrzebuje słownika z bazy systemu Awareness. Funkcja również może oddać tylko słowo główne rodziny słowa docelowego.
-Funkcja: take_superTarget(base: Any, word: Any, target: str = 'czasownik', what: str = 'WORDS-LISTS') -> Any
+
+    Funkcja: take_superTarget(base: Any, word: Any, target: str = 'czasownik', what: str = 'WORDS-LISTS') -> Any
+
 Przykład:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.take_superTarget(base, 'rowerem', 'rzeczownik', what='MAIN-WORDS'))
-print(awareness.take_superTarget(base, 'rower', 'rzeczownik', what='WORDS-LISTS'))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.take_superTarget(base, 'rowerem', 'rzeczownik', what='MAIN-WORDS'))
+    print(awareness.take_superTarget(base, 'rower', 'rzeczownik', what='WORDS-LISTS'))
+    
 Rezultat:
-take_superTarget(base, 'rowerem', 'rzeczownik', what='MAIN-WORDS'): Zwraca słowo główne rodziny słowa 'rowerem'.
-take_superTarget(base, 'rower', 'rzeczownik', what='WORDS-LISTS'): Zwraca listę słów, które należą do rodziny słowa 'rower'.
+
+    take_superTarget(base, 'rowerem', 'rzeczownik', what='MAIN-WORDS'): Zwraca słowo główne rodziny słowa 'rowerem'.
+    take_superTarget(base, 'rower', 'rzeczownik', what='WORDS-LISTS'): Zwraca listę słów, które należą do rodziny słowa 'rower'.
+
 Moduły te pozwalają na pobieranie słów z rodziny wybranego słowa lub na szybkie uzyskanie słowa głównego rodziny.
 
 (EN)
-Take_SuperTarget Module (Family Root Word)
+### Take_SuperTarget Module (Family Root Word)
+
 Description: The take_superTarget function does the same thing as take_target, but much faster and requires a dictionary from the Awareness database. The function can also return only the root word of the target word family.
-Function: take_superTarget(base: Any, word: Any, target: str = 'verb', what: str = 'WORDS-LISTS') -> Any
+
+    Function: take_superTarget(base: Any, word: Any, target: str = 'verb', what: str = 'WORDS-LISTS') -> Any
+
 Example:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.take_superTarget(base, 'by bike', 'noun', what='MAIN-WORDS'))
-print(awareness.take_superTarget(base, 'bicycle', 'noun', what='WORDS-LISTS'))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.take_superTarget(base, 'by bike', 'noun', what='MAIN-WORDS'))
+    print(awareness.take_superTarget(base, 'bicycle', 'noun', what='WORDS-LISTS'))
+    
 Result:
-take_superTarget(base, 'by bike', 'noun', what='MAIN-WORDS'): Returns the root word of the word family 'by bike'.
-take_superTarget(base, 'bicycle', 'noun', what='WORDS-LISTS'): Returns a list of words that belong to the word family 'bicycle'.
+
+    take_superTarget(base, 'by bike', 'noun', what='MAIN-WORDS'): Returns the root word of the word family 'by bike'.
+    take_superTarget(base, 'bicycle', 'noun', what='WORDS-LISTS'): Returns a list of words that belong to the word family 'bicycle'.
+
 These modules allow you to retrieve words from the family of a selected word or to quickly obtain the root word of the family.
 
 (PL)
-Moduł Verb_Flex (Odmiana Czasowników)
+### Moduł Verb_Flex (Odmiana Czasowników)
+
 Opis: Funkcja verb_flex służy do odmiany czasowników. Może zamienić czasownik w dowolnej formie na dowolną formę lub oddać całą rodzinę odmienionych czasowników wraz z przypisanymi flagami.
-Funkcja: verb_flex(base: Any, w: Any, option: str = 'TAKE', mode: Any | None = None) -> Any
+
+    Funkcja: verb_flex(base: Any, w: Any, option: str = 'TAKE', mode: Any | None = None) -> Any
+
 Przykład:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.verb_flex(base, 'wysunąć', option='TAKE'))
-print(awareness.verb_flex(base, 'wysunąć', option='CHANGE', mode='IIos-LM-PRZP-PRZE-NONE'))
-print(awareness.verb_flex(base, 'wysunąć', option='ALL'))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.verb_flex(base, 'wysunąć', option='TAKE'))
+    print(awareness.verb_flex(base, 'wysunąć', option='CHANGE', mode='IIos-LM-PRZP-PRZE-NONE'))
+    print(awareness.verb_flex(base, 'wysunąć', option='ALL'))
+
 Rezultat:
-option='TAKE': Zwraca bazową formę czasownika (bezokolicznik).
-option='CHANGE': Zamienia czasownik 'wysunąć' na formę 'wysunęliśmy' zgodnie z podanym trybem (mode).
-option='ALL': Opcja deweloperska, zwraca cały zbiór rodziny danego czasownika odmieniony w grupie fleksyjnej.
+
+    option='TAKE': Zwraca bazową formę czasownika (bezokolicznik).
+    option='CHANGE': Zamienia czasownik 'wysunąć' na formę 'wysunęliśmy' zgodnie z podanym trybem (mode).
+    option='ALL': Opcja deweloperska, zwraca cały zbiór rodziny danego czasownika odmieniony w grupie fleksyjnej.
 
 (EN)
-Verb_Flex (Verb Conjugation) Module
+### Verb_Flex (Verb Conjugation) Module
+
 Description: The verb_flex function is used to conjure verbs. It can convert a verb in any form into any form or return an entire family of conjugated verbs with assigned flags.
-Function: verb_flex(base: Any, w: Any, option: str = 'TAKE', mode: Any | None = None) -> Any
+
+    Function: verb_flex(base: Any, w: Any, option: str = 'TAKE', mode: Any | None = None) -> Any
+
 Example:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.verb_flex(base, 'extend', option='TAKE'))
-print(awareness.verb_flex(base, 'eject', option='CHANGE', mode='IIos-LM-PRZP-PRZE-NONE'))
-print(awareness.verb_flex(base, 'extrude', option='ALL'))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.verb_flex(base, 'extend', option='TAKE'))
+    print(awareness.verb_flex(base, 'eject', option='CHANGE', mode='IIos-LM-PRZP-PRZE-NONE'))
+    print(awareness.verb_flex(base, 'extrude', option='ALL'))
+
 Result:
-option='TAKE': Returns the base form of the verb (infinitive).
-option='CHANGE': Changes the verb 'to extend' to the form 'we advanced' according to the given mode.
-option='ALL': Developer option, returns the entire set of the family of a given verb inflected in the inflection group.
+
+    option='TAKE': Returns the base form of the verb (infinitive).
+    option='CHANGE': Changes the verb 'to extend' to the form 'we advanced' according to the given mode.
+    option='ALL': Developer option, returns the entire set of the family of a given verb inflected in the inflection group.
 
 (PL)
-Moduł Set_Gr (Wykrywanie Grupy Fleksyjnej)
+### Moduł Set_Gr (Wykrywanie Grupy Fleksyjnej)
+
 Opis: Funkcja set_gr służy do wykrywania grupy fleksyjnej czasownika.
-Funkcja: set_gr(base: Any, w: Any, option: Any | None = None) -> (dict | str)
+
+    Funkcja: set_gr(base: Any, w: Any, option: Any | None = None) -> (dict | str)
+
 Przykład:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.set_gr(base, 'tłuc', option=None))
-print(awareness.set_gr(base, 'robić', option=None))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.set_gr(base, 'tłuc', option=None))
+    print(awareness.set_gr(base, 'robić', option=None))
+    
 Rezultat:
-Dla 'tłuc': Zwraca XIA, co jest oznaczeniem grupy fleksyjnej.
-Dla 'robić': Zwraca spec, co jest oznacza, że odmiana była dokonywana i odmienione formy istnieją w systemie.
+
+    Dla 'tłuc': Zwraca XIA, co jest oznaczeniem grupy fleksyjnej.
+    Dla 'robić': Zwraca spec, co jest oznacza, że odmiana była dokonywana i odmienione formy istnieją w systemie.
+
 Moduły te umożliwiają odmianę czasowników oraz wykrywanie grupy fleksyjnej czasownika, co jest przydatne w analizach gramatycznych i generowaniu treści.
 
 (EN)
-Set_Gr Module (Inflectional Group Detection)
+### Set_Gr Module (Inflectional Group Detection)
+
 Description: The set_gr function is used to detect the inflection group of a verb.
-Function: set_gr(base: Any, w: Any, option: Any | None = None) -> (dict | str)
+
+    Function: set_gr(base: Any, w: Any, option: Any | None = None) -> (dict | str)
+    
 Example:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(awareness.set_gr(base, 'beat', option=None))
-print(awareness.set_gr(base, 'do', option=None))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(awareness.set_gr(base, 'beat', option=None))
+    print(awareness.set_gr(base, 'do', option=None))
+    
 Result:
-For 'beat': Returns XIA, which is the inflection group designator.
-For 'do': Returns spec, which means that an inflection has been made and inflected forms exist in the system.
+
+    For 'beat': Returns XIA, which is the inflection group designator.
+    For 'do': Returns spec, which means that an inflection has been made and inflected forms exist in the system.
+    
 These modules enable verb conjugation and detection of the verb's inflection group, which is useful in grammatical analysis and content generation.
 
 (PL)
-Moduł Part_Sentens (Analiza Zdania)
+### Moduł Part_Sentens (Analiza Zdania)
+
 Opis: Funkcja part_sentens służy do analizy zdania i zwraca słownik z analizą jego struktury. W słowniku znajdziesz informacje o podmiocie, orzeczeniu, przydawce, dopełnieniu, okolicznościach orzecznikowych, okolicznościach dopełnienia, zaimkach, przyimkach, nazwach własnych oraz partykułach wraz z odpowiadającymi im symbolami. Funkcja przeprowadza również bardziej szczegółową analizę czasownika.
-Funkcja: part_sentens(base: Any, x_list: Any) -> Any
+
+    Funkcja: part_sentens(base: Any, x_list: Any) -> Any
+    
 Przykład:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-lista = ['Telefon', 'ma', 'dzwonić', 'cały', 'dzień']
-print(awareness.part_sentens(base, lista))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    lista = ['Telefon', 'ma', 'dzwonić', 'cały', 'dzień']
+    print(awareness.part_sentens(base, lista))
+    
 Rezultat:
-Funkcja zwraca słownik z analizą zdania, w którym znajdziesz informacje o różnych elementach składni zdania, takie jak podmiot, orzeczenie, przydawka, dopełnienie, okoliczności orzecznikowe, okoliczności dopełnienia, zaimki, przyimki, nazwy własne i partykuły. Ponadto, jest również analiza czasownika zawierająca takie informacje, jak:
-Rodzaj czasownika (osobowy lub nieosobowy).
-Liczba (pojedyncza lub mnoga).
-Tryb czasownika.
-Czas czasownika.
-Rodzaj czasownika.
-Oznaczenie bezokolicznika czasownika.
-Czy czasownik jest czasownikiem nieprzechodnim.
-Czy czasownik jest w czasie niedokonanym.
+
+    Funkcja zwraca słownik z analizą zdania, w którym znajdziesz informacje o różnych elementach składni zdania, takie jak podmiot, orzeczenie, przydawka, dopełnienie, okoliczności orzecznikowe, okoliczności dopełnienia, zaimki, przyimki, nazwy własne i partykuły. Ponadto, jest również analiza czasownika zawierająca takie informacje, jak:
+    Rodzaj czasownika (osobowy lub nieosobowy).
+    Liczba (pojedyncza lub mnoga).
+    Tryb czasownika.
+    Czas czasownika.
+    Rodzaj czasownika.
+    Oznaczenie bezokolicznika czasownika.
+    Czy czasownik jest czasownikiem nieprzechodnim.
+    Czy czasownik jest w czasie niedokonanym.
+    
 Funkcja part_sentens pozwala na pełną analizę struktury zdania i czasownika, co jest przydatne w zadaniach analizy tekstu i generowania treści.
 
 (EN)
-Part_Sentens (Sentence Analysis) Module
+### Part_Sentens (Sentence Analysis) Module
+
 Description: The part_sentens function is used to analyze a sentence and returns a dictionary with an analysis of its structure. In the dictionary you will find information about the subject, predicate, adverb, object, predicate circumstances, object circumstances, pronouns, prepositions, proper names and particles along with the corresponding symbols. The function also performs a more detailed analysis of the verb.
-Function: part_sentens(base: Any, x_list: Any) -> Any
+
+    Function: part_sentens(base: Any, x_list: Any) -> Any
+    
 Example:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-list = ['Phone', 'ma', 'call', 'all', 'day']
-print(awareness.part_sentens(base, list))
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    list = ['Phone', 'ma', 'call', 'all', 'day']
+    print(awareness.part_sentens(base, list))
+    
 Result:
-The function returns a dictionary with sentence analysis, in which you will find information about various elements of the sentence's syntax, such as subject, predicate, adverb, object, predicate circumstances, object circumstances, pronouns, prepositions, proper names and particles. In addition, there is also a verb analysis including information such as:
-Type of verb (personal or impersonal).
-Number (singular or plural).
-Verb mode.
-Verb tense.
-Type of verb.
-Marking the infinitive of a verb.
-Whether the verb is an intransitive verb.
-Is the verb in the imperfect tense?
+
+    The function returns a dictionary with sentence analysis, in which you will find information about various elements of the sentence's syntax, such as subject, predicate, adverb, object, predicate circumstances, object circumstances, pronouns, prepositions, proper names and particles. In addition, there is also a verb analysis including information such as:
+    Type of verb (personal or impersonal).
+    Number (singular or plural).
+    Verb mode.
+    Verb tense.
+    Type of verb.
+    Marking the infinitive of a verb.
+    Whether the verb is an intransitive verb.
+    Is the verb in the imperfect tense?
 The part_sentens function allows for full analysis of sentence and verb structure, which is useful in text analysis and content generation tasks.
 
 (PL)
-Moduł BaseTools (Narzędzia Bazy)
+### Moduł BaseTools (Narzędzia Bazy)
+
 Opis: Moduł BaseTools zawiera funkcje, które umożliwiają manipulację danymi w bazie systemowej. Baza systemowa zawiera informacje o słowach, ich kategoriach gramatycznych, linkach, zbiorach znaczeniowych i innych informacjach związanych z analizą języka naturalnego.
+
 Funkcje ogólne:
 
-Funkcja: take_base(file_name: str = 'base') -> (dict | dict[str, Any])
+    Funkcja: take_base(file_name: str = 'base') -> (dict | dict[str, Any])
+    
 Opis: Funkcja ładuje bazę systemową z plików systemowych i zwraca ją jako słownik.
-Przykład:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(len(base))
-print(type(base))
-Rezultat: Funkcja zwraca słownik zawierający bazę systemową. Przykładowy wynik zawiera 15 wpisów.
 
-Funkcja: save_base(base: Any) -> Literal[True]
-Opis: Funkcja zapisuje bazę systemową w katalogu systemowym.
 Przykład:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-awareness.save_base(base)
-Rezultat: Funkcja zwraca informację potwierdzającą zapisanie bazy w katalogu systemowym.
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(len(base))
+    print(type(base))
+    
+Rezultat: 
+
+    Funkcja zwraca słownik zawierający bazę systemową. Przykładowy wynik zawiera 15 wpisów.
+
+Funkcja: 
+
+    save_base(base: Any) -> Literal[True]
+    
+Opis: Funkcja zapisuje bazę systemową w katalogu systemowym.
+
+Przykład:
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    awareness.save_base(base)
+    
+Rezultat: 
+
+    Funkcja zwraca informację potwierdzającą zapisanie bazy w katalogu systemowym.
 
 (EN)
-BaseTools Module (Base Tools)
+### BaseTools Module (Base Tools)
+
 Description: The BaseTools module contains functions that enable data manipulation in the system database. The system database contains information about words, their grammatical categories, links, meaning sets and other information related to natural language analysis.
+
 General Features:
 
-Function: take_base(file_name: str = 'base') -> (dict | dict[str, Any])
+    Function: take_base(file_name: str = 'base') -> (dict | dict[str, Any])
+    
 Description: The function loads the system database from system files and returns it as a dictionary.
-Example:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-print(len(base))
-print(type(base))
-Result: The function returns a dictionary containing the system database. The sample output contains 15 entries.
 
-Function: save_base(base: Any) -> Literal[True]
-Description: The function saves the system database in the system directory.
 Example:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-awareness.save_base(base)
-Result: The function returns information confirming that the database is saved in the system directory.
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    print(len(base))
+    print(type(base))
+    
+Result: 
+
+    The function returns a dictionary containing the system database. The sample output contains 15 entries.
+
+    Function: save_base(base: Any) -> Literal[True]
+    
+Description: The function saves the system database in the system directory.
+
+Example:
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    awareness.save_base(base)
+    
+Result: 
+
+    The function returns information confirming that the database is saved in the system directory.
 
 (PL)
-Funkcje manipulacji danymi w bazie:
-Funkcja: add_word(base: Any, cat: Any, word: Any) -> Any
+### Funkcje manipulacji danymi w bazie:
+
+    Funkcja: add_word(base: Any, cat: Any, word: Any) -> Any
+    
 Opis: Funkcja dodaje słowo do bazy z określoną kategorią gramatyczną i zwraca zaktualizowaną bazę.
-Funkcja: add_link(base: Any, cat_id: Any, link_id: Any) -> Any
+
+    Funkcja: add_link(base: Any, cat_id: Any, link_id: Any) -> Any
+
 Opis: Funkcja dodaje link (połączenie) do bazy między słowem a innym elementem i zwraca zaktualizowaną bazę.
-Funkcja: add_se(base: Any, cat_id: Any, se_id: Any) -> Any
+
+    Funkcja: add_se(base: Any, cat_id: Any, se_id: Any) -> Any
+    
 Opis: Funkcja dodaje zbiór SE (zbioru znaczeń) do słowa w bazie i zwraca zaktualizowaną bazę.
-Funkcja: take_word(base: Any, cat_id: Any) -> (Any | None)
+
+    Funkcja: take_word(base: Any, cat_id: Any) -> (Any | None)
+    
 Opis: Funkcja zwraca informacje o słowie na podstawie jego symbolu (cat_id) lub None, jeśli słowo nie istnieje w bazie.
-Funkcja: take_LID(base: Any, cat_id: Any) -> (Any | None)
+
+    Funkcja: take_LID(base: Any, cat_id: Any) -> (Any | None)
+
 Opis: Funkcja zwraca token dla symbolu (cat_id) lub None, jeśli symbol nie istnieje w bazie.
-Funkcja: join_ids(base: Any, cat_id: Any) -> (Any | None)
+
+    Funkcja: join_ids(base: Any, cat_id: Any) -> (Any | None)
+
 Opis: Funkcja łączy linki słowa po symbolach i zwraca listę linków, jeśli symbol istnieje w bazie, lub None, jeśli symbol nie istnieje.
-Funkcja: take_se_words(base: Any, cat_id: Any) -> (Any | None)
+
+    Funkcja: take_se_words(base: Any, cat_id: Any) -> (Any | None)
+
 Opis: Funkcja zwraca słowa w zbiorze SE (zbiorze znaczeń) na podstawie symbolu (cat_id) lub None, jeśli symbol nie istnieje w bazie.
-Funkcja: take_sa(base: Any, sa_id: Any) -> (Any | None)
+
+    Funkcja: take_sa(base: Any, sa_id: Any) -> (Any | None)
+
 Opis: Funkcja zwraca zawartość zbioru SA (zbioru atrybutów) na podstawie jego symbolu (sa_id) lub None, jeśli symbol nie istnieje w bazie.
-Funkcja: take_se(base: Any, se_id: Any) -> (Any | None)
+
+    Funkcja: take_se(base: Any, se_id: Any) -> (Any | None)
+
 Opis: Funkcja zwraca zbiór SE (zbioru znaczeń) na podstawie jego symbolu (se_id) lub None, jeśli symbol nie istnieje w bazie.
-Funkcja: take_re(base: Any, re_id: Any) -> (Any | None)
+
+    Funkcja: take_re(base: Any, re_id: Any) -> (Any | None)
+
 Opis: Funkcja zwraca zbiór rankingowy RE (zbioru rankingowego) na podstawie jego symbolu (re_id) lub None, jeśli symbol nie istnieje w bazie.
-Funkcja: take_links(base: Any, cat_id: Any) -> (Any | list)
+
+    Funkcja: take_links(base: Any, cat_id: Any) -> (Any | list)
+
 Opis: Funkcja zwraca linki dla słowa na podstawie jego symbolu (cat_id) lub pustą listę, jeśli słowo nie posiada linków.
-Funkcja: take_sentens(base: Any, cat_id: Any) -> (Any | list | None)
+
+    Funkcja: take_sentens(base: Any, cat_id: Any) -> (Any | list | None)
+
 Opis: Funkcja zwraca listę symboli SE (zbioru znaczeń) dla danego słowa na podstawie jego symbolu (cat_id) lub None, jeśli symbol nie istnieje.
-Funkcja: take_id(base: Any, cat: Any, word: Any) -> (str | None)
+
+    Funkcja: take_id(base: Any, cat: Any, word: Any) -> (str | None)
+
 Opis: Funkcja zwraca symbol (cat_id) dla słowa o określonej kategorii gramatycznej i słowie lub None, jeśli słowo nie istnieje w bazie.
-Funkcja: update_sa(base: Any, sa_id: Any, sa_new_list: Any) -> Any
+
+    Funkcja: update_sa(base: Any, sa_id: Any, sa_new_list: Any) -> Any
+
 Opis: Funkcja aktualizuje zbiór SA (zbioru atrybutów) na podstawie symbolu (sa_id) i nowej listy atrybutów, a następnie zwraca zaktualizowaną bazę.
-Funkcja: update_se(base: Any, se_id: Any, se_new_list: Any) -> Any
+
+    Funkcja: update_se(base: Any, se_id: Any, se_new_list: Any) -> Any
+
 Opis: Funkcja aktualizuje zbiór SE (zbioru znaczeń) na podstawie symbolu (se_id) i nowej listy znaczeń, a następnie zwraca zaktualizowaną bazę.
-Funkcja: remove_sentens(base: Any, cat_id: Any, se_id: Any) -> Any
+
+    Funkcja: remove_sentens(base: Any, cat_id: Any, se_id: Any) -> Any
+
 Opis: Funkcja usuwa zdanie (symbol SE) z każdego zbioru sentens dla słów, w których to zdanie występuje, na podstawie symbolu zdania (se_id). Zwraca zaktualizowaną bazę.
-Funkcja: remove_link(base: Any, cat_id: Any, link_id: Any) -> Any
+
+    Funkcja: remove_link(base: Any, cat_id: Any, link_id: Any) -> Any
+
 Opis: Funkcja usuwa link ze zbioru link w słowach zdania na podstawie symbolu linku (link_id) i zwraca zaktualizowaną bazę.
-Funkcja: join_ids_list(base: Any, ids_list: Any) -> Any
+
+    Funkcja: join_ids_list(base: Any, ids_list: Any) -> Any
+
 Opis: Funkcja łączy całą listę symboli ze sobą i zwraca wynikową listę.
-Funkcja: remove_word_from_se(base: Any, word: Any, se_id: Any) -> Any
+
+    Funkcja: remove_word_from_se(base: Any, word: Any, se_id: Any) -> Any
+
 Opis: Funkcja usuwa symbol słowa ze zdania w zbiorze SE (zbiorze znaczeń) na podstawie symbolu słowa (word) i zdania (se_id). Zwraca zaktualizowaną bazę.
-Funkcja: take_lb(base: Any, cat_id: Any, take: str = 'ID') -> (Any | None)
+
+    Funkcja: take_lb(base: Any, cat_id: Any, take: str = 'ID') -> (Any | None)
+
 Opis: Funkcja pobiera symbol etykietki (LB) dla danego słowa na podstawie symbolu słowa (cat_id) i opcjonalnie zwraca ID lub całą etykietkę.
-Funkcja: complete_LB(base: Any, word_LB: Any, kind: Any) -> Any
+
+    Funkcja: complete_LB(base: Any, word_LB: Any, kind: Any) -> Any
+
 Opis: Funkcja aktualizuje etykietkę LB słowa (word_LB) o wszystkie możliwe formy na podstawie kategorii gramatycznej (kind) i zwraca zaktualizowaną bazę.
+
 To są narzędzia umożliwiające manipulację danymi w bazie systemowej w celu odczytywania, dodawania, aktualizacji i usuwania słów, zdań, kategorii, klasyfikatorów oraz różnych atrybutów.
 
 (EN)
 Data manipulation functions in the database:
-Function: add_word(base: Any, cat: Any, word: Any) -> Any
+
+    Function: add_word(base: Any, cat: Any, word: Any) -> Any
+
 Description: The function adds a word to the database with a specific grammatical category and returns the updated database.
-Function: add_link(base: Any, cat_id: Any, link_id: Any) -> Any
+
+    Function: add_link(base: Any, cat_id: Any, link_id: Any) -> Any
+
 Description: The function adds a link (connection) to the database between a word and another element and returns the updated database.
-Function: add_se(base: Any, cat_id: Any, se_id: Any) -> Any
+
+    Function: add_se(base: Any, cat_id: Any, se_id: Any) -> Any
+
 Description: The function adds a set of SE (set of meanings) to a word in the database and returns the updated database.
-Function: take_word(base: Any, cat_id: Any) -> (Any | None)
+
+    Function: take_word(base: Any, cat_id: Any) -> (Any | None)
+
 Description: The function returns information about a word based on its symbol (cat_id) or None if the word does not exist in the database.
-Function: take_LID(base: Any, cat_id: Any) -> (Any | None)
+
+    Function: take_LID(base: Any, cat_id: Any) -> (Any | None)
+
 Description: The function returns a token for the symbol (cat_id) or None if the symbol does not exist in the database.
-Function: join_ids(base: Any, cat_id: Any) -> (Any | None)
+
+    Function: join_ids(base: Any, cat_id: Any) -> (Any | None)
+
 Description: The function combines word-by-symbol links and returns a list of links if the symbol exists in the database, or None if the symbol does not exist.
-Function: take_se_words(base: Any, cat_id: Any) -> (Any | None)
+
+    Function: take_se_words(base: Any, cat_id: Any) -> (Any | None)
+
 Description: The function returns words in the SE set (meaning set) based on the symbol (cat_id) or None if the symbol does not exist in the database.
-Function: take_sa(base: Any, sa_id: Any) -> (Any | None)
+
+    Function: take_sa(base: Any, sa_id: Any) -> (Any | None)
+
 Description: The function returns the contents of the SA set (attribute set) based on its symbol (sa_id) or None if the symbol does not exist in the database.
-Function: take_se(base: Any, se_id: Any) -> (Any | None)
+
+    Function: take_se(base: Any, se_id: Any) -> (Any | None)
+
 Description: The function returns a set of SE (set of meanings) based on its symbol (se_id) or None if the symbol does not exist in the database.
-Function: take_re(base: Any, re_id: Any) -> (Any | None)
+
+    Function: take_re(base: Any, re_id: Any) -> (Any | None)
+
 Description: The function returns the RE ranking set based on its symbol (re_id) or None if the symbol does not exist in the database.
-Function: take_links(base: Any, cat_id: Any) -> (Any | list)
+
+    Function: take_links(base: Any, cat_id: Any) -> (Any | list)
+
 Description: The function returns links for a word based on its symbol (cat_id) or an empty list if the word has no links.
-Function: take_sentens(base: Any, cat_id: Any) -> (Any | list | None)
+
+    Function: take_sentens(base: Any, cat_id: Any) -> (Any | list | None)
+
 Description: The function returns a list of SE symbols (set of meanings) for a given word based on its symbol (cat_id) or None if the symbol does not exist.
-Function: take_id(base: Any, cat: Any, word: Any) -> (str | None)
+
+    Function: take_id(base: Any, cat: Any, word: Any) -> (str | None)
+
 Description: The function returns a symbol (cat_id) for a word with a specific grammatical category and word, or None if the word does not exist in the database.
-Function: update_sa(base: Any, sa_id: Any, sa_new_list: Any) -> Any
+
+    Function: update_sa(base: Any, sa_id: Any, sa_new_list: Any) -> Any
+
 Description: The function updates the SA set (set of attributes) based on the symbol (sa_id) and the new list of attributes, and then returns the updated database.
-Function: update_se(base: Any, se_id: Any, se_new_list: Any) -> Any
+
+    Function: update_se(base: Any, se_id: Any, se_new_list: Any) -> Any
+
 Description: The function updates the SE set (set of meanings) based on the symbol (se_id) and the new list of meanings, and then returns the updated database.
-Function: remove_sentens(base: Any, cat_id: Any, se_id: Any) -> Any
+
+    Function: remove_sentens(base: Any, cat_id: Any, se_id: Any) -> Any
+
 Description: The function removes a sentence (SE symbol) from each sentens set for words in which this sentence appears, based on the sentence symbol (se_id). Returns the updated database.
-Function: remove_link(base: Any, cat_id: Any, link_id: Any) -> Any
+
+    Function: remove_link(base: Any, cat_id: Any, link_id: Any) -> Any
+
 Description: The function removes a link from the set of links in sentence words based on the link symbol (link_id) and returns the updated database.
-Function: join_ids_list(base: Any, ids_list: Any) -> Any
+
+    Function: join_ids_list(base: Any, ids_list: Any) -> Any
+
 Description: The function combines the entire list of symbols together and returns the resulting list.
-Function: remove_word_from_se(base: Any, word: Any, se_id: Any) -> Any
+
+    Function: remove_word_from_se(base: Any, word: Any, se_id: Any) -> Any
+
 Description: The function removes a word symbol from a sentence in the SE set (meaning set) based on the word symbol (word) and the sentence (se_id). Returns the updated database.
-Function: take_lb(base: Any, cat_id: Any, take: str = 'ID') -> (Any | None)
+
+    Function: take_lb(base: Any, cat_id: Any, take: str = 'ID') -> (Any | None)
+
 Description: The function retrieves the tag symbol (LB) for a given word based on the word symbol (cat_id) and optionally returns the ID or the entire tag.
-Function: complete_LB(base: Any, word_LB: Any, kind: Any) -> Any
+
+    Function: complete_LB(base: Any, word_LB: Any, kind: Any) -> Any
+
 Description: The function updates the word's LB label (word_LB) with all possible forms based on the grammatical category (kind) and returns the updated database.
+
 These are tools that enable manipulation of data in the system database in order to read, add, update and delete words, sentences, categories, classifiers and various attributes.
 
 (PL)
-Funkcja change_part_by_part w bibliotece Awareness służy do zamiany wybranej części zdania na inną w oparciu o identyfikatory zbiorów znaczeń (SE). Poniżej znajdziesz opis i sposób użycia tej funkcji:
-Funkcja: change_part_by_part(base: Any, take_se_id: Any, take_part_name: Any, put_se_id: Any, put_as_it: Any, put_case: str = 'MIA', action: str = 'START') -> Any
+### Funkcja change_part_by_part w bibliotece Awareness służy do zamiany wybranej części zdania na inną w oparciu o identyfikatory zbiorów znaczeń (SE). 
+
+Poniżej znajdziesz opis i sposób użycia tej funkcji:
+
+    Funkcja: change_part_by_part(base: Any, take_se_id: Any, take_part_name: Any, put_se_id: Any, put_as_it: Any, put_case: str = 'MIA', action: str = 'START') -> Any
+
 Opis: Funkcja ta umożliwia zamianę wybranej części zdania na inną część na podstawie identyfikatorów zbiorów znaczeń (SE). Możesz wskazać, którą część zdania chcesz usunąć (take_se_id i take_part_name), a także, którą część chcesz wstawić (put_se_id i put_as_it). Ponadto, można określić przypadki (put_case) oraz sposób, w jaki ma być wykonana zamiana (action).
+
 Parametry:
+
 base: Baza systemowa.
 take_se_id: Identyfikator zbioru znaczeń, z którego zostanie usunięta wybrana część zdania.
 take_part_name: Nazwa części zdania, która ma zostać usunięta (np. 'PO' dla podmiotu).
@@ -733,20 +986,29 @@ put_se_id: Identyfikator zbioru znaczeń, do którego zostanie wstawiona nowa cz
 put_as_it: Nowa część zdania, którą chcesz wstawić (np. 'DO' dla dopełnienia).
 put_case: Opcjonalny parametr określający przypadek nowej części zdania (domyślnie 'MIA' dla mianownika).
 action: Opcjonalny parametr określający sposób wykonania zamiany (domyślnie 'START').
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-take_se_id = 'SE_150'
-put_se_id = 'SE_1200'
-awareness.change_part_by_part(base, take_se_id, 'PO', put_se_id, 'DO', put_case='DOP', action='START')
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    take_se_id = 'SE_150'
+    put_se_id = 'SE_1200'
+    awareness.change_part_by_part(base, take_se_id, 'PO', put_se_id, 'DO', put_case='DOP', action='START')
+    
 Funkcja ta pozwala na elastyczną manipulację częściami zdania w zbiorach znaczeń (SE). 
 
 (EN)
-The change_part_by_part function in the Awareness library is used to replace a selected part of a sentence with another one based on meaning set identifiers (SE). Below you will find a description and how to use this function:
-Function: change_part_by_part(base: Any, take_se_id: Any, take_part_name: Any, put_se_id: Any, put_as_it: Any, put_case: str = 'MIA', action: str = 'START') -> Any
+### The change_part_by_part function in the Awareness library is used to replace a selected part of a sentence with another one based on meaning set identifiers (SE). 
+
+Below you will find a description and how to use this function:
+
+    Function: change_part_by_part(base: Any, take_se_id: Any, take_part_name: Any, put_se_id: Any, put_as_it: Any, put_case: str = 'MIA', action: str = 'START') -> Any
+
 Description: This function allows you to replace a selected part of a sentence with another part based on the meaning set identifiers (SE). You can indicate which part of the sentence you want to remove (take_se_id and take_part_name) and also which part you want to insert (put_se_id and put_as_it). Moreover, you can specify cases (put_case) and how the replacement is to be performed (action).
+
 Parameters:
+
 base: System base.
 take_se_id: The identifier of the meaning set from which the selected part of the sentence will be removed.
 take_part_name: The name of the part of the sentence to be removed (e.g. 'PO' for subject).
@@ -754,51 +1016,68 @@ put_se_id: The identifier of the meaning set into which the new part of the sent
 put_as_it: The new part of the sentence you want to insert (e.g. 'DO' for object).
 put_case: Optional parameter specifying the case of the new part of the sentence (default 'MIA' for nominative case).
 action: Optional parameter specifying how to perform the replacement (default 'START').
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-take_se_id = 'SE_150'
-put_se_id = 'SE_1200'
-awareness.change_part_by_part(base, take_se_id, 'PO', put_se_id, 'DO', put_case='DOP', action='START')
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    take_se_id = 'SE_150'
+    put_se_id = 'SE_1200'
+    awareness.change_part_by_part(base, take_se_id, 'PO', put_se_id, 'DO', put_case='DOP', action='START')
+    
 This feature allows flexible manipulation of sentence parts in meaning sets (SE).
 
 (PL)
-Funkcja advanced_action w bibliotece Awareness służy do dodawania zdań złożonych do bazy systemowej oraz przypisywania tych zdań do kategorii w zbiorze znaczeń SA. Poniżej znajdziesz opis i sposób użycia tej funkcji:
-Funkcja: advanced_action(base: Any, full_text: Any, source: str = 'wiki', word: str = 'nieznane') -> Any
+### Funkcja advanced_action w bibliotece Awareness służy do dodawania zdań złożonych do bazy systemowej oraz przypisywania tych zdań do kategorii w zbiorze znaczeń SA. 
+
+Poniżej znajdziesz opis i sposób użycia tej funkcji:
+
+    Funkcja: advanced_action(base: Any, full_text: Any, source: str = 'wiki', word: str = 'nieznane') -> Any
+    
 Opis: Funkcja ta umożliwia dodawanie zdań złożonych do bazy systemowej, a także przypisywanie ich do kategorii w zbiorze znaczeń SA. Możesz określić źródło dodawanych zdań (source) oraz nazwę kategorii, do której mają być przypisane związane z nimi zdania (word).
+
 Parametry:
 base: Baza systemowa.
 full_text: Pełny tekst zawierający złożone zdania do dodania do bazy.
 source: Opcjonalny parametr określający źródło dodawanych zdań (domyślnie 'automatic'). Możliwe opcje: 'automatic', 'manual', 'wiki'.
 word: Opcjonalny parametr, który dotyczy przypisywania kategorii do zdań w przypadku źródła 'manual' (domyślnie 'nieznane'). Wprowadź nazwę kategorii, do której mają być przypisane związane z nimi zdania.
+
 Sposób użycia:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-few_sentences = 'Kilka długich zdań. Mogą być wielokrotnie złożone. Funkcja rozpozna poszczególne części zdania, podzieli na zdania podrzędne i inne. Następnie dopisze do kategorii z zbiorze SA, wszystkie zdania oraz zbuduje dla nich dane.'
-awareness.advanced_action(base, few_sentences, source='automatic')
-# source = 'automatic', 'manual', 'wiki' (sposób przydzielania kategorii SA)
-# word = 'nieznane' dotyczy źródła 'manual', należy wpisać kategorię
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    few_sentences = 'Kilka długich zdań. Mogą być wielokrotnie złożone. Funkcja rozpozna poszczególne części zdania, podzieli na zdania podrzędne i inne. Następnie dopisze do kategorii z zbiorze SA, wszystkie zdania oraz zbuduje dla nich dane.'
+    awareness.advanced_action(base, few_sentences, source='automatic')
+    # source = 'automatic', 'manual', 'wiki' (sposób przydzielania kategorii SA)
+    # word = 'nieznane' dotyczy źródła 'manual', należy wpisać kategorię
 Funkcja ta pozwala na dodawanie i przypisywanie kategorii złożonych zdań do bazy systemowej, co może być przydatne do dalszych analiz i przetwarzania tekstów.
 
 (EN)
-The advanced_action function in the Awareness library is used to add complex sentences to the system database and assign these sentences to categories in the SA meaning set. Below you will find a description and how to use this function:
-Function: advanced_action(base: Any, full_text: Any, source: str = 'wiki', word: str = 'unknown') -> Any
+### The advanced_action function in the Awareness library is used to add complex sentences to the system database and assign these sentences to categories in the SA meaning set. 
+
+Below you will find a description and how to use this function:
+
+    Function: advanced_action(base: Any, full_text: Any, source: str = 'wiki', word: str = 'unknown') -> Any
+    
 Description: This function allows you to add complex sentences to the system database and assign them to categories in the SA meaning set. You can specify the source of the added sentences (source) and the name of the category to which the related sentences are to be assigned (word).
+
 Parameters:
 base: System base.
 full_text: Full text containing complex sentences to be added to the database.
 source: Optional parameter specifying the source of added sentences (default 'automatic'). Possible options: 'automatic', 'manual', 'wiki'.
 word: Optional parameter that concerns assigning categories to sentences in the case of the 'manual' source (default 'unknown'). Enter the name of the category to which the related sentences should be assigned.
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-few_sentences = 'A few long sentences. They can be folded many times. The function will recognize individual parts of the sentence and divide it into subordinate and other sentences. Then it will add all sentences to the categories from the SA set and build data for them.'
-awareness.advanced_action(base, few_sentences, source='automatic')
-# source = 'automatic', 'manual', 'wiki' (how to assign SA categories)
-# word = 'unknown' refers to the source 'manual', please enter the category
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    few_sentences = 'A few long sentences. They can be folded many times. The function will recognize individual parts of the sentence and divide it into subordinate and other sentences. Then it will add all sentences to the categories from the SA set and build data for them.'
+    awareness.advanced_action(base, few_sentences, source='automatic')
+    # source = 'automatic', 'manual', 'wiki' (how to assign SA categories)
+    # word = 'unknown' refers to the source 'manual', please enter the category
 This function allows you to add and assign categories of complex sentences to the system database, which may be useful for further analyzes and text processing.
 
 (PL)
