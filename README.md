@@ -177,9 +177,9 @@ Opis: Funkcja kind_sex_word rozpoznaje rodzaj słowa, tj. męski (M), żeński (
 Przykład:
 
 ##### python
-  import awareness
-  print(awareness.kind_sex_word('samochód'))  # 'M'
-  print(awareness.kind_sex_word('kobieta'))  # 'Z'
+    import awareness
+    print(awareness.kind_sex_word('samochód'))  # 'M'
+    print(awareness.kind_sex_word('kobieta'))  # 'Z'
 
 (EN)
 ### Kind_sex_word module (Recognizing Kinds of Words)
