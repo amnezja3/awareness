@@ -2290,7 +2290,11 @@ The new version of The Awareness Library will be equipped with advanced modules 
 
 Expanding the tool's language scope aims to offer users greater flexibility and versatility in working with text, regardless of the language they are working in. We are excited about the possibilities that this new version of The Awareness Library will bring, both for Polish-speaking and English-speaking users.
 
-## Kontakt
+## Autor / Author
+
+Nazywam się Mikael Yankeevech. Jestem pomysłodawcą, autorem i twórcą tego oprogramowania. / My name is Mikael Yankeevech. I am the visionary, author, and creator of this software.
+
+## Kontakt / Contact
 
 Informacje o tym, jak skontaktować się z twórcami projektu. / Information on how to get in touch with the project creators.
 
