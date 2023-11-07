@@ -2267,9 +2267,30 @@ Let me know if you have any other questions about the documentation or the `awar
 
 ## Rozwój
 
-Link do repozytorium GitHub projektu.
+**Polish**
+
+Pomysłem, który kierował mną przy tworzeniu kolejnej wersji The Awareness Library, było rozszerzenie jej funkcjonalności na język angielski. Obecna wersja tego narzędzia koncentrowała się wyłącznie na analizie tekstu w języku polskim, ale uważam, że istnieje ogromne zapotrzebowanie na podobne rozwiązania dla języka angielskiego.
+
+Nowa wersja The Awareness Library będzie wyposażona w zaawansowane moduły umożliwiające analizę tekstu, generowanie treści oraz przeprowadzanie badań lingwistycznych nie tylko w języku polskim, ale również w języku angielskim. Dzięki temu, użytkownicy będą mieli dostęp do jeszcze szerszego zakresu narzędzi do analizy tekstu i przetwarzania języka naturalnego.
+
+Rozszerzenie zakresu językowego narzędzia ma na celu dostarczenie użytkownikom jeszcze większej elastyczności i wszechstronności w pracy z tekstem, niezależnie od języka, w którym pracują. Jesteśmy podekscytowani możliwościami, jakie ta nowa wersja The Awareness Library przyniesie, zarówno dla polskojęzycznych, jak i anglojęzycznych użytkowników.
+
+**English**
+
+The idea driving the development of the next version of The Awareness Library was to expand its functionality to include the English language. The current version of this tool focused solely on text analysis in Polish, but I believe there is a significant demand for similar solutions in the English language.
+
+The new version of The Awareness Library will be equipped with advanced modules for text analysis, content generation, and linguistic research not only in Polish but also in English. This will provide users with an even wider range of natural language processing tools.
+
+Expanding the tool's language scope aims to offer users greater flexibility and versatility in working with text, regardless of the language they are working in. We are excited about the possibilities that this new version of The Awareness Library will bring, both for Polish-speaking and English-speaking users.
 
 ## Kontakt
 
-Informacje o tym, jak skontaktować się z twórcami projektu.
+Informacje o tym, jak skontaktować się z twórcami projektu. / Information on how to get in touch with the project creators.
+
 Here is an example of its use:
+
+**email**
+heretykboga@gmail.com
+
+**discord**
+_amnezja
