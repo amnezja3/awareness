@@ -1,7 +1,6 @@
 # awareness
 The Awareness Library is a versatile Polish text processing tool offering advanced modules for text analysis, content generation, and linguistic research. Key modules include the Action Module for sentence analysis, the Advanced Action Module for complex constructions, and functions for adjective, noun, and verb inflections.
 
-[![Python](https://img.shields.io/pypi/pyversions/awareness?color=3776AB&logo=python&logoColor=white)](https://pypi.org/project/awareness/)
 [![GitHub License](https://img.shields.io/github/license/amnezja3/awareness)](https://img.shields.io/github/license/amnezja3/awareness)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)
 [![Latest Release](https://img.shields.io/github/v/release/amnezja3/awareness)](https://img.shields.io/github/v/release/amnezja3/awareness)
