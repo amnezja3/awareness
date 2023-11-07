@@ -2,8 +2,11 @@
 The Awareness Library is a versatile Polish text processing tool offering advanced modules for text analysis, content generation, and linguistic research. Key modules include the Action Module for sentence analysis, the Advanced Action Module for complex constructions, and functions for adjective, noun, and verb inflections.
 
 (PL) 
+
 ## Biblioteka Awareness: Narzędzie NLP dla Języka Polskiego
+
 (EN) 
+
 ## Awareness Library: NLP Tool for the Polish Language
 
 (PL)
@@ -85,6 +88,7 @@ The Awareness Library is a versatile and powerful tool that has found its applic
 If you need more detailed information about specific functions and their applications, please refer to the Awareness Library documentation.
 
 (PL)
+
 ### Moduł Sam_g (Rozpoznawanie Samogłoski)
 
 Opis: Funkcja sam_g rozpoznaje samogłoski w podanym tekście.
@@ -98,6 +102,7 @@ Przykład:
     print(awareness.sam_g('a'))  # True
 
 (EN)
+
 ### Sam_g Module (Vowel Recognition)
 
 Description: The sam_g function recognizes vowels in text.
@@ -111,6 +116,7 @@ Example:
     print(awareness.sam_g('a')) # True
 
 (PL)
+
 ### Moduł Sufix (Rozpoznawanie Sufiksów)
 
 Opis: Funkcja sufix zwraca sufiksy dla podanego słowa.
@@ -124,6 +130,7 @@ Przykład:
     print(awareness.sufix('samochód'))  # 'chód'
 
 (EN)
+
 ### Sufix Module (Suffix Recognizer)
 
 Description: The suffix function returns suffixes for the given word.
@@ -138,6 +145,7 @@ Example:
     print(awareness.sufix('car')) # 'chód'
 
 (PL)
+
 ### Moduł Check_v_list (Sprawdza czy jakiś element znajduje się na liście)
 
 Opis: Funkcja check_v_list sprawdza, czy dany element znajduje się na liście.
@@ -153,6 +161,7 @@ Przykład:
     print(awareness.check_v_list(lista, 1))  # True
 
 (EN)
+
 ### Check_v_list module (Checks if an item is in the list)
 
 Description: The check_v_list function checks whether an item is in the list.
@@ -168,6 +177,7 @@ Example:
     print(awareness.check_v_list(list, 1)) # True
 
 (PL)
+
 ### Moduł Kind_sex_word (Rozpoznawanie Rodzaje Słowa)
 
 Opis: Funkcja kind_sex_word rozpoznaje rodzaj słowa, tj. męski (M), żeński (Z) lub nijaki (N).
@@ -182,6 +192,7 @@ Przykład:
     print(awareness.kind_sex_word('kobieta'))  # 'Z'
 
 (EN)
+
 ### Kind_sex_word module (Recognizing Kinds of Words)
 
 Description: The kind_sex_word function recognizes the gender of a word, i.e. masculine (M), feminine (Z), or neuter (N).
@@ -196,6 +207,7 @@ Example:
     print(awareness.kind_sex_word('woman')) # 'Z'
 
 (PL)
+
 ### Moduł LPM (Rozpoznawanie Liczby Słowa)
 
 Opis: Funkcja lpm rozpoznaje, czy liczba słowa jest liczba mnogą (LM), pojedynczą (LP) lub nijaką (LN).
@@ -210,6 +222,7 @@ Przykład:
     print(awareness.lpm('kobiety'))  # 'LM'
 
 (EN)
+
 ### LPM Module (Word Number Recognition)
 
 Description: The lpm function recognizes whether the number of a word is plural (LM), singular (LP), or neuter (LN).
@@ -224,6 +237,7 @@ Example:
     print(awareness.lpm('women')) # 'LM'
 
 (PL)
+
 ### Moduł Part_Check (Rozpoznawanie Części Mowy)
 
 Opis: Funkcja part_check oddaje część mowy na podstawie podanego słowa.
@@ -250,6 +264,7 @@ Example:
     print(awareness.part_check('car')) # 'noun'
 
 (PL)
+
 ### Moduł Case_Updater (Aktualizacja Pliku Słów z Częściami Mowy)
 
 Opis: Funkcja case_updater aktualizuje plik słów z częściami mowy, ale nic nie zwraca.
@@ -264,6 +279,7 @@ Przykład:
     # Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
 
 (EN)
+
 ### Case_Updater Module (Updating the Word File with Parts of Speech)
 
 Description: The case_updater function updates the part-of-speech word file but returns nothing.
@@ -278,6 +294,7 @@ Example:
     # Updates the word file with information about the declination of the word 'car'
 
 (PL)
+
 ### Moduł If_Case (Sprawdzanie, Czy Słowo Jest Deklinacyjne)
 
 Opis: Funkcja if_case sprawdza, czy dane słowo jest deklinacyjne, tj. czy odmienia się przez przypadki.
@@ -292,6 +309,7 @@ Przykład:
     print(awareness.if_case('być'))  # False
 
 (EN)
+
 ### If_Case Module (Checking Whether a Word Is Declinational)
 
 Description: The if_case function checks whether a given word is declensional, i.e. whether it is inflected by cases.
@@ -306,6 +324,7 @@ Example:
     print(awareness.if_case('be')) # False
 
 (PL)
+
 ### Moduł Change_Cases (Odmiana Słowa przez Przypadki)
 
 Opis: Funkcja change_cases zwraca informacje o odmianie podanego rzeczownika lub zwraca pożądaną odmianę.
@@ -320,6 +339,7 @@ Przykład:
     # ['samochodu']
 
 (EN)
+
 ### Change_Cases Module (Word Inflection by Cases)
 
 Description: The change_cases function returns information about the declination of the given noun or returns the desired 
@@ -335,6 +355,7 @@ Example:
     # ['car']
 
 (PL)
+
 ### Moduł Noun_Adj_Case_Detector (Wykrywanie Rzeczowników i Przymiotników w Zdaniu)
 
 Opis: Funkcja noun_adj_case_detector wykrywa rzeczowniki i przymiotniki w podanym zdaniu i określa ich przypadek, liczbę i rodzaj, 
@@ -350,6 +371,7 @@ Przykład:
     # {'stary': 'MIA-LP-MRZ-POZ', 'samochód': 'LP-MIA', 'toczy': False, 'się': False, 'wolno': False}
 
 (EN)
+
 ### Noun_Adj_Case_Detector Module (Detecting Nouns and Adjectives in a Sentence)
 
 Description: The noun_adj_case_detector function detects nouns and adjectives in the given sentence and determines their case, number and gender, and in the case of adjectives, also their negation.
@@ -364,6 +386,7 @@ Example:
     # {'old': 'MIA-LP-MRZ-POZ', 'car': 'LP-MIA', 'rolling': False, 'running': False, 'slow': False}
 
 (PL)
+
 ### Moduł Change_Case_SP (Odmiana Słowa przez Przypadki z Korektą)
 
 Opis: Funkcja change_case_SP odmienia słowo przez przypadki i daje propozycje odmiany z możliwością korekty.
@@ -392,6 +415,7 @@ Example:
     print(awareness.change_case_SP(base, 'bicycle'))
 
 (PL)
+
 ### Moduł Change_Cases_SP_Adjective (Odmiana Przymiotników z Korektą)
 
 Opis: Funkcja change_cases_SP_adjective zarządza przymiotnikami w systemie, odmienia przymiotniki przez przypadki i zwraca informacje o przymiotniku.
@@ -406,6 +430,7 @@ Przykład:
     print(awareness.change_cases_SP_adjective(base, 'rowerowy', truck='BACK', numb='LM', rodz='MOS', direct='NEG', target='przymiotnik', update='YES'))
 
 (EN)
+
 ### Module Change_Cases_SP_Adjective (Conjugation of Adjectives with Correction)
 
 Description: The change_cases_SP_adjective function manages adjectives in the system, inflects adjectives by case, and returns information about the adjective.
@@ -420,6 +445,7 @@ Example:
     print(awareness.change_cases_SP_adjective(base, 'bicycle', truck='BACK', numb='LM', genus='MOS', direct='NEG', target='adjective', update='YES'))
 
 (PL)
+
 ### Moduł Part_Speech_2 (Zapisywanie Pliku Systemowego Części Mowy)
 
 Opis: Funkcja part_Speech_2 zapisuje plik systemowy cases_words_noun.neural.
@@ -433,6 +459,7 @@ Przykład:
     print(awareness.part_Speech_2('rower'))  # True
 
 (EN)
+
 ### Part_Speech_2 Module (Saving Part of Speech System File)
 
 Description: The part_Speech_2 function writes the cases_words_noun.neural system file.
@@ -446,6 +473,7 @@ Example:
     print(awareness.part_Speech_2('bicycle')) # True
 
 (PL)
+
 ### Moduł Two_Way_Words (Słowa Dwubiegunowe)
 
 Opis: Funkcja two_way_words oddaje słowa dwubiegunowe, czyli słowa, które posiadają przeciwieństwa.
@@ -468,6 +496,7 @@ Przykład:
 Moduł Ten pozwala na znalezienie słów, które posiadają swoje przeciwieństwa, co może być przydatne w różnych analizach językowych lub generowaniu treści.
 
 (EN)
+
 ### Two_Way_Words Module
 
 Description: The two_way_words function returns bipolar words, i.e. words that have opposites.
@@ -490,6 +519,7 @@ Example:
 This module allows you to find words that have their opposites, which can be useful in various language analyzes or content generation.
 
 (PL)
+
 ### Moduł Take_Target (Słowa z Rodziny)
 
 Opis: Funkcja take_target oddaje wszystkie słowa w formie listy, które należą do rodziny słowa docelowego.
@@ -507,6 +537,7 @@ Rezultat:
     Lista słów, które należą do rodziny słowa 'rower'.
 
 (EN)
+
 ### Take_Target Module (Family Words)
 
 Description: The take_target function returns all words in a list that belong to the target word family.
@@ -524,6 +555,7 @@ Result:
     A list of words that belong to the word 'bicycle' family.
 
 (PL)
+
 ### Moduł Take_SuperTarget (Słowo Główne Rodziny)
 
 Opis: Funkcja take_superTarget robi to samo co take_target, ale znacznie szybciej i potrzebuje słownika z bazy systemu Awareness. Funkcja również może oddać tylko słowo główne rodziny słowa docelowego.
@@ -546,6 +578,7 @@ Rezultat:
 Moduły te pozwalają na pobieranie słów z rodziny wybranego słowa lub na szybkie uzyskanie słowa głównego rodziny.
 
 (EN)
+
 ### Take_SuperTarget Module (Family Root Word)
 
 Description: The take_superTarget function does the same thing as take_target, but much faster and requires a dictionary from the Awareness database. The function can also return only the root word of the target word family.
@@ -568,6 +601,7 @@ Result:
 These modules allow you to retrieve words from the family of a selected word or to quickly obtain the root word of the family.
 
 (PL)
+
 ### Moduł Verb_Flex (Odmiana Czasowników)
 
 Opis: Funkcja verb_flex służy do odmiany czasowników. Może zamienić czasownik w dowolnej formie na dowolną formę lub oddać całą rodzinę odmienionych czasowników wraz z przypisanymi flagami.
@@ -590,6 +624,7 @@ Rezultat:
     option='ALL': Opcja deweloperska, zwraca cały zbiór rodziny danego czasownika odmieniony w grupie fleksyjnej.
 
 (EN)
+
 ### Verb_Flex (Verb Conjugation) Module
 
 Description: The verb_flex function is used to conjure verbs. It can convert a verb in any form into any form or return an entire family of conjugated verbs with assigned flags.
@@ -612,6 +647,7 @@ Result:
     option='ALL': Developer option, returns the entire set of the family of a given verb inflected in the inflection group.
 
 (PL)
+
 ### Moduł Set_Gr (Wykrywanie Grupy Fleksyjnej)
 
 Opis: Funkcja set_gr służy do wykrywania grupy fleksyjnej czasownika.
@@ -634,6 +670,7 @@ Rezultat:
 Moduły te umożliwiają odmianę czasowników oraz wykrywanie grupy fleksyjnej czasownika, co jest przydatne w analizach gramatycznych i generowaniu treści.
 
 (EN)
+
 ### Set_Gr Module (Inflectional Group Detection)
 
 Description: The set_gr function is used to detect the inflection group of a verb.
@@ -656,6 +693,7 @@ Result:
 These modules enable verb conjugation and detection of the verb's inflection group, which is useful in grammatical analysis and content generation.
 
 (PL)
+
 ### Moduł Part_Sentens (Analiza Zdania)
 
 Opis: Funkcja part_sentens służy do analizy zdania i zwraca słownik z analizą jego struktury. W słowniku znajdziesz informacje o podmiocie, orzeczeniu, przydawce, dopełnieniu, okolicznościach orzecznikowych, okolicznościach dopełnienia, zaimkach, przyimkach, nazwach własnych oraz partykułach wraz z odpowiadającymi im symbolami. Funkcja przeprowadza również bardziej szczegółową analizę czasownika.
@@ -685,6 +723,7 @@ Rezultat:
 Funkcja part_sentens pozwala na pełną analizę struktury zdania i czasownika, co jest przydatne w zadaniach analizy tekstu i generowania treści.
 
 (EN)
+
 ### Part_Sentens (Sentence Analysis) Module
 
 Description: The part_sentens function is used to analyze a sentence and returns a dictionary with an analysis of its structure. In the dictionary you will find information about the subject, predicate, adverb, object, predicate circumstances, object circumstances, pronouns, prepositions, proper names and particles along with the corresponding symbols. The function also performs a more detailed analysis of the verb.
@@ -713,6 +752,7 @@ Result:
 The part_sentens function allows for full analysis of sentence and verb structure, which is useful in text analysis and content generation tasks.
 
 (PL)
+
 ### Moduł BaseTools (Narzędzia Bazy)
 
 Opis: Moduł BaseTools zawiera funkcje, które umożliwiają manipulację danymi w bazie systemowej. Baza systemowa zawiera informacje o słowach, ich kategoriach gramatycznych, linkach, zbiorach znaczeniowych i innych informacjach związanych z analizą języka naturalnego.
@@ -753,6 +793,7 @@ Rezultat:
     Funkcja zwraca informację potwierdzającą zapisanie bazy w katalogu systemowym.
 
 (EN)
+
 ### BaseTools Module (Base Tools)
 
 Description: The BaseTools module contains functions that enable data manipulation in the system database. The system database contains information about words, their grammatical categories, links, meaning sets and other information related to natural language analysis.
@@ -791,6 +832,7 @@ Result:
     The function returns information confirming that the database is saved in the system directory.
 
 (PL)
+
 ### Funkcje manipulacji danymi w bazie:
 
     Funkcja: add_word(base: Any, cat: Any, word: Any) -> Any
@@ -880,6 +922,7 @@ Opis: Funkcja aktualizuje etykietkę LB słowa (word_LB) o wszystkie możliwe fo
 To są narzędzia umożliwiające manipulację danymi w bazie systemowej w celu odczytywania, dodawania, aktualizacji i usuwania słów, zdań, kategorii, klasyfikatorów oraz różnych atrybutów.
 
 (EN)
+
 Data manipulation functions in the database:
 
     Function: add_word(base: Any, cat: Any, word: Any) -> Any
@@ -969,6 +1012,7 @@ Description: The function updates the word's LB label (word_LB) with all possibl
 These are tools that enable manipulation of data in the system database in order to read, add, update and delete words, sentences, categories, classifiers and various attributes.
 
 (PL)
+
 ### Funkcja change_part_by_part w bibliotece Awareness służy do zamiany wybranej części zdania na inną w oparciu o identyfikatory zbiorów znaczeń (SE). 
 
 Poniżej znajdziesz opis i sposób użycia tej funkcji:
@@ -979,13 +1023,13 @@ Opis: Funkcja ta umożliwia zamianę wybranej części zdania na inną część 
 
 Parametry:
 
-base: Baza systemowa.
-take_se_id: Identyfikator zbioru znaczeń, z którego zostanie usunięta wybrana część zdania.
-take_part_name: Nazwa części zdania, która ma zostać usunięta (np. 'PO' dla podmiotu).
-put_se_id: Identyfikator zbioru znaczeń, do którego zostanie wstawiona nowa część zdania.
-put_as_it: Nowa część zdania, którą chcesz wstawić (np. 'DO' dla dopełnienia).
-put_case: Opcjonalny parametr określający przypadek nowej części zdania (domyślnie 'MIA' dla mianownika).
-action: Opcjonalny parametr określający sposób wykonania zamiany (domyślnie 'START').
+    base: Baza systemowa.
+    take_se_id: Identyfikator zbioru znaczeń, z którego zostanie usunięta wybrana część zdania.
+    take_part_name: Nazwa części zdania, która ma zostać usunięta (np. 'PO' dla podmiotu).
+    put_se_id: Identyfikator zbioru znaczeń, do którego zostanie wstawiona nowa część zdania.
+    put_as_it: Nowa część zdania, którą chcesz wstawić (np. 'DO' dla dopełnienia).
+    put_case: Opcjonalny parametr określający przypadek nowej części zdania (domyślnie 'MIA' dla mianownika).
+    action: Opcjonalny parametr określający sposób wykonania zamiany (domyślnie 'START').
 
 Sposób użycia:
 
@@ -999,6 +1043,7 @@ Sposób użycia:
 Funkcja ta pozwala na elastyczną manipulację częściami zdania w zbiorach znaczeń (SE). 
 
 (EN)
+
 ### The change_part_by_part function in the Awareness library is used to replace a selected part of a sentence with another one based on meaning set identifiers (SE). 
 
 Below you will find a description and how to use this function:
@@ -1009,13 +1054,13 @@ Description: This function allows you to replace a selected part of a sentence w
 
 Parameters:
 
-base: System base.
-take_se_id: The identifier of the meaning set from which the selected part of the sentence will be removed.
-take_part_name: The name of the part of the sentence to be removed (e.g. 'PO' for subject).
-put_se_id: The identifier of the meaning set into which the new part of the sentence will be inserted.
-put_as_it: The new part of the sentence you want to insert (e.g. 'DO' for object).
-put_case: Optional parameter specifying the case of the new part of the sentence (default 'MIA' for nominative case).
-action: Optional parameter specifying how to perform the replacement (default 'START').
+    base: System base.
+    take_se_id: The identifier of the meaning set from which the selected part of the sentence will be removed.
+    take_part_name: The name of the part of the sentence to be removed (e.g. 'PO' for subject).
+    put_se_id: The identifier of the meaning set into which the new part of the sentence will be inserted.
+    put_as_it: The new part of the sentence you want to insert (e.g. 'DO' for object).
+    put_case: Optional parameter specifying the case of the new part of the sentence (default 'MIA' for nominative case).
+    action: Optional parameter specifying how to perform the replacement (default 'START').
 
 How to use:
 
@@ -1029,6 +1074,7 @@ How to use:
 This feature allows flexible manipulation of sentence parts in meaning sets (SE).
 
 (PL)
+
 ### Funkcja advanced_action w bibliotece Awareness służy do dodawania zdań złożonych do bazy systemowej oraz przypisywania tych zdań do kategorii w zbiorze znaczeń SA. 
 
 Poniżej znajdziesz opis i sposób użycia tej funkcji:
@@ -1038,10 +1084,11 @@ Poniżej znajdziesz opis i sposób użycia tej funkcji:
 Opis: Funkcja ta umożliwia dodawanie zdań złożonych do bazy systemowej, a także przypisywanie ich do kategorii w zbiorze znaczeń SA. Możesz określić źródło dodawanych zdań (source) oraz nazwę kategorii, do której mają być przypisane związane z nimi zdania (word).
 
 Parametry:
-base: Baza systemowa.
-full_text: Pełny tekst zawierający złożone zdania do dodania do bazy.
-source: Opcjonalny parametr określający źródło dodawanych zdań (domyślnie 'automatic'). Możliwe opcje: 'automatic', 'manual', 'wiki'.
-word: Opcjonalny parametr, który dotyczy przypisywania kategorii do zdań w przypadku źródła 'manual' (domyślnie 'nieznane'). Wprowadź nazwę kategorii, do której mają być przypisane związane z nimi zdania.
+
+    base: Baza systemowa.
+    full_text: Pełny tekst zawierający złożone zdania do dodania do bazy.
+    source: Opcjonalny parametr określający źródło dodawanych zdań (domyślnie 'automatic'). Możliwe opcje: 'automatic', 'manual', 'wiki'.
+    word: Opcjonalny parametr, który dotyczy przypisywania kategorii do zdań w przypadku źródła 'manual' (domyślnie 'nieznane'). Wprowadź nazwę kategorii, do której mają być przypisane związane z nimi zdania.
 
 Sposób użycia:
 
@@ -1052,9 +1099,11 @@ Sposób użycia:
     awareness.advanced_action(base, few_sentences, source='automatic')
     # source = 'automatic', 'manual', 'wiki' (sposób przydzielania kategorii SA)
     # word = 'nieznane' dotyczy źródła 'manual', należy wpisać kategorię
+    
 Funkcja ta pozwala na dodawanie i przypisywanie kategorii złożonych zdań do bazy systemowej, co może być przydatne do dalszych analiz i przetwarzania tekstów.
 
 (EN)
+
 ### The advanced_action function in the Awareness library is used to add complex sentences to the system database and assign these sentences to categories in the SA meaning set. 
 
 Below you will find a description and how to use this function:
@@ -1064,10 +1113,11 @@ Below you will find a description and how to use this function:
 Description: This function allows you to add complex sentences to the system database and assign them to categories in the SA meaning set. You can specify the source of the added sentences (source) and the name of the category to which the related sentences are to be assigned (word).
 
 Parameters:
-base: System base.
-full_text: Full text containing complex sentences to be added to the database.
-source: Optional parameter specifying the source of added sentences (default 'automatic'). Possible options: 'automatic', 'manual', 'wiki'.
-word: Optional parameter that concerns assigning categories to sentences in the case of the 'manual' source (default 'unknown'). Enter the name of the category to which the related sentences should be assigned.
+
+    base: System base.
+    full_text: Full text containing complex sentences to be added to the database.
+    source: Optional parameter specifying the source of added sentences (default 'automatic'). Possible options: 'automatic', 'manual', 'wiki'.
+    word: Optional parameter that concerns assigning categories to sentences in the case of the 'manual' source (default 'unknown'). Enter the name of the category to which the related sentences should be assigned.
 
 How to use:
 
@@ -1078,6 +1128,7 @@ How to use:
     awareness.advanced_action(base, few_sentences, source='automatic')
     # source = 'automatic', 'manual', 'wiki' (how to assign SA categories)
     # word = 'unknown' refers to the source 'manual', please enter the category
+    
 This function allows you to add and assign categories of complex sentences to the system database, which may be useful for further analyzes and text processing.
 
 (PL)
@@ -1617,16 +1668,22 @@ Przykład wyniku:
     {'SE_36750', 'SE_54847', 'SE_51866', 'SE_81097', 'SE_11900', …}
 
 (EN)
-Function: searcher_phrase(base: Any, sentens: Any) -> set
+
+    Function: searcher_phrase(base: Any, sentens: Any) -> set
+    
 Description: The searcher_phrase function finds sentences that contain the given phrase (words separated by spaces).
+
 How to use:
-python
-import awareness
-base = awareness.take_base('memory_CLO_v2010')
-result = awareness.searcher_phrase(base, 'use force')
-print(result)
+
+##### python
+    import awareness
+    base = awareness.take_base('memory_CLO_v2010')
+    result = awareness.searcher_phrase(base, 'use force')
+    print(result)
+    
 Result example:
-{'SE_36750', 'SE_54847', 'SE_51866', 'SE_81097', 'SE_11900', …}
+
+    {'SE_36750', 'SE_54847', 'SE_51866', 'SE_81097', 'SE_11900', …}
 
 (PL)
 
@@ -1635,6 +1692,7 @@ Result example:
 Opis: Funkcja stats_part zwraca statystykę dla danego symbolu słowa na podstawie identyfikatora cat_id. Statystyka zawiera informacje na temat liczby zdań, linków, symboli wchodzących i wychodzących, oraz łącznej liczby symboli.
 
 Sposób użycia:
+
 ##### python
     import awareness
     base = awareness.take_base('memory_CLO_v2010')
@@ -1984,6 +2042,7 @@ Result example:
 These functions allow you to save, read and manage data in your projects.
 
 (PL)
+
 ### Funkcja part_speach jest używana do rozpoznawania rodzaju części mowy słowa. 
 
 Oto przykład jej użycia:
@@ -2000,6 +2059,7 @@ Przykład wyniku:
 Funkcja zwraca listę, gdzie pierwszym elementem jest rozpoznany rodzaj części mowy (np. 'rzeczownik'), a drugim elementem jest analizowane słowo (np. 'samochód'). Możesz używać tej funkcji, aby analizować części mowy różnych słów w tekście
 
 (EN)
+
 ### The part_speach function is used to recognize the type of part of speech of a word. 
 
 Here is an example of its use:
