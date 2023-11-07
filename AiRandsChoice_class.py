@@ -32,7 +32,7 @@ class AiRandsChoice:
 # random_item = aiRadsCho.weighted_choice(items, weights)  # Wywołujemy metodę `weighted_choice` na instancji `custom_random`, aby wylosować element z listy `items` zgodnie z wagami z listy `weights`.
 # print(random_item)  # Wypisujemy wylosowany element na ekranie.
 
-# import awereness as a
+# import awareness as a
 # base = a.take_base('memory_CLO_v2010')
 # lista = ['OR_3416', 'DO_5248', 'DO_6612', 'DO_967', 'OK_1289']
 # wagi = [a.stats_part(base, w)['TOTAL'] for w in lista]
