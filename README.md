@@ -5,8 +5,6 @@ The Awareness Library is a versatile Polish text processing tool offering advanc
 
 Instrukcje dotyczące instalacji projektu.
 
-## Użycie / Using
-
 (PL) 
 
 ## Biblioteka Awareness: Narzędzie NLP dla Języka Polskiego
@@ -92,6 +90,8 @@ Thanks to the functions for adjective, noun, and verb inflections, the library i
 The Awareness Library is a versatile and powerful tool that has found its applications in the analysis of the Polish language, both in terms of grammatical analysis and content generation. These modules allow users to perform advanced text operations, analyze sentence structures, and construct more complex language constructions.
 
 If you need more detailed information about specific functions and their applications, please refer to the Awareness Library documentation.
+
+## Użycie / Using
 
 (PL)
 
