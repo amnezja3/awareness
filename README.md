@@ -2240,11 +2240,30 @@ Result example:
     }
 
 The function returns a data set containing a list of symbols, symbol relationship operations, technical data, a list of responses, and a selected random response.
+# Documentation
 
+## How to use
 
-## Dokumentacja
+**Polish**
 
-Link do dokumentacji projektu.
+Aby użyć dokumentacji, po prostu kliknij link powyżej. Link przeniesie Cię do dokumentacji biblioteki `awareness`. Dokumentacja zawiera informacje o tym, jak używać biblioteki, w tym instrukcje instalacji, przykłady użycia i referencję API.
+
+**English**
+
+To use the documentation, simply click on the link above. The link will take you to the documentation for the `awareness` library. The documentation contains information about how to use the library, including installation instructions, usage examples, and API reference.
+
+## Do you have any other questions?
+
+**Polish**
+
+Daj mi znać, jeśli masz inne pytania dotyczące dokumentacji lub biblioteki `awareness`.
+
+**English**
+
+Let me know if you have any other questions about the documentation or the `awareness` library.
+
+[Documentation](https://github.com/amnezja3/awareness/blob/main/docs/usage.MD)
+
 
 ## Rozwój
 
