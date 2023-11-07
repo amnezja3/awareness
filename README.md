@@ -1,6 +1,12 @@
 # awareness
 The Awareness Library is a versatile Polish text processing tool offering advanced modules for text analysis, content generation, and linguistic research. Key modules include the Action Module for sentence analysis, the Advanced Action Module for complex constructions, and functions for adjective, noun, and verb inflections.
 
+## Instalacja / Installation
+
+Instrukcje dotyczące instalacji projektu.
+
+## Użycie / Using
+
 (PL) 
 
 ## Biblioteka Awareness: Narzędzie NLP dla Języka Polskiego
@@ -2132,8 +2138,6 @@ Funkcja zwraca zestaw danych zawierający listę symboli, operacje związków mi
 
 ### The dicson_brain function is used to obtain a set of data about the given sentence. 
 
-Here is an example of its use:
-
 ##### python
     import awareness
     base = awareness.take_base('memory_CLO_v2010')
@@ -2179,3 +2183,17 @@ Result example:
     }
 
 The function returns a data set containing a list of symbols, symbol relationship operations, technical data, a list of responses, and a selected random response.
+
+
+## Dokumentacja
+
+Link do dokumentacji projektu.
+
+## Rozwój
+
+Link do repozytorium GitHub projektu.
+
+## Kontakt
+
+Informacje o tym, jak skontaktować się z twórcami projektu.
+Here is an example of its use:
