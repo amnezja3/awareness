@@ -3,7 +3,7 @@ The Awareness Library is a versatile Polish text processing tool offering advanc
 
 ## Instalacja / Installation
 
-(PL)
+**Polish**
 
 Instrukcja Instalacji
 
@@ -34,7 +34,7 @@ Aby zainstalować biblioteki zewnętrzne, możesz użyć pip:
     pip install -r requirements.txt
 
 
-(EN)
+**English**
 
 Installation Instructions
 
@@ -62,15 +62,15 @@ To install the external libraries, you can use pip:
 
     pip install -r requirements.txt
 
-(PL) 
+**Polish** 
 
 ## Biblioteka Awareness: Narzędzie NLP dla Języka Polskiego
 
-(EN) 
+**English** 
 
 ## Awareness Library: NLP Tool for the Polish Language
 
-(PL)
+**Polish**
 
 Biblioteka Awareness to zaawansowane narzędzie do przetwarzania tekstu w języku polskim, stworzone w celu ułatwienia analizy i manipulacji tekstu. Ta wszechstronna biblioteka oferuje szereg potężnych modułów, które umożliwiają użytkownikom przeprowadzanie głębokiej analizy tekstów, wykonywanie zaawansowanych operacji związanych z językiem polskim. 
 
@@ -110,7 +110,7 @@ Biblioteka Awareness to narzędzie wszechstronne i potężne, które znalazło s
 
 Jeśli potrzebujesz bardziej szczegółowych informacji na temat konkretnych funkcji i ich zastosowań, zapraszamy do konsultacji dokumentacji biblioteki Awareness.
 
-(EN)
+**English**
 
 The Awareness Library is an advanced tool for processing text in the Polish language, created to facilitate the analysis and manipulation of text. This versatile library offers a range of powerful modules that enable users to perform in-depth analysis of texts and carry out advanced operations related to the Polish language. 
 
@@ -150,7 +150,7 @@ If you need more detailed information about specific functions and their applica
 
 ## Użycie / Using
 
-(PL)
+**Polish**
 
 ### Moduł Sam_g (Rozpoznawanie Samogłoski)
 
@@ -164,7 +164,7 @@ Przykład:
     print(awareness.sam_g('x'))  # False
     print(awareness.sam_g('a'))  # True
 
-(EN)
+**English**
 
 ### Sam_g Module (Vowel Recognition)
 
@@ -178,7 +178,7 @@ Example:
     print(awareness.sam_g('x')) # False
     print(awareness.sam_g('a')) # True
 
-(PL)
+**Polish**
 
 ### Moduł Sufix (Rozpoznawanie Sufiksów)
 
@@ -192,7 +192,7 @@ Przykład:
     print(awareness.sufix('pismo'))  # 'smo'
     print(awareness.sufix('samochód'))  # 'chód'
 
-(EN)
+**English**
 
 ### Sufix Module (Suffix Recognizer)
 
@@ -207,7 +207,7 @@ Example:
     print(awareness.sufix('letter')) # 'smo'
     print(awareness.sufix('car')) # 'chód'
 
-(PL)
+**Polish**
 
 ### Moduł Check_v_list (Sprawdza czy jakiś element znajduje się na liście)
 
@@ -223,7 +223,7 @@ Przykład:
     print(awareness.check_v_list(lista, 3))  # False
     print(awareness.check_v_list(lista, 1))  # True
 
-(EN)
+**English**
 
 ### Check_v_list module (Checks if an item is in the list)
 
@@ -239,7 +239,7 @@ Example:
     print(awareness.check_v_list(list, 3)) # False
     print(awareness.check_v_list(list, 1)) # True
 
-(PL)
+**Polish**
 
 ### Moduł Kind_sex_word (Rozpoznawanie Rodzaje Słowa)
 
@@ -254,7 +254,7 @@ Przykład:
     print(awareness.kind_sex_word('samochód'))  # 'M'
     print(awareness.kind_sex_word('kobieta'))  # 'Z'
 
-(EN)
+**English**
 
 ### Kind_sex_word module (Recognizing Kinds of Words)
 
@@ -269,7 +269,7 @@ Example:
     print(awareness.kind_sex_word('car')) # 'M'
     print(awareness.kind_sex_word('woman')) # 'Z'
 
-(PL)
+**Polish**
 
 ### Moduł LPM (Rozpoznawanie Liczby Słowa)
 
@@ -284,7 +284,7 @@ Przykład:
     print(awareness.lpm('samochód'))  # 'LP'
     print(awareness.lpm('kobiety'))  # 'LM'
 
-(EN)
+**English**
 
 ### LPM Module (Word Number Recognition)
 
@@ -299,7 +299,7 @@ Example:
     print(awareness.lpm('car')) # 'LP'
     print(awareness.lpm('women')) # 'LM'
 
-(PL)
+**Polish**
 
 ### Moduł Part_Check (Rozpoznawanie Części Mowy)
 
@@ -313,7 +313,7 @@ Przykład:
     import awareness
     print(awareness.part_check('samochód'))  # 'rzeczownik'
 
-(EN)
+**English**
 ### Part_Check Module (Part of Speech Recognition)
 
 Description: The part_check function returns a part of speech based on the given word.
@@ -326,7 +326,7 @@ Example:
     import awareness
     print(awareness.part_check('car')) # 'noun'
 
-(PL)
+**Polish**
 
 ### Moduł Case_Updater (Aktualizacja Pliku Słów z Częściami Mowy)
 
@@ -341,7 +341,7 @@ Przykład:
     awareness.case_updater('samochód')
     # Aktualizuje plik słów z informacjami o deklinacji słowa 'samochód'
 
-(EN)
+**English**
 
 ### Case_Updater Module (Updating the Word File with Parts of Speech)
 
@@ -356,7 +356,7 @@ Example:
     awareness.case_updater('car')
     # Updates the word file with information about the declination of the word 'car'
 
-(PL)
+**Polish**
 
 ### Moduł If_Case (Sprawdzanie, Czy Słowo Jest Deklinacyjne)
 
@@ -371,7 +371,7 @@ Przykład:
     print(awareness.if_case('samochód'))  # True
     print(awareness.if_case('być'))  # False
 
-(EN)
+**English**
 
 ### If_Case Module (Checking Whether a Word Is Declinational)
 
@@ -386,7 +386,7 @@ Example:
     print(awareness.if_case('car')) # True
     print(awareness.if_case('be')) # False
 
-(PL)
+**Polish**
 
 ### Moduł Change_Cases (Odmiana Słowa przez Przypadki)
 
@@ -401,7 +401,7 @@ Przykład:
     print(awareness.change_cases('samochód', truck='BACK', opt='DOP', update='NO'))
     # ['samochodu']
 
-(EN)
+**English**
 
 ### Change_Cases Module (Word Inflection by Cases)
 
@@ -417,7 +417,7 @@ Example:
     print(awareness.change_cases('car', truck='BACK', opt='DOP', update='NO'))
     # ['car']
 
-(PL)
+**Polish**
 
 ### Moduł Noun_Adj_Case_Detector (Wykrywanie Rzeczowników i Przymiotników w Zdaniu)
 
@@ -433,7 +433,7 @@ Przykład:
     print(awareness.noun_adj_case_detector('stary samochód toczy się wolno'))
     # {'stary': 'MIA-LP-MRZ-POZ', 'samochód': 'LP-MIA', 'toczy': False, 'się': False, 'wolno': False}
 
-(EN)
+**English**
 
 ### Noun_Adj_Case_Detector Module (Detecting Nouns and Adjectives in a Sentence)
 
@@ -448,7 +448,7 @@ Example:
     print(awareness.noun_adj_case_detector('old car rolls slowly'))
     # {'old': 'MIA-LP-MRZ-POZ', 'car': 'LP-MIA', 'rolling': False, 'running': False, 'slow': False}
 
-(PL)
+**Polish**
 
 ### Moduł Change_Case_SP (Odmiana Słowa przez Przypadki z Korektą)
 
@@ -463,7 +463,7 @@ Przykład:
     base = awareness.take_base('memory_CLO_v2010')
     print(awareness.change_case_SP(base, 'rower'))
 
-(EN)
+**English**
 ### Change_Case_SP Module (Word Conjugation by Cases with Correction)
 
 Description: The change_case_SP function inflects a word by case and provides inflection suggestions with the possibility of correction.
@@ -477,7 +477,7 @@ Example:
     base = awareness.take_base('memory_CLO_v2010')
     print(awareness.change_case_SP(base, 'bicycle'))
 
-(PL)
+**Polish**
 
 ### Moduł Change_Cases_SP_Adjective (Odmiana Przymiotników z Korektą)
 
@@ -492,7 +492,7 @@ Przykład:
     base = awareness.take_base('memory_CLO_v2010')
     print(awareness.change_cases_SP_adjective(base, 'rowerowy', truck='BACK', numb='LM', rodz='MOS', direct='NEG', target='przymiotnik', update='YES'))
 
-(EN)
+**English**
 
 ### Module Change_Cases_SP_Adjective (Conjugation of Adjectives with Correction)
 
@@ -507,7 +507,7 @@ Example:
     base = awareness.take_base('memory_CLO_v2010')
     print(awareness.change_cases_SP_adjective(base, 'bicycle', truck='BACK', numb='LM', genus='MOS', direct='NEG', target='adjective', update='YES'))
 
-(PL)
+**Polish**
 
 ### Moduł Part_Speech_2 (Zapisywanie Pliku Systemowego Części Mowy)
 
@@ -521,7 +521,7 @@ Przykład:
     import awareness
     print(awareness.part_Speech_2('rower'))  # True
 
-(EN)
+**English**
 
 ### Part_Speech_2 Module (Saving Part of Speech System File)
 
@@ -535,7 +535,7 @@ Example:
     import awareness
     print(awareness.part_Speech_2('bicycle')) # True
 
-(PL)
+**Polish**
 
 ### Moduł Two_Way_Words (Słowa Dwubiegunowe)
 
@@ -558,7 +558,7 @@ Przykład:
 
 Moduł Ten pozwala na znalezienie słów, które posiadają swoje przeciwieństwa, co może być przydatne w różnych analizach językowych lub generowaniu treści.
 
-(EN)
+**English**
 
 ### Two_Way_Words Module
 
@@ -581,7 +581,7 @@ Example:
 
 This module allows you to find words that have their opposites, which can be useful in various language analyzes or content generation.
 
-(PL)
+**Polish**
 
 ### Moduł Take_Target (Słowa z Rodziny)
 
@@ -599,7 +599,7 @@ Rezultat:
 
     Lista słów, które należą do rodziny słowa 'rower'.
 
-(EN)
+**English**
 
 ### Take_Target Module (Family Words)
 
@@ -617,7 +617,7 @@ Result:
 
     A list of words that belong to the word 'bicycle' family.
 
-(PL)
+**Polish**
 
 ### Moduł Take_SuperTarget (Słowo Główne Rodziny)
 
@@ -640,7 +640,7 @@ Rezultat:
 
 Moduły te pozwalają na pobieranie słów z rodziny wybranego słowa lub na szybkie uzyskanie słowa głównego rodziny.
 
-(EN)
+**English**
 
 ### Take_SuperTarget Module (Family Root Word)
 
@@ -663,7 +663,7 @@ Result:
 
 These modules allow you to retrieve words from the family of a selected word or to quickly obtain the root word of the family.
 
-(PL)
+**Polish**
 
 ### Moduł Verb_Flex (Odmiana Czasowników)
 
@@ -686,7 +686,7 @@ Rezultat:
     option='CHANGE': Zamienia czasownik 'wysunąć' na formę 'wysunęliśmy' zgodnie z podanym trybem (mode).
     option='ALL': Opcja deweloperska, zwraca cały zbiór rodziny danego czasownika odmieniony w grupie fleksyjnej.
 
-(EN)
+**English**
 
 ### Verb_Flex (Verb Conjugation) Module
 
@@ -709,7 +709,7 @@ Result:
     option='CHANGE': Changes the verb 'to extend' to the form 'we advanced' according to the given mode.
     option='ALL': Developer option, returns the entire set of the family of a given verb inflected in the inflection group.
 
-(PL)
+**Polish**
 
 ### Moduł Set_Gr (Wykrywanie Grupy Fleksyjnej)
 
@@ -732,7 +732,7 @@ Rezultat:
 
 Moduły te umożliwiają odmianę czasowników oraz wykrywanie grupy fleksyjnej czasownika, co jest przydatne w analizach gramatycznych i generowaniu treści.
 
-(EN)
+**English**
 
 ### Set_Gr Module (Inflectional Group Detection)
 
@@ -755,7 +755,7 @@ Result:
     
 These modules enable verb conjugation and detection of the verb's inflection group, which is useful in grammatical analysis and content generation.
 
-(PL)
+**Polish**
 
 ### Moduł Part_Sentens (Analiza Zdania)
 
@@ -785,7 +785,7 @@ Rezultat:
     
 Funkcja part_sentens pozwala na pełną analizę struktury zdania i czasownika, co jest przydatne w zadaniach analizy tekstu i generowania treści.
 
-(EN)
+**English**
 
 ### Part_Sentens (Sentence Analysis) Module
 
@@ -814,7 +814,7 @@ Result:
     Is the verb in the imperfect tense?
 The part_sentens function allows for full analysis of sentence and verb structure, which is useful in text analysis and content generation tasks.
 
-(PL)
+**Polish**
 
 ### Moduł BaseTools (Narzędzia Bazy)
 
@@ -855,7 +855,7 @@ Rezultat:
 
     Funkcja zwraca informację potwierdzającą zapisanie bazy w katalogu systemowym.
 
-(EN)
+**English**
 
 ### BaseTools Module (Base Tools)
 
@@ -894,7 +894,7 @@ Result:
 
     The function returns information confirming that the database is saved in the system directory.
 
-(PL)
+**Polish**
 
 ### Funkcje manipulacji danymi w bazie:
 
@@ -984,7 +984,7 @@ Opis: Funkcja aktualizuje etykietkę LB słowa (word_LB) o wszystkie możliwe fo
 
 To są narzędzia umożliwiające manipulację danymi w bazie systemowej w celu odczytywania, dodawania, aktualizacji i usuwania słów, zdań, kategorii, klasyfikatorów oraz różnych atrybutów.
 
-(EN)
+**English**
 
 Data manipulation functions in the database:
 
@@ -1074,7 +1074,7 @@ Description: The function updates the word's LB label (word_LB) with all possibl
 
 These are tools that enable manipulation of data in the system database in order to read, add, update and delete words, sentences, categories, classifiers and various attributes.
 
-(PL)
+**Polish**
 
 ### Funkcja change_part_by_part w bibliotece Awareness służy do zamiany wybranej części zdania na inną w oparciu o identyfikatory zbiorów znaczeń (SE). 
 
@@ -1105,7 +1105,7 @@ Sposób użycia:
     
 Funkcja ta pozwala na elastyczną manipulację częściami zdania w zbiorach znaczeń (SE). 
 
-(EN)
+**English**
 
 ### The change_part_by_part function in the Awareness library is used to replace a selected part of a sentence with another one based on meaning set identifiers (SE). 
 
@@ -1136,7 +1136,7 @@ How to use:
     
 This feature allows flexible manipulation of sentence parts in meaning sets (SE).
 
-(PL)
+**Polish**
 
 ### Funkcja advanced_action w bibliotece Awareness służy do dodawania zdań złożonych do bazy systemowej oraz przypisywania tych zdań do kategorii w zbiorze znaczeń SA. 
 
@@ -1165,7 +1165,7 @@ Sposób użycia:
     
 Funkcja ta pozwala na dodawanie i przypisywanie kategorii złożonych zdań do bazy systemowej, co może być przydatne do dalszych analiz i przetwarzania tekstów.
 
-(EN)
+**English**
 
 ### The advanced_action function in the Awareness library is used to add complex sentences to the system database and assign these sentences to categories in the SA meaning set. 
 
@@ -1194,7 +1194,7 @@ How to use:
     
 This function allows you to add and assign categories of complex sentences to the system database, which may be useful for further analyzes and text processing.
 
-(PL)
+**Polish**
 
     Funkcja: action(base: Any, sentens: Any, se_id: Any | None = None, option: str = 'all') -> (Any | dict[str, Any] | None)
     
@@ -1221,7 +1221,7 @@ Przykład wyniku:
     
 Funkcja action analizuje zdanie i zwraca listę symboli składających się na to zdanie. Może być używana do analizy tekstu i dodawania go do bazy systemowej w celu dalszej analizy.
 
-(EN)
+**English**
 
     Function: action(base: Any, sentens: Any, se_id: Any | None = None, option: str = 'all') -> (Any | dict[str, Any] | None)
     
@@ -1248,7 +1248,7 @@ Result example:
     
 The action function parses a sentence and returns a list of symbols that make up that sentence. It can be used to analyze text and add it to the system database for further analysis.
 
-(PL)
+**Polish**
 
     Funkcja: splitSententionNum(sentention: Any) -> tuple[list, set, dict[str, Any]
     
@@ -1273,7 +1273,7 @@ Przykład wyniku:
 
 Funkcja splitSententionNum analizuje zdanie i dokonuje jego podziału na zdania podrzędne, nadrzędne i równoległe, a następnie zwraca wynik w formie krotki. Zdania podrzędne są przechowywane w liście, zdania nadrzędne w zbiorze, a zdania równoległe w słowniku. 
 
-(EN)
+**English**
 
     Function: splitSentenceNum(sentention: Any) -> tuple[list, set, dict[str, Any]
 
@@ -1298,7 +1298,7 @@ Result example:
     
 The splitSentenceNum function parses a sentence and splits it into child, parent, and parallel sentences, and then returns the result as a tuple. Subordinate sentences are stored in a list, parent sentences in a set, and parallel sentences in a dictionary.
 
-(PL)
+**Polish**
 
     Funkcja: make_OS(base: Any, se_id: Any, oso: str = 'Ios-LP-NDKTER-DKPRZY', frend: str = 'PR', main: str = 'PO', neubor: str = 'ZAI') -> str | None
     
@@ -1324,7 +1324,7 @@ Sposób użycia:
 
 Funkcja make_OS pozwala na modyfikację zdaniowego zbioru SE w bazie systemowej, zamieniając zdania na wybraną formę czasownika i ustalając odpowiednie relacje między zdaniem nadrzędnym, zdaniem głównym i zdaniem nadrzędnym zdania nadrzędnego. 
 
-(EN)
+**English**
 
     Function: make_OS(base: Any, se_id: Any, oso: str = 'Ios-LP-NDKTER-DKPRZY', frend: str = 'PR', main: str = 'PO', neubor: str = 'ZAI') -> p | None
     
@@ -1350,7 +1350,7 @@ How to use:
     
 The make_OS function allows you to modify the SE sentence set in the system database, replacing the sentences with the selected verb form and establishing appropriate relationships between the parent clause, the main clause and the parent clause of the parent clause.
 
-(PL)
+**Polish**
 
     Funkcja: synonimus_sentenses(base: Any, sentens_list: Any) -> Any
     
@@ -1369,7 +1369,7 @@ Przykład wyniku:
 
     {'DICT': {0: ['historia', 'pisze', 'się', 'sam'], 1: ['historia', 'pisze', 'się', 'jednakowy'], ...}, 'LIST': [['historia', 'pisze', 'się', 'sam'], ['historia', 'pisze', 'się', 'jednakowy'], ...], 'STRINGES': ['historia pisze się sam', 'historia pisze się jednakowy', …]}
 
-(EN)
+**English**
 
     Function: synonymus_sentenses(base: Any, sentens_list: Any) -> Any
     
@@ -1388,7 +1388,7 @@ Result example:
 
     {'DICT': {0: ['history', 'writes', 'itself', 'itself'], 1: ['history', 'it writes', 'itself', 'the same'], ...} , 'LETTER': [['history', 'writes', 'itself', 'itself'], ['history', 'it writes', 'itself', 'the same'], ...], 'STRINGES' : ['history writes itself', 'history writes itself', ...]}
 
-(PL)
+**Polish**
 
     Funkcja: neuralSentensPrepare(base: Any) -> dict[str, dict]
     
@@ -1406,7 +1406,7 @@ Przykład wyniku:
 
     {'SLOWNIK_SLOW': {...}, 'SLOWNIK_CAT': {...}, 'ALL_SENTENSES_LID': {...}, 'ALL_SENTENSES': {…}}
 
-(EN)
+**English**
 
     Function: neuralSentensPrepare(base: Any) -> dict[str, dict]
     
@@ -1424,7 +1424,7 @@ Result example:
 
     {'SLOWNIK_SLOW': {...}, 'CAT_DICATORIAL': {...}, 'ALL_SENTENSES_LID': {...}, 'ALL_SENTENSES': {...}}
     
-(PL)
+**Polish**
 
     Funkcja: stats_se(base: Any, se_id: Any) -> dict[str, int] | dict
 
@@ -1442,7 +1442,7 @@ Przykład wyniku:
 
     {'PO': 1, 'PR': 3, 'OR': 3, 'DO': 3, 'OK': 0, 'VO': 1, 'OZ': 0, 'ZA': 3, 'HW': 3}
 
-(EN)
+**English**
 
     Function: stats_se(base: Any, se_id: Any) -> dict[str, int] | dict
     
@@ -1460,7 +1460,7 @@ Result example:
 
     {'PO': 1, 'PR': 3, 'OR': 3, 'DO': 3, 'OK': 0, 'VO': 1, 'OZ': 0, 'ZA': 3, ' HW': 3}
 
-(PL)
+**Polish**
 
     Funkcja: golden_se(base: Any, cat_id: Any) -> list
 
@@ -1478,7 +1478,7 @@ Przykład wyniku:
 
     ['SE_32509', 'SE_83880', 'SE_58694', 'SE_67428', 'SE_56169', …]
 
-(EN)
+**English**
     Function: golden_se(base: Any, cat_id: Any) -> list
     
 Description: The golden_se function finds the so-called "golden" sentences in the SE set based on the category identifier cat_id. Returns a list of sentence identifiers that are considered particularly valuable in a given category.
@@ -1495,7 +1495,7 @@ Result example:
 
     ['SE_32509', 'SE_83880', 'SE_58694', 'SE_67428', 'SE_56169', ...]
 
-(PL)
+**Polish**
 
     Funkcja: part_split_IN_OUT(base: Any, cat_id: Any) -> dict[str, set]
     
@@ -1513,7 +1513,7 @@ Przykład wyniku:
 
     {'IN': {'VO_13', 'VO_40', 'HW_3', 'PR_625', 'HW_1', ...}, 'OUT': {'ZA_234', 'OZ_43', 'HW_7', 'DO_5654', …}}
 
-(EN)
+**English**
 
     Function: part_split_IN_OUT(base: Any, cat_id: Any) -> dict[str, set]
     
@@ -1530,7 +1530,7 @@ How to use:
 Result example:
     {'IN': {'VO_13', 'VO_40', 'HW_3', 'PR_625', 'HW_1', ...}, 'OUT': {'ZA_234', 'OZ_43', 'HW_7', 'DO_5654 ', ...}}
 
-(PL)
+**Polish**
 
     Funkcja: find_part_in_SE(base: Any, cat_id: Any) -> list
     
@@ -1548,7 +1548,7 @@ Przykład wyniku:
 
     ['SE_131', 'SE_1307', 'SE_1378', 'SE_1508', 'SE_2699', …]
 
-(EN)
+**English**
 
     Function: find_part_in_SE(base: Any, cat_id: Any) -> list
     
@@ -1566,7 +1566,7 @@ Result example:
 
     ['SE_131', 'SE_1307', 'SE_1378', 'SE_1508', 'SE_2699', ...]
 
-(PL)
+**Polish**
 
     Funkcja: part_most_popular(base: Any, item_list: Any, exceping_part: Any | None = None) -> Any | None
     
@@ -1585,7 +1585,7 @@ Przykład wyniku:
 
     PO_100
 
-(EN)
+**English**
 
     Function: part_most_popular(base: Any, item_list: Any, exceping_part: Any | None = None) -> Any | None
 
@@ -1604,7 +1604,7 @@ Result example:
 
     PO_100
 
-(PL)
+**Polish**
 
     Funkcja: find_se_by_LB(base: Any, LB_id: Any) -> set
     
@@ -1622,7 +1622,7 @@ Przykład wyniku:
 
     {'SE_131', 'SE_2699', 'SE_11883', 'SE_13512', 'SE_45499', ...}
 
-(EN)
+**English**
 
     Function: find_se_by_LB(base: Any, LB_id: Any) -> set
     
@@ -1640,7 +1640,7 @@ Result example:
 
     {'SE_131', 'SE_2699', 'SE_11883', 'SE_13512', 'SE_45499', …}
 
-(PL)
+**Polish**
 
     Funkcja: find_se_by_PO(base: Any, PO_id: Any, cat_id: Any) -> set
     
@@ -1658,7 +1658,7 @@ Przykład wyniku:
 
     {'SE_6138'}
 
-(EN)
+**English**
 
     Function: find_se_by_PO(base: Any, PO_id: Any, cat_id: Any) -> set
     
@@ -1676,7 +1676,7 @@ Result example:
 
     {'SE_6138'}
 
-(PL)
+**Polish**
 
     Funkcja: find_pharse_in_part(base: Any, word: Any) -> list
     
@@ -1694,7 +1694,7 @@ Przykład wyniku:
 
     ['OR_584']
 
-(EN)
+**English**
 
     Function: find_pharse_in_part(base: Any, word: Any) -> list
     
@@ -1712,7 +1712,7 @@ Result example:
 
     ['OR_584']
 
-(PL)
+**Polish**
 
     Funkcja: searcher_phrase(base: Any, sentens: Any) -> set
     
@@ -1730,7 +1730,7 @@ Przykład wyniku:
 
     {'SE_36750', 'SE_54847', 'SE_51866', 'SE_81097', 'SE_11900', …}
 
-(EN)
+**English**
 
     Function: searcher_phrase(base: Any, sentens: Any) -> set
     
@@ -1748,7 +1748,7 @@ Result example:
 
     {'SE_36750', 'SE_54847', 'SE_51866', 'SE_81097', 'SE_11900', …}
 
-(PL)
+**Polish**
 
     Funkcja: stats_part(base: Any, cat_id: Any) -> dict
     
@@ -1766,7 +1766,7 @@ Przykład wyniku:
 
     {'SENTENS': 21, 'LINKS': 21, 'PART-IN': 7, 'PART-OUT': 13, 'TOTAL': 62}
 
-(EN)
+**English**
 
     Function: stats_part(base: Any, cat_id: Any) -> dict
     
@@ -1784,7 +1784,7 @@ Result example:
 
     {'SENTENS': 21, 'LINKS': 21, 'PART-IN': 7, 'PART-OUT': 13, 'TOTAL': 62}
 
-(PL)
+**Polish**
 
     Funkcja: generator_AI_most_popular(base: Any, cat_start_id: Any, no_words: int = 5, exceping_part: Any | None = None) -> dict
 
@@ -1802,7 +1802,7 @@ Przykład wyniku:
 
     {'STRING': 'różnica w to', 'ID': ['PO_100', 'ZA_3', 'HW_1']}
 
-(EN)
+**English**
     
     Function: generator_AI_most_popular(base: Any, cat_start_id: Any, no_words: int = 5, exceping_part: Any | None = None) -> dict
 
@@ -1820,7 +1820,7 @@ Result example:
 
     {'STRING': 'difference in', 'ID': ['PO_100', 'ZA_3', 'HW_1']}
 
-(PL)
+**Polish**
 
     Funkcja: generator_AI_se(base: Any, seed: str) -> str
 
@@ -1838,7 +1838,7 @@ Przykład wyniku:
 
     samochód lub całkowicie samochód
 
-(EN)
+**English**
 
     Function: generator_AI_se(base: Any, seed: str) -> str
     
@@ -1856,7 +1856,7 @@ Result example:
 
     car or completely car
 
-(PL)
+**Polish**
 
     Funkcja: check_list_to_list(list_a: list, list_b: list) -> bool
     
@@ -1874,7 +1874,7 @@ Przykład wyniku:
 
     True
 
-(EN)
+**English**
 
     Function: check_list_to_list(list_a: list, list_b: list) -> bool
 
@@ -1892,7 +1892,7 @@ Result example:
 
     True
 
-(PL)
+**Polish**
 
     Funkcja: sentens_generator_AI(base: Any, seed: str) -> dict
 
@@ -1910,7 +1910,7 @@ Przykład wyniku:
 
     {'LIST': ['Orzeczenie to część zdania w którym się znajduje , lub o procesie , któremu podlega.', 'Zdania informująca o w nim możliwości lub kilka naraz.', 'Dwa jej w celu uzyskania potomstwa dziedziczącego nowe cechy.', 'Łączy się w związku chemicznym.'], 'DICT-ID': {'łączy się w': ['OR_430', 'ZA_5', 'ZA_3'], 'dwa jej': ['OZ_70', 'ZA_80', 'ZA_3'], 'dwa przedmioty': ['PR_723', 'DO_184', 'ZA_3'], 'dwa miejsca': ['OK_10', 'DO_12', 'ZA_3'], 'zdania w': ['DO_71', 'ZA_3'], 'zdania informująca w': ['OR_12276', 'OK_2680', 'ZA_11', 'ZA_3']}, 'SENTENS': 'łączy dwa zdania ze sobą', 'WORDS': {'łączy': ['DO_14670', 'OR_430'], 'dwa': ['OZ_70', 'PR_723', 'OK_10'], 'zdania': ['DO_71', 'OR_12276'], 'ze': ['ZA_243'], 'sobą': ['ZA_115']}}
 
-(EN)
+**English**
 
     Function: sentens_generator_AI(base: Any, seed: str) -> dict
     
@@ -1928,7 +1928,7 @@ Result example:
 
     {'LIST': ['A predicate is part of a sentence in which it is found, or about a process to which it is subject.', 'A sentence informing about a possibility in it or several at once.', 'Two of them in order to obtain offspring inheriting new features.', 'Combines in a chemical compound.'], 'DICT-ID': {'combines in': ['OR_430', 'ZA_5', 'ZA_3'], 'two hers': ['OZ_70', 'ZA_80' , 'ZA_3'], 'two items': ['PR_723', 'DO_184', 'ZA_3'], 'two places': ['OK_10', 'DO_12', 'ZA_3'], 'sentences in': [ 'DO_71', 'ZA_3'], 'sentence informing in': ['OR_12276', 'OK_2680', 'ZA_11', 'ZA_3']}, 'SENTENS': 'connects two sentences together', 'WORDS': {'connects': ['DO_14670', 'OR_430'], 'two': ['OZ_70', 'PR_723', 'OK_10'], 'sentences': ['DO_71', 'OR_12276'], 'with' : ['ZA_243'], 'myself': ['ZA_115']}}
 
-(PL)
+**Polish**
 
     Funkcja: save_ver(project_name: str, var_name: str, data: Any) -> bool
 
@@ -1946,7 +1946,7 @@ Przykład wyniku:
 
     True
 
-(EN)
+**English**
 
     Function: save_ver(project_name: str, var_name: str, data: Any) -> bool
 
@@ -1964,7 +1964,7 @@ Result example:
 
     True
 
-(PL)
+**Polish**
 
     Funkcja: open_all(project_name: str) -> dict
 
@@ -1981,7 +1981,7 @@ Przykład wyniku:
 
     {'ver': 'String'}
 
-(EN)
+**English**
 
     Function: open_all(project_name: str) -> dict
 
@@ -1998,7 +1998,7 @@ Result example:
 
     {'ver': 'String'}
 
-(PL)
+**Polish**
 
     Funkcja: open_ver(project_name: str, var_name: str) -> Any
 
@@ -2015,7 +2015,7 @@ Przykład wyniku:
 
     'String'
 
-(EN)
+**English**
 
     Function: open_ver(project_name: str, var_name: str) -> Any
 
@@ -2032,7 +2032,7 @@ Result example:
 
     'String'
 
-(PL)
+**Polish**
 
     Funkcja: delete_project(project_name: str) -> bool
 
@@ -2049,7 +2049,7 @@ Przykład wyniku:
 
     True
 
-(EN)
+**English**
 
     Function: delete_project(project_name: str) -> bool
     
@@ -2066,7 +2066,7 @@ Result example:
 
     True
 
-(PL)
+**Polish**
 
     Funkcja: delete_ver(project_name: str, var_name: str) -> bool
     
@@ -2085,7 +2085,7 @@ Przykład wyniku:
 
 Te funkcje pozwalają na zapisywanie, odczytywanie i zarządzanie danymi w projektach.
 
-(EN)
+**English**
 
     Function: delete_ver(project_name: str, var_name: str) -> bool
 
@@ -2104,7 +2104,7 @@ Result example:
 
 These functions allow you to save, read and manage data in your projects.
 
-(PL)
+**Polish**
 
 ### Funkcja part_speach jest używana do rozpoznawania rodzaju części mowy słowa. 
 
@@ -2121,7 +2121,7 @@ Przykład wyniku:
 
 Funkcja zwraca listę, gdzie pierwszym elementem jest rozpoznany rodzaj części mowy (np. 'rzeczownik'), a drugim elementem jest analizowane słowo (np. 'samochód'). Możesz używać tej funkcji, aby analizować części mowy różnych słów w tekście
 
-(EN)
+**English**
 
 ### The part_speach function is used to recognize the type of part of speech of a word. 
 
@@ -2139,7 +2139,7 @@ Result example:
 The function returns a list, where the first element is the recognized type of part of speech (e.g. 'noun'), and the second element is the word being analyzed (e.g. 'car'). You can use this feature to analyze the parts of speech of different words in text
 
 
-(PL)
+**Polish**
 ### Funkcja dicson_brain służy do uzyskiwania zestawu danych dotyczących podanego zdania. 
 
 Oto przykład jej użycia:
@@ -2191,7 +2191,7 @@ Przykład wyniku:
 Funkcja zwraca zestaw danych zawierający listę symboli, operacje związków między symbolami, dane techniczne, listę odpowiedzi oraz wybraną odpowiedź losową.
 
 
-(EN)
+**English**
 
 ### The dicson_brain function is used to obtain a set of data about the given sentence. 
 
