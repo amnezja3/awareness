@@ -3,7 +3,64 @@ The Awareness Library is a versatile Polish text processing tool offering advanc
 
 ## Instalacja / Installation
 
-Instrukcje dotyczące instalacji projektu.
+(PL)
+
+Instrukcja Instalacji
+
+1. Pobranie Repozytorium
+
+Pierwszym krokiem jest pobranie zawartości repozytorium do katalogu docelowego. Możesz to zrobić za pomocą polecenia git clone:
+
+
+    git clone https://github.com/amnezja3/awareness.git
+
+
+2. Rozpakowanie Plików .zip
+
+Po pobraniu repozytorium, przejdź do katalogu docelowego:
+
+    cd nazwa-twojego-katalogu
+
+Następnie rozpakuj wszystkie pliki .zip, które są częścią repozytorium. Możesz użyć polecenia unzip:
+
+    unzip '*.zip'
+
+To rozpakuje wszystkie pliki .zip w bieżącym katalogu.
+
+3. Instalacja Bibliotek Zewnętrznych
+
+Aby zainstalować biblioteki zewnętrzne, możesz użyć pip:
+
+    pip install -r requirements.txt
+
+
+(EN)
+
+Installation Instructions
+
+1. Clone the Repository
+
+The first step is to clone the repository to your target directory. You can do this with the git clone command:
+
+    git clone https://github.com/amnezja3/awareness.git
+
+2. Unzip the .zip Files
+
+After cloning the repository, navigate to the target directory:
+
+    cd your-target-directory
+
+Then, unzip all of the .zip files that are part of the repository. You can use the unzip command:
+
+    unzip '*.zip'
+
+This will unzip all of the .zip files in the current directory.
+
+3. Install External Libraries
+
+To install the external libraries, you can use pip:
+
+    pip install -r requirements.txt
 
 (PL) 
 
