@@ -1,9 +1,7 @@
 # awareness
 The Awareness Library is a versatile Polish text processing tool offering advanced modules for text analysis, content generation, and linguistic research. Key modules include the Action Module for sentence analysis, the Advanced Action Module for complex constructions, and functions for adjective, noun, and verb inflections.
 
-[![GitHub License](https://img.shields.io/github/license/amnezja3/awareness)](https://img.shields.io/github/license/amnezja3/awareness)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)
-[![Latest Release](https://img.shields.io/github/v/release/amnezja3/awareness)](https://img.shields.io/github/v/release/amnezja3/awareness)
+[![GitHub License](https://img.shields.io/github/license/amnezja3/awareness)](https://img.shields.io/github/license/amnezja3/awareness) [![Python](https://img.shields.io/badge/Python-Backend-blue)](https://www.python.org/) [![AI](https://img.shields.io/badge/AI-Artificial%20Intelligence-brightgreen)](https://en.wikipedia.org/wiki/Artificial_intelligence) [![ML](https://img.shields.io/badge/ML-Machine%20Learning-success)](https://en.wikipedia.org/wiki/Machine_learning) [![NN](https://img.shields.io/badge/NN-Neural%20Networks-red)](https://en.wikipedia.org/wiki/Artificial_neural_network) [![NLP](https://img.shields.io/badge/NLP-Natural%20Language%20Processing-yellow)](https://en.wikipedia.org/wiki/Natural_language_processing) 
 
 
 
